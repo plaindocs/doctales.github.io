@@ -2,7 +2,7 @@
 
 - title: Die Geschichte
   url: /story/
-  excerpt: "Hier beginnt die Geschichte"
+  excerpt: "Hier beginnt die Geschichte in navigation.yml"
   image: doctales-logo.svg
 - title: Über Uns
   url: /about/

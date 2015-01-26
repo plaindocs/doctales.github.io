@@ -1,6 +1,7 @@
 ---
 layout: article
-title: Die Geschichte
+lang: de
+name: story
 date: 
 modified:
 excerpt: Excerpt
@@ -11,12 +12,17 @@ image:
 ads: false
 ---
 
+<h1>{{ site.data.translations.[page.lang].story.title }}</h1>
+
 <div class="tiles">
+<!-- Show chapters of the same language -->
 {% for chapter in site.chapters %}
+  {% if chapter.lang == page.lang %}
   <li>
     <img src="{{ chapter.thumbnail-path }}" alt="{{ chapter.title }}"/>
-    <a href="{{ chapter.url }}">{{ chapter.title }}</a>
+    <a href="{{ chapter.url }}">{{ chapter.title }} {{ chapter.lang }}</a>
     <p>{{ chapter.short-description }}</p>
   </li>
+  {% endif %}
 {% endfor %}
-</div><!-- /.tiles -->
+</div>

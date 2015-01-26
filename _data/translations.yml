@@ -1,0 +1,17 @@
+# Page Titles
+en:
+  story:
+    title: "The Story"
+  landing-page:
+    title: 'Some Title'
+de:
+  story:
+    title: "Die Geschichte"
+  landing-page:
+    title: 'Ein Titel'
+
+all-posts:
+  en:
+    home: "All Posts"
+  de:
+    home: "Alle Posts"

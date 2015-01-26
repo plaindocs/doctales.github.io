@@ -1,8 +1,30 @@
 <header id="masthead">
   <div class="inner-wrap">
     <a href="{{ site.url }}/" class="site-title">{{ site.title }}</a>
+    
+    <!-- Works, but only for chapters -->
+    <p>chapters:</p>
+    {% assign chapters=site.chapters | where:"name", page.name | sort: 'path' %}
+    <ul>
+      {% for chapter in chapters %}
+        <li class="lang">
+          <a href="{{ chapter.url }}" class="{{ chapter.lang }}">{{ chapter.lang }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <p>posts:</p>
+    {% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
+    <ul>
+      {% for post in posts %}
+        <li class="lang">
+          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    
     <nav role="navigation" class="menu top-menu">
         {% include navigation.html %}
     </nav>
-  </div><!-- /.inner-wrap -->
-</header><!-- /.masthead -->
+  </div>
+</header>

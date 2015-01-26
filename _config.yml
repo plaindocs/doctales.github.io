@@ -1,3 +1,7 @@
+# This is the main configuration file of the website
+# Changes of variables require a restart of Jekyll
+
+
 # Site wide configuration
 
 title: doctales
@@ -7,12 +11,27 @@ teaser: doctales-logo.png # 400x250 px default teaser image used in image archiv
 locale:
 # url: http://doctales.github.io
 
-# Jekyll configuration
+# Defaults
+defaults:
+  -
+    scope:
+      path: _posts/en
+    values:
+      layout: default
+      lang: en
+  -
+    scope:
+      path: _posts/de
+    values:
+      layout: default
+      lang: de
 
+# Jekyll configuration
 sass:
     sass_dir: _sass
     style: compressed
-permalink: /:categories/:title/
+permalink: /:title/
+# permalink: /:categories/:title/
 markdown: kramdown
 highlighter: pygments
 gems:
@@ -22,7 +41,10 @@ gems:
 collections:
   chapters:
     output: true
-    permalink: /chapters/:path/
+    permalink: /chapters/:categories/:path/
+  landing:
+    output: true
+    permalink: /landing/:categories/:path/
 
 
 # Site owner
@@ -33,7 +55,8 @@ owner:
   google:
     ad-client: 
     ad-slot: 
-  bio: 
+  bio:
+
 # avatar: bio-photo.jpg # 160x160 px image for author byline
 
 # disqus-shortname: doctales
@@ -43,4 +66,4 @@ owner:
       short_name : doctales
 
 
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json", "*.xpr"]
