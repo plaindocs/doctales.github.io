@@ -41,10 +41,19 @@ gems:
 collections:
   chapters:
     output: true
-    permalink: /chapters/:categories/:path/
+    permalink: /chapters/:path/
+  howtos:
+    output: true
+    permalink: /howtos/:path/  
+  knowledge:
+    output: true
+    permalink: /knowledge/:path/
   landing:
     output: true
-    permalink: /landing/:categories/:path/
+    permalink: /landing/:path/
+  index:
+    output: true
+    permalink: /index/:path/
 
 
 # Site owner

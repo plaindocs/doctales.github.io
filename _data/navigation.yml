@@ -1,9 +1,17 @@
 # Site navigation links
 
 - title: Die Geschichte
-  url: /story/
+  url: /chapters/
   excerpt: "Hier beginnt die Geschichte in navigation.yml"
   image: doctales-logo.svg
+- title: Wiki
+  url: /knowledge/
+  excerpt: ""
+  image: doctales-logo.svg
+- title: Tutorials
+  url: /howtos/
+  excerpt: ""
+  image: doctales-logo.svg    
 - title: Über Uns
   url: /about/
   excerpt: "Auf dieser Seite erfahren Sie alles über das Doctales-Team."

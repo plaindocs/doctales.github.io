@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /
-name: start
+name: index
 lang: de
 image:
   teaser: 
@@ -10,7 +10,6 @@ image:
   creditlink: 
 ---
 
-<!--
 <style type="text/css">
 .en:lang(en), .de:lang(fr) {
   font-weight: bold;
@@ -32,7 +31,7 @@ h1 {
 <a href="index/de/index.html" class="btn">Deutsch</a>
 <a href="index/en/index.html" class="btn">Englisch</a>
 
-
+<!--
 <div class="tiles">
   {% for post in site.posts %}
     {% include post-grid.html %}

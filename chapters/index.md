@@ -1,7 +1,7 @@
 ---
 layout: article
 lang: de
-name: story
+name: chapters
 date: 
 modified:
 excerpt: Excerpt
