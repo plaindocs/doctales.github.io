@@ -19,8 +19,9 @@ ads: false
 {% for knowledgepage in site.knowledge %}
   {% if knowledgepage.lang == page.lang %}
   <li>
-    <img src="{{ knowledgepage.thumbnail-path }}" alt="{{ knowledgepage.title }}"/>
-    <a href="{{ knowledgepage.url }}">{{ knowledgepage.title }} {{ knowledgepage.lang }}</a>
+    <!--<img src="{{ knowledgepage.thumbnail-path }}" alt="{{ knowledgepage.title }}"/>-->
+    <!--<a href="{{ knowledgepage.url }}">{{ knowledgepage.title }} {{ knowledgepage.lang }}</a>-->
+    <a href="{{ knowledgepage.url }}">{{ knowledgepage.title }}</a>
     <p>{{ knowledgepage.short-description }}</p>
   </li>
   {% endif %}

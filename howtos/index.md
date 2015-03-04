@@ -19,8 +19,9 @@ ads: false
 {% for howto in site.howtos %}
   {% if howto.lang == page.lang %}
   <li>
-    <img src="{{ howto.thumbnail-path }}" alt="{{ howto.title }}"/>
-    <a href="{{ howto.url }}">{{ howto.title }} {{ howto.lang }}</a>
+    <!--<img src="{{ howto.thumbnail-path }}" alt="{{ howto.title }}"/>-->
+    <!--<a href="{{ howto.url }}">{{ howto.title }} {{ howto.lang }}</a>-->
+    <a href="{{ howto.url }}">{{ howto.title }}</a>
     <p>{{ howto.short-description }}</p>
   </li>
   {% endif %}

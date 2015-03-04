@@ -16,13 +16,16 @@ ads: false
 
 <div class="tiles">
 <!-- Show chapters of the same language -->
+<ol>
 {% for chapter in site.chapters %}
   {% if chapter.lang == page.lang %}
   <li>
-    <img src="{{ chapter.thumbnail-path }}" alt="{{ chapter.title }}"/>
-    <a href="{{ chapter.url }}">{{ chapter.title }} {{ chapter.lang }}</a>
+    <!--<img src="{{ chapter.thumbnail-path }}" alt="{{ chapter.title }}"/>-->
+    <!--<a href="{{ chapter.url }}">{{ chapter.title }} {{ chapter.lang }}</a>-->
+    <a href="{{ chapter.url }}">{{ chapter.title }}</a>
     <p>{{ chapter.short-description }}</p>
   </li>
   {% endif %}
 {% endfor %}
+</ol>
 </div>

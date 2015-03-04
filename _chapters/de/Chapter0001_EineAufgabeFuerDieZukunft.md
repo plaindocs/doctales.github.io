@@ -15,15 +15,7 @@ creditlink:
   
 # Eine Aufgabe für die Zukunft
   
-    Ein neuer Tag, ein neuer Job. Um 6 klingelt der Wecker und erlöst Ben aus einer schlaflosen
-      Nacht. Heute tritt er seine neue Stelle als Technischer Redakteur an. So viel ging Ben in der
-      Dunkelheit durch den Kopf. Auch als der erste Becher Kaffee angesetzt ist, fragen die inneren
-      Stimmern weiter die immer gleichen Fragen:
-      "Wie
-      wird es sein in der neuen Firma? Kannst du die an dich gestellten Erwartungen erfüllen oder
-      hast du dich beim Bewerbungsgespräch mit deinen IT-Fähigkeiten doch ein wenig zu weit aus dem
-      Fenster
-      gelehnt?"
+    Ein neuer Tag, ein neuer Job. Um 6 klingelt der Wecker und erlöst Ben aus einer schlaflosen Nacht. Heute tritt er seine neue Stelle als Technischer Redakteur an. So viel ging Ben in der Dunkelheit durch den Kopf. Auch als der erste Becher Kaffee angesetzt ist, fragen die inneren Stimmern weiter die immer gleichen Fragen: "Wie wird es sein in der neuen Firma? Kannst du die an dich gestellten Erwartungen erfüllen oder hast du dich beim Bewerbungsgespräch mit deinen IT-Fähigkeiten doch ein wenig zu weit aus dem Fenster gelehnt?"
 
     Für seine
       bisherige Stelle
