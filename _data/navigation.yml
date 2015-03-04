@@ -2,17 +2,17 @@
 
 - title: Die Geschichte
   url: /chapters/
-  excerpt: "Hier beginnt die Geschichte in navigation.yml"
-  image: doctales-logo.svg
+  excerpt: "Hier beginnt die Geschichte"
+  image: doctales-story.svg
 - title: Wiki
   url: /knowledge/
-  excerpt: ""
-  image: doctales-logo.svg
+  excerpt: "Schlaue Wissensartikel"
+  image: doctales-knowledge.svg
 - title: Tutorials
   url: /howtos/
-  excerpt: ""
-  image: doctales-logo.svg    
+  excerpt: "Spannende Tutorials"
+  image: doctales-howto.svg    
 - title: Über Uns
   url: /about/
-  excerpt: "Auf dieser Seite erfahren Sie alles über das Doctales-Team."
-  image: doctales-logo.svg
+  excerpt: "Das Doctales-Team"
+  image: doctales-about.svg
