@@ -1,9 +1,10 @@
 ---
 layout: article
-title: ""
+lang: de
+name: about
 date: 
 modified:
-excerpt:
+excerpt: Excerpt
 image:
   feature: 
   teaser: 
@@ -14,3 +15,4 @@ ads: false
 <h1>{{ site.data.translations.[page.lang].about.title }}</h1>
 
 ...
+
