@@ -1,10 +1,22 @@
 # Page Titles
 en:
+  about:
+    title: "About Us"
+  howto:
+    title: "Howtos"
+  knowledge:
+    title: "Knowledge"  
   story:
     title: "The Story"
   landing-page:
     title: 'Some Title'
 de:
+  about:
+    title: "Über Uns"
+  howto:
+    title: "Tutorials"
+  knowledge:
+    title: "Wiki"  
   story:
     title: "Die Geschichte"
   landing-page:

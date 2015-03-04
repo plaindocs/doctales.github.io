@@ -11,4 +11,6 @@ image:
 ads: false
 ---
 
-# Über Uns
+<h1>{{ site.data.translations.[page.lang].about.title }}</h1>
+
+...
