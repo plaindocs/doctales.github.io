@@ -15,16 +15,16 @@ locale:
 defaults:
   -
     scope:
-      path: _posts/en
+      path: _posts/en-us
     values:
       layout: default
-      lang: en
+      lang: en-us
   -
     scope:
-      path: _posts/de
+      path: _posts/de-de
     values:
       layout: default
-      lang: de
+      lang: de-de
 
 # Jekyll configuration
 sass:

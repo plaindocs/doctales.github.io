@@ -1,6 +1,6 @@
 ---
 layout: article
-lang: de
+lang: de-de
 name: chapters
 date: 
 modified:
