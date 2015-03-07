@@ -21,7 +21,3 @@ Hier wird beschrieben, wie Sie ein Ant-Skript starten.
 
 Übergeordnetes Thema: Ant
 
-
-
-# Zugehörige Konzepte
-Ant
