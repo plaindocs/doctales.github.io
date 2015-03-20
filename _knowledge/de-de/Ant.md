@@ -24,12 +24,9 @@ Ant ist eine Build-Management-Software. Mit Ant können beispielsweise Programme
     Abhängigkeiten zueinander haben. Auf diese Weise lassen sich komplexe wiederkehrende Abläufe
     festlegen, die einfach ausgeführt werden können.
 
-Ant-Skripte sind XML-Dateien. Üblicherweise lautet der Dateiname eines Ant-Skriptes
-        build.xml, das muss aber nicht so sein.[gooole]
+Ant-Skripte sind XML-Dateien. Üblicherweise lautet der Dateiname eines Ant-Skriptes build.xml, das muss aber nicht so sein.[gooole]
 
-Direkter Link zum Howto: [Ant-Skript startenHier wird beschrieben, wie Sie ein Ant-Skript starten.]
-
-Key Link zum Howto: [Ant Skript startenHier wird beschrieben, wie Sie ein Ant-Skript starten.]
+[Ant Skript startenHier wird beschrieben, wie Sie ein Ant-Skript starten.]
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -44,11 +41,6 @@ Key Link zum Howto: [Ant Skript startenHier wird beschrieben, wie Sie ein Ant-Sk
 </project>    
 
 {% endhighlight %}
-
-
-
-Ant-Skript starten
-Hier wird beschrieben, wie Sie ein Ant-Skript starten.
 
 
 

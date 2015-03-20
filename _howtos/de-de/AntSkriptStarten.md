@@ -18,6 +18,3 @@ Hier wird beschrieben, wie Sie ein Ant-Skript starten.
 
 1. Öffnen Sie ein Terminal-Fenster.
 1. Geben Sie folgenden Befehl ein:`ant [target]`
-
-Übergeordnetes Thema: Ant
-
