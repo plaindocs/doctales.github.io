@@ -2,7 +2,7 @@
 layout: article
 title: Wegweiser durch den DITA-Informationsdschungel
 name: concept_pgl_vgp_2r
-lang: de-DE
+lang: de-de
 excerpt: Ben hat erste Gespräche geführt und die dokumentarische Lage bei Audiofashion
   aufgearbeitet. Die Idee, DITA zu verwenden, hat sich ihm aufgedrängt. Aber eignet sich der
   Standard wirklich für das Unternehmen? Er muss erstmal mehr darüber in Erfahrung
