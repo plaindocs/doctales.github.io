@@ -1,78 +1,27 @@
-# This is the main configuration file of the website
-# Changes of variables require a restart of Jekyll
-
-
-# Site wide configuration
-
+# Site settings
 title: doctales
+email: stefan.eike@mailbox.org
+
+
+# Write an awesome description for your new site here. You can edit this
+# line in _config.yml. It will appear in your document head meta (for
+# Google search results) and in your feed.xml site description.
+
 description: doctales is a team of DITA users and developers who share plugins and knowledge to gather and share DITA experience and spread the word.
 logo: doctales-logo.svg # 120x120 px default image used for Twitter summary card
 teaser: doctales-logo.png # 400x250 px default teaser image used in image archive grid
-locale:
+locale: de
 # url: http://doctales.github.io
+baseurl: /
 
-# Defaults
-defaults:
-  -
-    scope:
-      path: _posts/en-us
-    values:
-      layout: default
-      lang: en-us
-  -
-    scope:
-      path: _posts/de-de
-    values:
-      layout: default
-      lang: de-de
-
-# Jekyll configuration
-sass:
-    sass_dir: _sass
-    style: compressed
-permalink: /:title/
-# permalink: /:categories/:title/
+# Build settings
 markdown: kramdown
-highlighter: pygments
-gems:
-  - jekyll-sitemap
-  
-# Collections
-collections:
-  chapters:
-    output: true
-    permalink: /chapters/:path/
-  howtos:
-    output: true
-    permalink: /howtos/:path/  
-  knowledge:
-    output: true
-    permalink: /knowledge/:path/
-  landing:
-    output: true
-    permalink: /landing/:path/
-  index:
-    output: true
-    permalink: /index/:path/
 
-
-# Site owner
-owner:
-  name: doctales team
-  email:
-  twitter:
-  google:
-    ad-client: 
-    ad-slot: 
-  bio:
-
-# avatar: bio-photo.jpg # 160x160 px image for author byline
+# Handling Reading
+encoding:     "utf-8"
 
 disqus-shortname: doctale
 #  comments:
 #    provider: disqus
 #    disqus:
 #      short_name : doctale
-
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json", "*.xpr"]

@@ -1,18 +1,18 @@
 # Site navigation links
 
 - title: Die Geschichte
-  url: /chapters/
+  url: /landing/story.html
   excerpt: "Hier beginnt die Geschichte"
   image: doctales-story.svg
 - title: Wiki
-  url: /knowledge/
+  url: /landing/knowledge.html
   excerpt: "Schlaue Wissensartikel"
   image: doctales-knowledge.svg
 - title: Tutorials
-  url: /howtos/
+  url: /landing/howtos.html
   excerpt: "Spannende Tutorials"
   image: doctales-howto.svg    
 - title: Über Uns
-  url: /about/
+  url: /landing/about.html
   excerpt: "Das Doctales-Team"
   image: doctales-about.svg
