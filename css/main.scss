@@ -2,54 +2,62 @@
 sitemap: false
 ---
 
-/*
- *
- *  Skinny Bones Jekyll Starter
- *
- *  Designer: Michael Rose
- *  Twitter: http://twitter.com/mmistakes
- *
-*/
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-@import "variables";
+// Core variables and mixins
+// Do not use the default variables but the customized doctales
+// version generated using lavish and the doctales logo.
+@import "stylesheets/bootstrap/variables";
+// @import "stylesheets/variables";
+@import "stylesheets/bootstrap/mixins";
 
-/*
-   Vendor
-   ========================================================================== */
+// Reset and dependencies
+@import "stylesheets/bootstrap/normalize";
+@import "stylesheets/bootstrap/print";
+@import "stylesheets/bootstrap/glyphicons";
 
-@import "vendor/bourbon/bourbon";
-@import "grid-settings";
-@import "vendor/neat/neat";
-@import "vendor/font-awesome/font-awesome";
+// Core CSS
+@import "stylesheets/bootstrap/scaffolding";
+@import "stylesheets/bootstrap/type";
+@import "stylesheets/bootstrap/code";
+@import "stylesheets/bootstrap/grid";
+@import "stylesheets/bootstrap/tables";
+@import "stylesheets/bootstrap/forms";
+@import "stylesheets/bootstrap/buttons";
 
-/*
-   Global
-   ========================================================================== */
+// Components
+@import "stylesheets/bootstrap/component-animations";
+@import "stylesheets/bootstrap/dropdowns";
+@import "stylesheets/bootstrap/button-groups";
+@import "stylesheets/bootstrap/input-groups";
+@import "stylesheets/bootstrap/navs";
+@import "stylesheets/bootstrap/navbar";
+@import "stylesheets/bootstrap/breadcrumbs";
+@import "stylesheets/bootstrap/pagination";
+@import "stylesheets/bootstrap/pager";
+@import "stylesheets/bootstrap/labels";
+@import "stylesheets/bootstrap/badges";
+@import "stylesheets/bootstrap/jumbotron";
+@import "stylesheets/bootstrap/thumbnails";
+@import "stylesheets/bootstrap/alerts";
+@import "stylesheets/bootstrap/progress-bars";
+@import "stylesheets/bootstrap/media";
+@import "stylesheets/bootstrap/list-group";
+@import "stylesheets/bootstrap/panels";
+@import "stylesheets/bootstrap/responsive-embed";
+@import "stylesheets/bootstrap/wells";
+@import "stylesheets/bootstrap/close";
 
-@import "mixins";
-@import "reset";
-@import "base";
+// Components w/ JavaScript
+@import "stylesheets/bootstrap/modals";
+@import "stylesheets/bootstrap/tooltip";
+@import "stylesheets/bootstrap/popovers";
+@import "stylesheets/bootstrap/carousel";
 
-/*
-   Components
-   ========================================================================== */
-
-@import "helpers";
-@import "buttons";
-@import "badges";
-@import "bullets";
-@import "sliding-menu";
-@import "menu-navicons"; /* animated 3 line menu icon */
-@import "notices";
-@import "animations";
-@import "tiles";
-@import "footnotes";
-@import "toc"; /* table of contents */
-@import "breadcrumbs";
-@import "syntax";
-
-/*
-   Page specific
-   ========================================================================== */
-
-@import "layout";
+// Utility classes
+@import "stylesheets/bootstrap/utilities";
+@import "stylesheets/bootstrap/responsive-utilities";
