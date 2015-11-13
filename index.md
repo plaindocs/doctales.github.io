@@ -21,5 +21,4 @@ image:
 </nav>
 <main class="col-md-9">
   <img src="images/doctales-logo.svg" style="width:100%;"/>
-  <h1 class="title topictitle1" id="ariaid-title1">Ant-Skript starten</h1>
 </main>
