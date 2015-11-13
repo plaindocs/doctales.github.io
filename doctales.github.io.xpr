@@ -9,6 +9,5 @@
         <folder path="."/>
         <folder path="../documentation-theme-jekyll/"/>
         <folder path="../org.doctales.story/"/>
-        <file name="_sass/_footnotes.scss"/>
     </projectTree>
 </project>

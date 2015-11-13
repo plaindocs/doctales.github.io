@@ -4343,21 +4343,20 @@ a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #337ab7; }
 
-.alert, .note {
+.alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; }
-  .alert h4, .note h4 {
+  .alert h4 {
     margin-top: 0;
     color: inherit; }
-  .alert .alert-link, .note .alert-link {
+  .alert .alert-link {
     font-weight: bold; }
-  .alert > p, .note > p,
-  .alert > ul,
-  .note > ul {
+  .alert > p,
+  .alert > ul {
     margin-bottom: 0; }
-  .alert > p + p, .note > p + p {
+  .alert > p + p {
     margin-top: 5px; }
 
 .alert-dismissable,
@@ -4388,22 +4387,22 @@ a.thumbnail.active {
   .alert-info .alert-link {
     color: #245269; }
 
-.alert-warning, .note .warning {
+.alert-warning {
   background-color: #fcf8e3;
   border-color: #faebcc;
   color: #8a6d3b; }
-  .alert-warning hr, .note .warning hr {
+  .alert-warning hr {
     border-top-color: #f7e1b5; }
-  .alert-warning .alert-link, .note .warning .alert-link {
+  .alert-warning .alert-link {
     color: #66512c; }
 
-.alert-danger, .note .danger {
+.alert-danger {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442; }
-  .alert-danger hr, .note .danger hr {
+  .alert-danger hr {
     border-top-color: #e4b9c0; }
-  .alert-danger .alert-link, .note .danger .alert-link {
+  .alert-danger .alert-link {
     color: #843534; }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -5796,5 +5795,110 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.note .danger {
-  background-color: green !important; }
+div.alert-attention {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  div.alert-attention hr {
+    border-top-color: #e4b9c0; }
+  div.alert-attention .alert-link {
+    color: #843534; }
+
+div.alert-caution {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  div.alert-caution hr {
+    border-top-color: #e4b9c0; }
+  div.alert-caution .alert-link {
+    color: #843534; }
+
+div.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  div.alert-danger hr {
+    border-top-color: #e4b9c0; }
+  div.alert-danger .alert-link {
+    color: #843534; }
+
+div.alert-important {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  div.alert-important hr {
+    border-top-color: #e4b9c0; }
+  div.alert-important .alert-link {
+    color: #843534; }
+
+div.alert-note {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  div.alert-note hr {
+    border-top-color: #a6e1ec; }
+  div.alert-note .alert-link {
+    color: #245269; }
+
+div.alert-notice {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  div.alert-notice hr {
+    border-top-color: #a6e1ec; }
+  div.alert-notice .alert-link {
+    color: #245269; }
+
+div.alert-tip {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  div.alert-tip hr {
+    border-top-color: #a6e1ec; }
+  div.alert-tip .alert-link {
+    color: #245269; }
+
+div.alert-warning {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  div.alert-warning hr {
+    border-top-color: #e4b9c0; }
+  div.alert-warning .alert-link {
+    color: #843534; }
+
+/* search area */
+#search-demo-container ul#results-container {
+  list-style: none;
+  font-size: 12px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+  left: 20px;
+  z-index: 5;
+  width: 223px;
+  border-left: 1px solid #dedede;
+  box-shadow: 2px 3px 2px #dedede; }
+
+ul#results-container a {
+  background-color: transparent; }
+
+ul#results-container a:hover {
+  color: black; }
+
+#search-demo-container a:hover {
+  color: black; }
+
+#search-input {
+  padding: .5em;
+  margin-left: 20px;
+  width: 20em;
+  font-size: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 10px; }
+
+/* end search */

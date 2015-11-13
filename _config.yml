@@ -13,6 +13,8 @@ teaser: doctales-logo.png # 400x250 px default teaser image used in image archiv
 locale: de
 # url: http://doctales.github.io
 baseurl: /
+# permalink: /:categories/:title/
+permalink: /
 
 # Build settings
 markdown: kramdown
