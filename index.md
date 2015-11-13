@@ -14,7 +14,7 @@ image:
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="dita/story/de-de/Story.html">DocTales - Abenteuerliche Geschichten aus der DITA-Welt</a></li>
+      <li><a href="dita/story/de-de/Story.html">DocTales Story</a></li>
       <li><a href="dita/knowledge/de-de/Knowledge.html">Doctales Wiki</a></li>
     </ul>
   </div>

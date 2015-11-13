@@ -36,11 +36,10 @@
       })
     </script>
     
-    
-    
       
     
     
+      
     
   </head>
   <body>
@@ -99,17 +98,13 @@
         </ul>
         <!-- Sample Dropdown -->
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="/dita/story/de-de/Story.html">DocTales - Abenteuerliche Geschichten aus der DITA-Welt</a></li>
               <li><a href="/dita/knowledge/de-de/Knowledge.html">Doctales Wiki</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <!--<li role="separator" class="divider"></li>-->
+              <!--<li><a href="#">Separated link</a></li>-->
             </ul>
           </li>
         </ul>
@@ -121,66 +116,51 @@
       <div class="col-md-3">&nbsp;</div>
       <!-- Content Row -->
 <div class="row">
-    <!-- Sidebar Column -->
-    <div class="col-md-3">
-
-        <script>
-
-            $(document).ready(function() {
-                        // Initialize navgoco with default options
-                        $("#mysidebar").navgoco({
-                            caretHtml: '',
-                            accordion: true,
-                            openClass: 'active', // open
-                            save: false, // leave false or nav highlighting doesn't work right
-                            cookie: {
-                                name: 'navgoco',
-                                expires: false,
-                                path: '/'
-                        },
-                        slide: {
-                            duration: 400,
-                            easing: 'swing'
-                                }
-                                });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-            });
-
-        </script>
-
-
-        
+  <!-- Sidebar Column -->
+  <div class="col-md-3">
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Initialize navgoco with default options
+        $("#mysidebar").navgoco({
+          caretHtml: '',
+          accordion: true,
+          openClass: 'active', // open
+          save: false, // leave false or nav highlighting doesn't work right
+          cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+          },
+          slide: {
+            duration: 400,
+            easing: 'swing'
+          }
+        });
+        $("#collapseAll").click(function(e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco('toggle', false);
+        });
+        $("#expandAll").click(function(e) {
+          e.preventDefault();
+          $("#mysidebar").navgoco('toggle', true);
+        });
+      });
+    </script>
+    
 
 
 
-
-        <ul id="mysidebar" class="nav">
-
-            <span class="siteTagline"></span>
-            <span class="versionTagline"></span>
-
-            
-
-
-   <!-- if you aren't using the accordion, uncomment this block:
-
-        <p class="external">
-            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-        </p>
-    -->
-
+    <ul id="mysidebar" class="nav">
+      <span class="siteTagline"></span>
+      <span class="versionTagline"></span>
+      
+     <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+           <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+     -->
     </div>
-       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
     <script>$("li.active").parents('li').toggleClass("active");</script>
 
       <!-- Content Column -->
@@ -227,7 +207,7 @@ $('#toc').on('click', 'a', function() {
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="dita/story/de-de/Story.html">DocTales - Abenteuerliche Geschichten aus der DITA-Welt</a></li>
+      <li><a href="dita/story/de-de/Story.html">DocTales Story</a></li>
       <li><a href="dita/knowledge/de-de/Knowledge.html">Doctales Wiki</a></li>
     </ul>
   </div>
@@ -277,8 +257,8 @@ $('#toc').on('click', 'a', function() {
 </footer>
 
       </div><!-- /.row -->
-    </div>    <!-- /.container -->
+    </div>
+    <!-- /.container -->
   </body>
   
 </html>
-  
