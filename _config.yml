@@ -10,7 +10,7 @@ email: stefan.eike@mailbox.org
 description: doctales is a team of DITA users and developers who share plugins and knowledge to gather and share DITA experience and spread the word.
 logo: doctales-logo.svg # 120x120 px default image used for Twitter summary card
 teaser: doctales-logo.png # 400x250 px default teaser image used in image archive grid
-locale: de
+locale: en-us
 # url: http://doctales.github.io
 baseurl: /
 # permalink: /:categories/:title/

@@ -14,8 +14,10 @@ image:
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="dita/story/de-de/Story.html">DocTales Story</a></li>
-      <li><a href="dita/knowledge/de-de/Knowledge.html">Doctales Wiki</a></li>
+      <li><a href="dita/wiki/Wiki/index.html">DocTales Wiki</a></li>
+      <li><a href="dita/plugins/Plugins/index.html">Doctales Plugins</a></li>
+      <li><a href="dita/blog/Blog/index.html">Doctales Blog</a></li>
+      <li><a href="dita/about-us/AboutUs/index.html">Doctales About Us</a></li>
     </ul>
   </div>
 </nav>

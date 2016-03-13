@@ -78,7 +78,7 @@
             <!-- start search -->
             <div id="search-demo-container">
               <input type="text" id="search-input" placeholder="Suche">
-              <ul id="results-container"></ul>
+                <ul id="results-container"></ul>
             </div>
             <script src="/js/jekyll-search.js" type="text/javascript"></script>
             <script type="text/javascript">
@@ -118,51 +118,66 @@
 <div class="row">
   <!-- Sidebar Column -->
   <div class="col-md-3">
-    <script type="text/javascript">
+    
+    <script>
+      
       $(document).ready(function() {
-        // Initialize navgoco with default options
-        $("#mysidebar").navgoco({
-          caretHtml: '',
-          accordion: true,
-          openClass: 'active', // open
-          save: false, // leave false or nav highlighting doesn't work right
-          cookie: {
-            name: 'navgoco',
-            expires: false,
-            path: '/'
-          },
-          slide: {
-            duration: 400,
-            easing: 'swing'
-          }
-        });
-        $("#collapseAll").click(function(e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco('toggle', false);
-        });
-        $("#expandAll").click(function(e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco('toggle', true);
-        });
+      // Initialize navgoco with default options
+      $("#mysidebar").navgoco({
+      caretHtml: '',
+      accordion: true,
+      openClass: 'active', // open
+      save: false, // leave false or nav highlighting doesn't work right
+      cookie: {
+      name: 'navgoco',
+      expires: false,
+      path: '/'
+      },
+      slide: {
+      duration: 400,
+      easing: 'swing'
+      }
       });
+      
+      $("#collapseAll").click(function(e) {
+      e.preventDefault();
+      $("#mysidebar").navgoco('toggle', false);
+      });
+      
+      $("#expandAll").click(function(e) {
+      e.preventDefault();
+      $("#mysidebar").navgoco('toggle', true);
+      });
+      
+      });
+      
     </script>
+    
+    
     
 
 
 
+    
     <ul id="mysidebar" class="nav">
+      
       <span class="siteTagline"></span>
       <span class="versionTagline"></span>
       
-     <!-- if you aren't using the accordion, uncomment this block:
-         <p class="external">
-           <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-         </p>
-     -->
-    </div>
-    <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
-    <script>$("li.active").parents('li').toggleClass("active");</script>
-
+      
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+          
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+        
+  </div>
+  <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+  <script>$("li.active").parents('li').toggleClass("active");</script>
+  
       <!-- Content Column -->
       <div class="col-md-12">
         <!-- 2015-11-13 - Hide post-header, because otherwise the title appears twice on page - Doctales -->
@@ -207,8 +222,10 @@ $('#toc').on('click', 'a', function() {
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="dita/story/de-de/Story.html">DocTales Story</a></li>
-      <li><a href="dita/knowledge/de-de/Knowledge.html">Doctales Wiki</a></li>
+      <li><a href="dita/wiki/Wiki/index.html">DocTales Wiki</a></li>
+      <li><a href="dita/plugins/Plugins/index.html">Doctales Plugins</a></li>
+      <li><a href="dita/blog/Blog/index.html">Doctales Blog</a></li>
+      <li><a href="dita/about-us/AboutUs/index.html">Doctales About Us</a></li>
     </ul>
   </div>
 </nav>
@@ -231,7 +248,7 @@ $('#toc').on('click', 'a', function() {
   <div class="row">
     <div class="col-lg-12 footer">
       &copy;2015 Doctales. All rights reserved.<br />
-       Site last generated: Nov 13, 2015 <br />
+       Site last generated: Mar 13, 2016 <br />
     </div>
   </div>
 <!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
