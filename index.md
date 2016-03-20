@@ -3,6 +3,7 @@ layout: page
 permalink: /
 name: start
 lang: de
+title: "Welcome"
 image:
   teaser: 
   feature: doctales-logo.svg
