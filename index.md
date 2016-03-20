@@ -14,10 +14,10 @@ image:
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="dita/wiki/Wiki/index.html">DocTales Wiki</a></li>
-      <li><a href="dita/plugins/Plugins/index.html">Doctales Plugins</a></li>
-      <li><a href="dita/blog/Blog/index.html">Doctales Blog</a></li>
-      <li><a href="dita/about-us/AboutUs/index.html">Doctales About Us</a></li>
+      <li><a href="wiki/Wiki.html">DocTales Wiki</a></li>
+      <li><a href="plugins/Plugins.html">Doctales Plugins</a></li>
+      <li><a href="blog/Blog.html">Doctales Blog</a></li>
+      <li><a href="about-us/AboutUs.html">Doctales About Us</a></li>
     </ul>
   </div>
 </nav>

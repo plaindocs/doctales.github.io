@@ -2,41 +2,19 @@
 title: doctales
 email: stefan.eike@mailbox.org
 
-
-# Write an awesome description for your new site here. You can edit this
-# line in _config.yml. It will appear in your document head meta (for
-# Google search results) and in your feed.xml site description.
-
+name: DOCTALES
 description: doctales is a team of DITA users and developers who share plugins and knowledge to gather and share DITA experience and spread the word.
 logo: doctales-logo.svg # 120x120 px default image used for Twitter summary card
 teaser: doctales-logo.png # 400x250 px default teaser image used in image archive grid
-locale: en-us
-# url: http://doctales.github.io
-baseurl: /
+
+safe: true
+lsi: false
 highlighter: rouge
-permalink: /:categories/:title/
-# permalink: /
-
-# Collections
-collections:
-  blog:
-    output: true
-    permalink: /blog/:path/
-  about-us:
-    output: true
-    permalink: /about-us/:path/  
-  plugins:
-    output: true
-    permalink: /plugins/:path/
-  wiki:
-    output: true
-    permalink: /wiki/:path/
-
-# Build settings
 markdown: kramdown
-
-# Handling Reading
-encoding:     "utf-8"
+baseurl: ""
+sass:
+    style: compressed
+    sass_dir: _sass
 
 disqus-shortname: doctale
 #  comments:

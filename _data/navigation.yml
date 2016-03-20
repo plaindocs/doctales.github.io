@@ -1,11 +1,11 @@
 # Site navigation links
 
 - title: Die Geschichte
-  url: /dita/story/de-de/Story.html
+  url: /story/de-de/Story.html
   excerpt: "Hier beginnt die Geschichte"
   image: doctales-story.svg
 - title: Wiki
-  url: /dita/knowledge/de-de/Knowledge.html
+  url: /knowledge/de-de/Knowledge.html
   excerpt: "Schlaue Wissensartikel"
   image: doctales-knowledge.svg
 # - title: Tutorials
