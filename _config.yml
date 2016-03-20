@@ -15,8 +15,8 @@ sass:
     style: compressed
     sass_dir: _sass
 
-disqus-shortname: doctale
-  comments:
-    provider: disqus
-    disqus:
-      short_name : doctale
+# Disqus
+comments :
+  provider : disqus
+  disqus :
+    short_name : doctale
