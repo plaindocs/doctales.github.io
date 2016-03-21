@@ -15,10 +15,10 @@ image:
 <nav class="col-md-3">
   <div class="well well-sm">
     <ul class="nav bs-docs-sidenav">
-      <li><a href="wiki/Wiki.html">DocTales Wiki</a></li>
-      <li><a href="plugins/Plugins.html">Doctales Plugins</a></li>
-      <li><a href="blog/Blog.html">Doctales Blog</a></li>
-      <li><a href="about-us/AboutUs.html">Doctales About Us</a></li>
+      <li><a href="blog/Blog.html">Blog</a></li>
+      <li><a href="wiki/Wiki.html">Wiki</a></li>
+      <li><a href="plugins/Plugins.html">Plugins</a></li>
+      <li><a href="about-us/AboutUs.html">About Us</a></li>
     </ul>
   </div>
 </nav>
