@@ -15,6 +15,16 @@ comments: true
   <p class="p">DITA is well suited to model relationships between things and is therefore also very suitable
    for terminology management. The plugin org.doctales.terminology consists of several things.</p>
   
+  <section class="section"><h2 class="title sectiontitle">Installation</h2>
+   
+   <p class="p">Install <span class="ph uicontrol">org.doctales.terminology</span> via the <span class="keyword cmdname">dita</span>
+    command:</p>
+  
+   <p class="p"><kbd class="ph userinput">dita -install
+     https://github.com/doctales/org.doctales.terminology/archive/master.zip</kbd></p>
+  
+  </section>
+  
   <section class="section"><h2 class="title sectiontitle">Doctype</h2>
    
    <p class="p">The plugin ships a new topic type called <code class="keyword markupname xmlelement">&lt;termentry&gt;</code>. The
@@ -23,11 +33,6 @@ comments: true
     acronyms and abbreviations but also deprecated ones. Further on, the
      <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> element can have multiple
      <code class="keyword markupname xmlelement">&lt;termVariant&gt;</code> elements to represent synonyms in different languages. </p>
-  
-   
-  {% highlight xml %}
-  
-  {% endhighlight %}
   
   </section>
   
@@ -43,14 +48,58 @@ comments: true
   
   </section>
   
+  
   <section class="section"><h2 class="title sectiontitle">Transformation Types</h2>
    
-   <p class="p"><span class="ph uicontrol">termchecker</span></p>
+   <p class="p">The plugin ships some transformation types, which transform your terminology base to something that can be used with other tools.</p>
   
-   <p class="p">The <span class="ph uicontrol">termchecker</span> transformation type generates a Schematron file of the
-    terminology map. The Schematron rules detect deprecated terms in a text and use Schematron quick
-    fixes to replace deprecated terms with allowed ones.</p>
+   <ul class="ul">
+    <li class="li"><strong class="ph b">termchecker</strong> - Transform the terminology to Schematron to perform automatical terminology checks.</li>
   
+    <li class="li"><strong class="ph b">tbx-min</strong> - Transform the terminology to TBX-Min to send it to your language service provider.</li>
+  
+   </ul>
+  
+   
+   <div class="sectiondiv">
+    <p class="p"><strong class="ph b">termchecker</strong></p>
+  
+    <p class="p">The <span class="ph uicontrol">termchecker</span> transformation type generates a Schematron file of the
+     terminology map. This file contains rules that detect deprecated terms in a text and offers
+     Schematron quick fixes to replace deprecated terms with allowed ones.</p>
+  
+    <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+    <p class="p">none</p>
+  
+    <p class="p"><strong class="ph b">Usage</strong></p>
+  
+    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f termchecker -o termchecker</kbd></p>
+   
+   </div>
+   
+   <div class="sectiondiv">
+    <p class="p"><strong class="ph b">tbx-min</strong></p>
+  
+    <p class="p">The <span class="ph uicontrol">tbx-min</span> transformation type transforms your terminology to a single
+     TBX-Min file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
+     language service provider.</p>
+  
+    <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+    <ul class="ul" id="concept_hsh_nfp_hv__ul_dq5_wly_kv">
+     <li class="li"><span class="keyword parmname">args.source.language</span>: The source language of your terminology</li>
+  
+     <li class="li"><span class="keyword parmname">args.target.language</span>: The target language of your terminology</li>
+  
+    </ul>
+  
+    <p class="p"><strong class="ph b">Usage</strong></p>
+  
+    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-min -Dargs.source.language="en"
+     -Dargs.target.language="de" -o tbx</kbd></p>
+   
+   </div>
   </section>
   
  </div>
