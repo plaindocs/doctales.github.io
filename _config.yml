@@ -22,3 +22,11 @@ comments :
   provider : disqus
   disqus :
     short_name : doctale
+
+# Google Analytics
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-75662756-1'
+  getclicky :
+    site_id :
