@@ -27,6 +27,6 @@ comments :
 analytics :
   provider : google
   google : 
-      tracking_id : 'UA-75662756-1'
+    tracking_id : 'UA-75662756-1'
   getclicky :
     site_id :
