@@ -5,7 +5,7 @@ layout: page
 title: "org.doctales.reveal"
 comments: true
 ---
-<meta charset="UTF-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><nav class="col-md-3" role="toc"><div class="well well-sm"><ul class="bs-docs-sidenav"><li><a href="../blog/Blog.html">Blog</a></li><li><a href="../wiki/Wiki.html">Wiki</a></li><li><a href="../plugins/Plugins.html">Plugins</a><ul class="nav nav-list"><li><a href="../plugins/org.doctales.pdf-css.html">org.doctales.pdf-css</a></li><li><a href="../plugins/org.doctales.pdf.html">org.doctales.pdf</a></li><li class="active"><a href="../plugins/org.doctales.reveal.html">org.doctales.reveal</a></li><li><a href="../plugins/org.doctales.terminology.html">org.doctales.terminology</a></li></ul></li><li><a href="../about-us/AboutUs.html">About Us</a></li></ul></div></nav><main class="col-md-9">
+<meta charset="UTF-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><nav class="col-md-3" role="toc"><div class="well well-sm"><ul class="bs-docs-sidenav"><li><a href="../wiki/Wiki.html">Wiki</a></li><li><a href="../plugins/Plugins.html">Plugins</a><ul class="nav nav-list"><li><a href="../plugins/org.doctales.pdf-css.html">org.doctales.pdf-css</a></li><li><a href="../plugins/org.doctales.pdf.html">org.doctales.pdf</a></li><li class="active"><a href="../plugins/org.doctales.reveal.html">org.doctales.reveal</a></li><li><a href="../plugins/org.doctales.terminology.html">org.doctales.terminology</a></li></ul></li><li><a href="../about-us/AboutUs.html">About Us</a></li></ul></div></nav><main class="col-md-9">
  <h1 class="title topictitle1" id="ariaid-title1">org.doctales.reveal</h1>
   
  
@@ -22,13 +22,201 @@ comments: true
   
   </section>
   
+  <section class="section"><h2 class="title sectiontitle">Usage</h2>
+   
+   <p class="p">Let's create a small presentation to figure out, how the plugin works. Create a DITA Map file for the presentation and name it <span class="ph filepath">presentation.ditamap</span>. Fill in the snippet below. It is recommended to use a normal DITA Map for your presentation. Use <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements to reference the slides. Do not nest the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements.</p>
+  
+   <div class="p"><pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map xml:lang="en-US"&gt;
+ &lt;title&gt;Presentation&lt;/title&gt;
+ &lt;topicref href="slide1.dita"/&gt;
+ &lt;topicref href="slide2.dita"/&gt;
+&lt;/map&gt;
+</code></pre></div>
+  
+   <p class="p">Now create your first slide. <span class="ph filepath">slide1.dita</span> represents a normal slide with a title and a list containing two items.</p>
+  
+   <div class="p"><pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="slide1"&gt;
+  &lt;title&gt;Slide&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;item 1&lt;/li&gt;
+      &lt;li&gt;item 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre></div>
+  
+   <p class="p">Now create your second slide. This time we want to create a slide containing two nested (vertical) slides. Each nested slide is represented by a nested <code class="keyword markupname xmlelement">&lt;topic&gt;</code>.</p>
+  
+   <div class="p"><pre class="pre codeblock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="slide2"&gt;
+  &lt;title&gt;Slide 2&lt;/title&gt;
+  &lt;topic id="slide2_1"&gt;
+    &lt;title&gt;Vertical Slide 2/1&lt;/title&gt;
+    &lt;body&gt;
+      &lt;ul&gt;
+        &lt;li&gt;item 1&lt;/li&gt;
+        &lt;li&gt;item 2&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;
+  &lt;/topic&gt;
+  &lt;topic id="slide2_2"&gt;
+    &lt;title&gt;Vertical Slide 2/2&lt;/title&gt;
+    &lt;body&gt;
+      &lt;ul&gt;
+        &lt;li&gt;item 1&lt;/li&gt;
+        &lt;li&gt;item 2&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;
+  &lt;/topic&gt;
+&lt;/topic&gt;</code></pre></div>
+  
+    <p class="p">That's all the magic. You can use all DITA elements as usual. If an element is not correctly rendered, please create an issue on <a class="xref" href="http://github.com/doctales/org.doctales.reveal" target="_blank">github.com/doctales/org.doctales.reveal</a>.</p>
+   
+  </section>
+  
+  <section class="section"><h2 class="title sectiontitle">Parameters</h2>
+    
+    <p class="p">You can set several parameters to change the appearance and behavior of the presentation.</p>
+  
+    <p class="p">To generate a presentation from the <span class="ph filepath">presentation.ditamap</span> using the theme <code class="ph codeph">solarized</code>, use the following command:</p>
+  
+    <p class="p"><kbd class="ph userinput">dita -i presentation.ditamap -f reveal -Dargs.reveal.css=solarized -o presentation</kbd></p>
+  
+    <div class="sectiondiv">
+      <ul class="ul">
+        
+        <li class="li"><span class="keyword parmname">args.reveal.css</span>: The name of the theme. If you use a custom template, the name of the theme is the filename without its file extension. Possible values: <ul class="ul">
+          <li class="li"><code class="ph codeph">beige</code></li>
+  
+          <li class="li"><code class="ph codeph">black</code></li>
+  
+          <li class="li"><code class="ph codeph">blood</code></li>
+  
+          <li class="li"><code class="ph codeph">league</code></li>
+  
+          <li class="li"><code class="ph codeph">moon</code></li>
+  
+          <li class="li"><code class="ph codeph">night</code></li>
+  
+          <li class="li"><code class="ph codeph">serif</code></li>
+  
+          <li class="li"><code class="ph codeph">simple</code></li>
+  
+          <li class="li"><code class="ph codeph">sky</code></li>
+  
+          <li class="li"><code class="ph codeph">solarized</code></li>
+  
+          <li class="li"><code class="ph codeph">whitete</code></li>
+  
+          </ul>
+   Default: <code class="ph codeph">simple</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.controls</span>: Display controls in the bottom right corner. Default: <code class="ph codeph">true</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.progress</span>: Display a presentation progress bar. Default: <code class="ph codeph">true</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.slidenumber</span>: Display the page number of the current slide. Default: <code class="ph codeph">false</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.history</span>: Push each slide change to the browser history. Default: <code class="ph codeph">false</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.keyboard</span>: Enable keyboard shortcuts for navigation. Default: <code class="ph codeph">true</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.overview</span>: Enable the slide overview mode. Default: <code class="ph codeph">true</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.center</span>: Enable the vertical centering of slides. Default: <code class="ph codeph">true</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.touch</span>: Enable touch navigation on devices with touch input. Default: <code class="ph codeph">true</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.loop</span>: Loop the presentation. Default: <code class="ph codeph">false</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.rtl</span>: Change the presentation direction to be right-to-left. Default: <code class="ph codeph">false</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.fragments</span>: Turn fragments on and off globally. Default: <code class="ph codeph">true</code>.</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.embedded</span>: Flags if the presentation is running in an embedded mode, i.e. contained within a limited portion of the screen. Default: <code class="ph codeph">false</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.autoslide</span>: Number of milliseconds between automatically
+            proceeding to the next slide, disabled when set to 0, this value can be overwritten by
+            using a data-autoslide attribute on your slides. Default: <code class="ph codeph">0</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.autoslidestoppable</span>: Stop auto-sliding after user input. Default: <code class="ph codeph">true</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.mousewheel</span>: Enable slide navigation via mouse wheel. Default: <code class="ph codeph">false</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.hideaddressbar</span>: Hide the address bar on mobile devices. Default: <code class="ph codeph">true</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.previewlinks</span>: Open links in an iframe preview overlay. Default: <code class="ph codeph">false</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.transition</span>: Set the transition style. Possible values: <ul class="ul">
+          <li class="li"><code class="ph codeph">default</code></li>
+  
+              <li class="li"><code class="ph codeph">cube</code></li>
+  
+              <li class="li"><code class="ph codeph">page</code></li>
+  
+              <li class="li"><code class="ph codeph">concave</code></li>
+  
+              <li class="li"><code class="ph codeph">zoom</code></li>
+  
+              <li class="li"><code class="ph codeph">linear</code></li>
+  
+              <li class="li"><code class="ph codeph">fade</code></li>
+  
+              <li class="li"><code class="ph codeph">none</code></li>
+  
+        </ul>
+  Default: <code class="ph codeph">default&gt;</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.transitionspeed</span>: Set the transition speed. Possible values: "default", "fast", "slow" Default: <code class="ph codeph">default</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.backgroundtransition</span>: Set the transition style for full
+            page slide backgrounds. Possible values: <ul class="ul" id="concept_umg_4jt_hv__ul_u5f_p45_4v">
+              <li class="li"><code class="ph codeph">default</code></li>
+  
+              <li class="li"><code class="ph codeph">none</code></li>
+  
+              <li class="li"><code class="ph codeph">slide</code></li>
+  
+              <li class="li"><code class="ph codeph">concave</code></li>
+  
+              <li class="li"><code class="ph codeph">conex</code></li>
+  
+              <li class="li"><code class="ph codeph">zoom</code></li>
+  
+            </ul>
+   Default: <code class="ph codeph">default</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.viewdistance</span>: Set the number of slides away from the current that are visible. Default: <code class="ph codeph">3</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.parallaxbackgroundimage</span>: Set the parallax background image. Example: "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.parallaxbackgroundsize</span>: Set the parallax background size. Example: "2100px 900px"</li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.width</span>: The 'normal' width of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units. Default: <code class="ph codeph">960</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.height</span>: The 'normal' height of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units. Default: <code class="ph codeph">700</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.margin</span>: Factor of the display size that should remain empty around the content. Default: <code class="ph codeph">0.1</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.minScale</span>: Bounds for smallest possible scale to apply to content. Default: <code class="ph codeph">0.2</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.maxScale</span>: Bounds for largest possible scale to apply to content. Default: <code class="ph codeph">1.5</code></li>
+  
+        <li class="li"><span class="keyword parmname">args.reveal.generate.vertical.slides</span>: Generate vertical slides for level 2 and below references. Default: <code class="ph codeph">true</code></li>
+  
+      </ul>
+  
+    </div>
+  </section>
+  
  </div>
   
-<nav role="navigation" class="related-links">
-  <div class="familylinks">
-  <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../plugins/Plugins.html" title="The Doctales team maintains a few DITA-OT plugins, to make DITA editing easier.">Plugins</a></div>
-  </div>
-  </nav></main><div id="disqus_thread"></div><script>
+</main><div id="disqus_thread"></div><script>
       /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables

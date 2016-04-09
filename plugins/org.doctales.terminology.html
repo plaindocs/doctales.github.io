@@ -5,7 +5,7 @@ layout: page
 title: "org.doctales.terminology"
 comments: true
 ---
-<meta charset="UTF-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><nav class="col-md-3" role="toc"><div class="well well-sm"><ul class="bs-docs-sidenav"><li><a href="../blog/Blog.html">Blog</a></li><li><a href="../wiki/Wiki.html">Wiki</a></li><li><a href="../plugins/Plugins.html">Plugins</a><ul class="nav nav-list"><li><a href="../plugins/org.doctales.pdf-css.html">org.doctales.pdf-css</a></li><li><a href="../plugins/org.doctales.pdf.html">org.doctales.pdf</a></li><li><a href="../plugins/org.doctales.reveal.html">org.doctales.reveal</a></li><li class="active"><a href="../plugins/org.doctales.terminology.html">org.doctales.terminology</a></li></ul></li><li><a href="../about-us/AboutUs.html">About Us</a></li></ul></div></nav><main class="col-md-9">
+<meta charset="UTF-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><nav class="col-md-3" role="toc"><div class="well well-sm"><ul class="bs-docs-sidenav"><li><a href="../wiki/Wiki.html">Wiki</a></li><li><a href="../plugins/Plugins.html">Plugins</a><ul class="nav nav-list"><li><a href="../plugins/org.doctales.pdf-css.html">org.doctales.pdf-css</a></li><li><a href="../plugins/org.doctales.pdf.html">org.doctales.pdf</a></li><li><a href="../plugins/org.doctales.reveal.html">org.doctales.reveal</a></li><li class="active"><a href="../plugins/org.doctales.terminology.html">org.doctales.terminology</a></li></ul></li><li><a href="../about-us/AboutUs.html">About Us</a></li></ul></div></nav><main class="col-md-9">
  <h1 class="title topictitle1" id="ariaid-title1">org.doctales.terminology</h1>
   
  
@@ -25,6 +25,24 @@ comments: true
   
   </section>
   
+  <section class="section"><h2 class="title sectiontitle">Optional: Install the &lt;oXygen/&gt; XML framework</h2>
+   
+   <div class="p">
+    <ol class="ol" id="concept_hsh_nfp_hv__ol_e24_335_4v">
+     <li class="li">Open the menu item <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Preferences</span></span>.</li>
+  
+     <li class="li">Open <span class="ph menucascade"><span class="ph uicontrol">Document Type Association</span> &gt; <span class="ph uicontrol">Location</span></span>.</li>
+  
+     <li class="li">In the <span class="ph uicontrol">Additional frameworks directories</span> section: Add the
+       <em class="ph i">org.doctales.terminology</em> directory, e.g.
+       <span class="ph uicontrol">${homeDir}/workspace/dita-ot/plugins/org.doctales.terminology</span>.</li>
+  
+    </ol>
+  
+   </div>
+  
+  </section>
+  
   <section class="section"><h2 class="title sectiontitle">Doctype</h2>
    
    <p class="p">The plugin ships a new topic type called <code class="keyword markupname xmlelement">&lt;termentry&gt;</code>. The
@@ -41,10 +59,10 @@ comments: true
     CSS/LESS stylesheets to visualize the termentries and also has context sensitive menus and
     actions to make terminology authoring easy.</p>
   
-  <figure class="fig fignone"><span class="figcap">Figure 1. Termentry Topic in Oxygen XML</span>
-   
-   <img class="image" src="images/termentry.png">
-  </figure>
+   <figure class="fig fignone"><span class="figcap">Figure 1. Termentry Topic in Oxygen XML</span>
+    
+    <img class="image" src="images/termentry.png">
+   </figure>
   
   </section>
   
@@ -56,7 +74,11 @@ comments: true
    <ul class="ul">
     <li class="li"><strong class="ph b">termchecker</strong> - Transform the terminology to Schematron to perform automatical terminology checks.</li>
   
-    <li class="li"><strong class="ph b">tbx-min</strong> - Transform the terminology to TBX-Min to send it to your language service provider.</li>
+    <li class="li"><strong class="ph b">tbx-basic</strong> - Transform the terminology to TBX-Basic to send it to your language
+     service provider.</li>
+  
+    <li class="li"><strong class="ph b">tbx-min</strong> - Transform the terminology to TBX-Min to send it to your language service
+     provider.</li>
   
    </ul>
   
@@ -79,6 +101,23 @@ comments: true
    </div>
    
    <div class="sectiondiv">
+    <p class="p"><strong class="ph b">tbx-basic</strong></p>
+  
+    <p class="p">The <span class="ph uicontrol">tbx-basic</span> transformation type transforms your terminology to a single
+     TBX-Basic file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
+     language service provider.</p>
+  
+    <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+    <p class="p">none</p>
+  
+    <p class="p"><strong class="ph b">Usage</strong></p>
+  
+    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-basic -o tbx-basic</kbd></p>
+   
+   </div>
+   
+   <div class="sectiondiv">
     <p class="p"><strong class="ph b">tbx-min</strong></p>
   
     <p class="p">The <span class="ph uicontrol">tbx-min</span> transformation type transforms your terminology to a single
@@ -87,7 +126,7 @@ comments: true
   
     <p class="p"><strong class="ph b">Parameters</strong></p>
   
-    <ul class="ul" id="concept_hsh_nfp_hv__ul_dq5_wly_kv">
+    <ul class="ul">
      <li class="li"><span class="keyword parmname">args.source.language</span>: The source language of your terminology</li>
   
      <li class="li"><span class="keyword parmname">args.target.language</span>: The target language of your terminology</li>
@@ -97,18 +136,15 @@ comments: true
     <p class="p"><strong class="ph b">Usage</strong></p>
   
     <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-min -Dargs.source.language="en"
-     -Dargs.target.language="de" -o tbx</kbd></p>
+     -Dargs.target.language="de" -o tbx-min</kbd></p>
    
    </div>
+
   </section>
   
  </div>
   
-<nav role="navigation" class="related-links">
-  <div class="familylinks">
-  <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../plugins/Plugins.html" title="The Doctales team maintains a few DITA-OT plugins, to make DITA editing easier.">Plugins</a></div>
-  </div>
-  </nav></main><div id="disqus_thread"></div><script>
+</main><div id="disqus_thread"></div><script>
       /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables

@@ -417,6 +417,9 @@ dl.dl-horizontal dd {
     padding: 2px 10px;
 }
 
+span.parmname {
+    font-family: monospace;
+}
 .nav > li > a {
     font-size: 14px;
     line-height: 20px;
