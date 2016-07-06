@@ -59,7 +59,7 @@ comments: true
     CSS/LESS stylesheets to visualize the termentries and also has context sensitive menus and
     actions to make terminology authoring easy.</p>
   
-   <figure class="fig fignone"><span class="figcap">Figure 1. Termentry Topic in Oxygen XML</span>
+   <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Termentry Topic in Oxygen XML</figcaption>
     
     <img class="image" src="images/termentry.png">
    </figure>
@@ -97,6 +97,23 @@ comments: true
     <p class="p"><strong class="ph b">Usage</strong></p>
   
     <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f termchecker -o termchecker</kbd></p>
+   
+   </div>
+   
+   <div class="sectiondiv">
+    <p class="p"><strong class="ph b">webhelp-termbrowser</strong></p>
+  
+    <p class="p">The <span class="ph uicontrol">webhelp-termbrowser</span> transformation type generates a termbrowser
+     based on the &lt;oXygen/&gt; XML webhelp transtype. The <span class="ph uicontrol">webhelp-termbrowser</span>
+     uses the CSS libraries <a class="xref" href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <a class="xref" href="https://github.com/lipis/flag-icon-css" target="_blank">flag-icon-css</a> to improve the appearance.</p>
+  
+    <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+    <p class="p">none</p>
+  
+    <p class="p"><strong class="ph b">Usage</strong></p>
+  
+    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f webhelp-termbrowser</kbd></p>
    
    </div>
    
@@ -144,7 +161,11 @@ comments: true
   
  </div>
   
-</main><div id="disqus_thread"></div><script>
+<nav role="navigation" class="related-links">
+  <div class="familylinks">
+  <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../plugins/Plugins.html" title="The Doctales team maintains a few DITA-OT plugins, to make DITA editing easier.">Plugins</a></div>
+  </div>
+  </nav></main><div id="disqus_thread"></div><script>
       /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
