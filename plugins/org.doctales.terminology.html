@@ -66,13 +66,14 @@ comments: true
   
   </section>
   
-  
-  <section class="section"><h2 class="title sectiontitle">Transformation Types</h2>
+  <section class="section" id="concept_hsh_nfp_hv__section_acl_fnl_qw"><h2 class="title sectiontitle">Transformation Types</h2>
    
-   <p class="p">The plugin ships some transformation types, which transform your terminology base to something that can be used with other tools.</p>
+   <p class="p">The plugin ships some transformation types, which transform your terminology base to something
+    that can be used with other tools.</p>
   
-   <ul class="ul">
-    <li class="li"><strong class="ph b">termchecker</strong> - Transform the terminology to Schematron to perform automatical terminology checks.</li>
+   <ul class="ul" id="concept_hsh_nfp_hv__ul_pmc_gnl_qw">
+    <li class="li"><strong class="ph b">termchecker</strong> - Transform the terminology to Schematron to perform automatical
+     terminology checks.</li>
   
     <li class="li"><strong class="ph b">webhelp-termbrowser</strong> - Transform the terminology to a termbrowser using the
      &lt;oXygen/&gt; XML webhelp transtype.</li>
@@ -85,81 +86,93 @@ comments: true
   
    </ul>
   
+  </section>
+  
+  <section class="section" id="concept_hsh_nfp_hv__termchecker"><h2 class="title sectiontitle">termchecker</h2>
    
-   <div class="sectiondiv">
-    <p class="p"><strong class="ph b">termchecker</strong></p>
+   <p class="p">The <span class="ph uicontrol">termchecker</span> transformation type generates a Schematron file of the
+    terminology map. This file contains rules that detect deprecated terms in a text and offers
+    Schematron quick fixes to replace deprecated terms with allowed ones.</p>
   
-    <p class="p">The <span class="ph uicontrol">termchecker</span> transformation type generates a Schematron file of the
-     terminology map. This file contains rules that detect deprecated terms in a text and offers
-     Schematron quick fixes to replace deprecated terms with allowed ones.</p>
+   <p class="p"><strong class="ph b">Parameters</strong></p>
   
-    <p class="p"><strong class="ph b">Parameters</strong></p>
+   <div class="p">
+    <dl class="dl parml">
+     
+      <dt class="dt pt dlterm">args.language</dt>
   
-    <p class="p">none</p>
+      <dd class="dd pd">Language of the schematron messages. Currently, the following languages are supported:<ul class="ul" id="concept_hsh_nfp_hv__ul_h1l_ynl_qw">
+        <li class="li"><span class="keyword parmname">en-GB</span>: English</li>
   
-    <p class="p"><strong class="ph b">Usage</strong></p>
+        <li class="li"><span class="keyword parmname">de-DE</span>: German</li>
   
-    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f termchecker -o termchecker</kbd></p>
-   
+       </ul>
+  </dd>
+  
+     
+    </dl>
+  
    </div>
+  
+   <p class="p"><strong class="ph b">Usage</strong></p>
+  
+   <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f termchecker -Dargs.language=de-DE -o
+     termchecker</kbd></p>
+  
+  </section>
+  
+  <section class="section" id="concept_hsh_nfp_hv__section_ksh_mnl_qw"><h2 class="title sectiontitle">webhelp-termbrowser</h2>
    
-   <div class="sectiondiv">
-    <p class="p"><strong class="ph b">webhelp-termbrowser</strong></p>
+   <p class="p">The <span class="ph uicontrol">webhelp-termbrowser</span> transformation type generates a termbrowser
+    based on the &lt;oXygen/&gt; XML webhelp transtype. The <span class="ph uicontrol">webhelp-termbrowser</span>
+    uses the CSS libraries <a class="xref" href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <a class="xref" href="https://github.com/lipis/flag-icon-css" target="_blank">flag-icon-css</a> to improve the appearance.</p>
   
-    <p class="p">The <span class="ph uicontrol">webhelp-termbrowser</span> transformation type generates a termbrowser
-     based on the &lt;oXygen/&gt; XML webhelp transtype. The <span class="ph uicontrol">webhelp-termbrowser</span>
-     uses the CSS libraries <a class="xref" href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <a class="xref" href="https://github.com/lipis/flag-icon-css" target="_blank">flag-icon-css</a> to improve the appearance.</p>
+   <p class="p"><strong class="ph b">Parameters</strong></p>
   
-    <p class="p"><strong class="ph b">Parameters</strong></p>
+   <p class="p">none</p>
   
-    <p class="p">none</p>
+   <p class="p"><strong class="ph b">Usage</strong></p>
   
-    <p class="p"><strong class="ph b">Usage</strong></p>
+   <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f webhelp-termbrowser</kbd></p>
   
-    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f webhelp-termbrowser</kbd></p>
+  </section>
+  
+  <section class="section" id="concept_hsh_nfp_hv__section_mxp_nnl_qw"><h2 class="title sectiontitle">tbx-basic</h2>
    
-   </div>
+   <p class="p">The <span class="ph uicontrol">tbx-basic</span> transformation type transforms your terminology to a
+    single TBX-Basic file. A TBX-Min file is a bilingual XML-based file for exchanging terminology
+    with your language service provider.</p>
+  
+   <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+   <p class="p">none</p>
+  
+   <p class="p"><strong class="ph b">Usage</strong></p>
+  
+   <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-basic -o tbx-basic</kbd></p>
+  
+  </section>
+  
+  <section class="section" id="concept_hsh_nfp_hv__section_pnd_pnl_qw"><h2 class="title sectiontitle">tbx-min</h2>
    
-   <div class="sectiondiv">
-    <p class="p"><strong class="ph b">tbx-basic</strong></p>
+   <p class="p">The <span class="ph uicontrol">tbx-min</span> transformation type transforms your terminology to a single
+    TBX-Min file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
+    language service provider.</p>
   
-    <p class="p">The <span class="ph uicontrol">tbx-basic</span> transformation type transforms your terminology to a single
-     TBX-Basic file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
-     language service provider.</p>
+   <p class="p"><strong class="ph b">Parameters</strong></p>
   
-    <p class="p"><strong class="ph b">Parameters</strong></p>
+   <ul class="ul" id="concept_hsh_nfp_hv__ul_nbg_rnl_qw">
+    <li class="li"><span class="keyword parmname">args.source.language</span>: The source language of your terminology</li>
   
-    <p class="p">none</p>
+    <li class="li"><span class="keyword parmname">args.target.language</span>: The target language of your terminology</li>
   
-    <p class="p"><strong class="ph b">Usage</strong></p>
+   </ul>
   
-    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-basic -o tbx-basic</kbd></p>
-   
-   </div>
-   
-   <div class="sectiondiv">
-    <p class="p"><strong class="ph b">tbx-min</strong></p>
+   <p class="p"><strong class="ph b">Usage</strong></p>
   
-    <p class="p">The <span class="ph uicontrol">tbx-min</span> transformation type transforms your terminology to a single
-     TBX-Min file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
-     language service provider.</p>
-  
-    <p class="p"><strong class="ph b">Parameters</strong></p>
-  
-    <ul class="ul">
-     <li class="li"><span class="keyword parmname">args.source.language</span>: The source language of your terminology</li>
-  
-     <li class="li"><span class="keyword parmname">args.target.language</span>: The target language of your terminology</li>
-  
-    </ul>
-  
-    <p class="p"><strong class="ph b">Usage</strong></p>
-  
-    <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-min -Dargs.source.language="en"
+   <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f tbx-min -Dargs.source.language="en"
      -Dargs.target.language="de" -o tbx-min</kbd></p>
-   
-   </div>
-
+  
   </section>
   
  </div>
