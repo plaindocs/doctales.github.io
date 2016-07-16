@@ -1,0 +1,68 @@
+---
+# Generated from DITA source
+# doctales.github.com
+layout: page
+title: "org.doctales.termbrowser"
+comments: true
+---
+<meta charset="UTF-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><nav class="col-md-3" role="toc"><div class="well well-sm"><ul class="bs-docs-sidenav"><li><a href="../wiki/Wiki.html">Wiki</a></li><li><a href="../plugins/Plugins.html">Plugins</a><ul class="nav nav-list"><li><a href="../plugins/org.doctales.pdf-css.html">org.doctales.pdf-css</a></li><li><a href="../plugins/org.doctales.pdf.html">org.doctales.pdf</a></li><li><a href="../plugins/org.doctales.reveal.html">org.doctales.reveal</a></li><li><a href="../plugins/org.doctales.terminology.html">org.doctales.terminology</a></li><li class="active"><a href="../plugins/org.doctales.termbrowser.html">org.doctales.termbrowser</a></li></ul></li><li><a href="../about-us/AboutUs.html">About Us</a></li></ul></div></nav><main class="col-md-9">
+  <h1 class="title topictitle1" id="ariaid-title1">org.doctales.termbrowser</h1>
+  
+  
+  <div class="body conbody"><p class="shortdesc">The plugin <em class="ph i">org.doctales.termbrowser</em> generates a terminology browser from
+    terminology databases created using the <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> topic type that is
+    shipped with the <a class="xref" href="org.doctales.terminology.html" title="The plugin org.doctales.terminology is made for developing terminology databases with DITA.">org.doctales.terminology</a>
+    plugin.</p>
+  
+    <section class="section"><h2 class="title sectiontitle">Installation</h2>
+      
+      <p class="p">Install <span class="ph uicontrol">org.doctales.terminology</span> via the <span class="keyword cmdname">dita</span>
+        command:</p>
+  
+      <p class="p"><kbd class="ph userinput">dita -install
+          https://github.com/doctales/org.doctales.termbrowser/archive/master.zip</kbd></p>
+  
+    </section>
+  
+    <section class="section" id="concept_hsh_nfp_hv__section_ksh_mnl_qw"><h2 class="title sectiontitle">webhelp-termbrowser</h2>
+      
+      <p class="p">The <span class="ph uicontrol">webhelp-termbrowser</span> transformation type generates a termbrowser
+        based on the &lt;oXygen/&gt; XML webhelp transtype. The
+          <span class="ph uicontrol">webhelp-termbrowser</span> uses the CSS libraries <a class="xref" href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <a class="xref" href="https://github.com/lipis/flag-icon-css" target="_blank">flag-icon-css</a> to improve the appearance.</p>
+  
+      <p class="p"><strong class="ph b">Parameters</strong></p>
+  
+      <p class="p">none</p>
+  
+      <p class="p"><strong class="ph b">Usage</strong></p>
+  
+      <p class="p"><kbd class="ph userinput">dita -i terminology.ditamap -f webhelp-termbrowser</kbd></p>
+  
+    </section>
+  
+  </div>
+  
+<nav role="navigation" class="related-links">
+  <div class="familylinks">
+  <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../plugins/Plugins.html" title="The Doctales team maintains a few DITA-OT plugins, to make DITA editing easier.">Plugins</a></div>
+  </div>
+  </nav></main><div id="disqus_thread"></div><script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+      */
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {  // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      
+      s.src = '//doctale.disqus.com/embed.js';
+      
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
