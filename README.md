@@ -1,16 +1,14 @@
-# Skinny Bones Jekyll Starter
+![DOCTALES Logo](https://doctales.github.io/images/doctales-logo-without-subtitle.svg)
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+- - - -
 
-I'm currently using a variation of it on my personal website [Made Mistakes](http://mademistakes.com) with some modifications. To learn more about how to use the theme and install it check out the [Skinny Bones demo](http://mmistakes.github.io/skinny-bones-jekyll/) (*work in progress*).
+doctales.github.io
+==================
 
-![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
+This is the repository of the [doctales.github.io](http://doctales.github.io/) website. The website is built using [Jekyll](https://jekyllrb.com/), the [DITA-OT](http://dita-ot.github.io/) and the plugin *org.doctales.bootstrap*, which is based on [org.dita-ot.html](https://github.com/dita-ot/org.dita-ot.html).
 
----
 
-## Notable Features
+## Build the website
 
-* Stylesheet built using Sass. *Requires Jekyll 2.x*
-* Data files for easier customization of the site navigation/footer and for supporting multiple authors.
-* Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
-* And more.
+1. Call the `ant` target of the `build.xml`.
+2. Run Jekyll with `bundle exec jekyll serve`.
