@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map xml:lang="en-US">
- <title>Presentation</title>
- <topicref href="slide1.dita"/>
- <topicref href="slide2.dita"/>
-</map>
-
