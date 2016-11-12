@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_qb3_5yn_jv">
+ <title>Getting Started</title>
+ <shortdesc>This section helps you to get started with DITA if you are completely new to
+  DITA.</shortdesc>
+ <conbody>
+  <p>If you do never heard of DITA maps and topics, you should first complete the learningDITA
+   tutorials.</p>
+  <note type="notice"><ph conkeyref="KnowledgeArticles/learningdita"/></note>
+ </conbody>
+</concept>

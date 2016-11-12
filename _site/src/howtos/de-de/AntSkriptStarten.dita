@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="AntSkriptStarten" xml:lang="de-de">
+    <title>Ant-Skript starten</title>
+    <shortdesc>Hier wird beschrieben, wie Sie ein Ant-Skript starten.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Öffnen Sie ein Terminal-Fenster.</cmd>
+                <stepresult>
+                    <note type="attention">Lorem ipsum</note>
+                    <note type="caution">Lorem ipsumA</note>
+                    <note type="danger">Lorem ipsum</note>
+                    <note type="important">Lorem ipsum</note>
+                    <note type="note">Lorem ipsum</note>
+                    <note type="notice">Lorem ipsum</note>
+                    <note type="tip">Lorem ipsum</note>
+                    <note type="warning">Lorem ipsum</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geben Sie folgenden Befehl ein:<!--<userinput class="+ topic/ph sw-d/userinput "
+                        >ant [target]</userinput>--></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hsh_nfp_hv">
+ <title>org.doctales.terminology</title>
+ <shortdesc>The plugin <i>org.doctales.terminology</i> is made for developing terminology databases
+  with DITA.</shortdesc>
+ <conbody>
+  <p>DITA is well suited to model relationships between things and therefore is also very suitable
+   for terminology management. The plugin <i>org.doctales.terminology</i> consists of several
+   things:</p>
+  <ul id="ul_z1z_l1n_qw">
+   <li>A new DITA topic type called <xref keyref="org.doctales.terminology/TermentryTopic"
+     >termentry</xref>, that represents a single term</li>
+   <li>An <xref keyref="org.doctales.terminology/OxygenFramework">&lt;oXygen/> XML framework</xref>
+    that contains stylesheets and author actions for the <xmlelement>termentry</xmlelement>
+    topic.</li>
+   <li>A <xref keyref="org.doctales.terminology/termchecker">terminology checker</xref>, that
+    detects deprecated terms in a DITA file and offers recommended synonyms to the author.</li>
+   <li>A <xref keyref="org.doctales.terminology/TbxBasic">TBX-Basic converter</xref> to convert the
+    DITA terminology to TBX-Basic for delivering it to a language service provider (LSP).</li>
+   <li>A <xref keyref="org.doctales.terminology/TbxMin">TBX-Min converter</xref> to convert the DITA
+    terminology to TBX-Min for delivering it to a language service provider (LSP).</li>
+   <li>A <xref keyref="org.doctales.terminology/termbrowser">termbrowser</xref>, that is based on the plugin <i>com.oxygenxml.webhelp</i> that is shipped with
+    the <i>&lt;oXygen/> XML</i> editor.</li>
+  </ul>
+  <section>
+   <title>Installation</title>
+   <p>Install <uicontrol>org.doctales.terminology</uicontrol> via the <cmdname>dita</cmdname>
+    command:</p>
+   <p><userinput>dita -install
+     https://github.com/doctales/org.doctales.terminology/archive/master.zip</userinput></p>
+  </section>
+  <section>
+   <title>Optional: Install the &lt;oXygen/> XML framework</title>
+   <p>
+    <ol id="ol_e24_335_4v">
+     <li>Open the menu item <menucascade>
+       <uicontrol>Options</uicontrol>
+       <uicontrol>Preferences</uicontrol>
+      </menucascade>.</li>
+     <li>Open <menucascade>
+       <uicontrol>Document Type Association</uicontrol>
+       <uicontrol>Location</uicontrol>
+      </menucascade>.</li>
+     <li>In the <uicontrol>Additional frameworks directories</uicontrol> section: Add the
+       <i>org.doctales.terminology</i> directory, e.g.
+       <uicontrol>${homeDir}/workspace/dita-ot/plugins/org.doctales.terminology</uicontrol>.</li>
+    </ol>
+   </p>
+  </section>
+  <section id="TermentryTopic">
+   <title>Termentry Topic</title>
+   <p>The plugin ships a new topic type called <xmlelement>termentry</xmlelement>. The
+     <xmlelement>termentry</xmlelement> topic represents a single term. It is slightly similar to a
+     <xmlelement>glossentry</xmlelement> topic but is designed to not only hold allowed terms,
+    acronyms and abbreviations but also deprecated ones in multiple languages. Further on, the
+     <xmlelement>termentry</xmlelement> element can have multiple
+     <xmlelement>termVariant</xmlelement> elements to represent synonyms in different languages. </p>
+  </section>
+  <section id="OxygenFramework">
+   <title>&lt;oXygen/> XML Framework</title>
+   <p>The plugin ships an Oxygen XML framework that has CSS/LESS stylesheets to visualize the
+    termentries and also has context sensitive menus and actions to make terminology authoring
+    easy.</p>
+   <fig>
+    <title>Termentry Topic in Oxygen XML</title>
+    <image href="images/termentry.png"/>
+   </fig>
+  </section>
+  <section id="Transtypes">
+   <title>Transformation Types</title>
+   <p>The plugin ships some transformation types, which transform your terminology base to something
+    that can be used with other tools.</p>
+   <ul id="ul_pmc_gnl_qw">
+    <li><b>termchecker</b> - Transform the terminology to Schematron to perform automatical
+     terminology checks.</li>
+    <li><b>webhelp-termbrowser</b> - Transform the terminology to a termbrowser using the
+     &lt;oXygen/> XML webhelp transtype.</li>
+    <li><b>tbx-basic</b> - Transform the terminology to TBX-Basic to send it to your language
+     service provider.</li>
+    <li><b>tbx-min</b> - Transform the terminology to TBX-Min to send it to your language service
+     provider.</li>
+   </ul>
+  </section>
+  <section id="termchecker">
+   <title>termchecker</title>
+   <p>The <uicontrol>termchecker</uicontrol> transformation type generates a Schematron file of the
+    terminology map. This file contains rules that detect deprecated terms in a text and offers
+    Schematron quick fixes to replace deprecated terms with allowed ones.</p>
+   <p><b>Parameters</b></p>
+   <p>
+    <parml>
+     <plentry>
+      <pt>args.language</pt>
+      <pd>Language of the termchecker rules to be generated.</pd>
+     </plentry>
+    </parml>
+   </p>
+   <p><b>Usage</b></p>
+   <p><userinput>dita -i terminology.ditamap -f termchecker -Dargs.language=de-DE -o
+     termchecker</userinput></p>
+  </section>
+  <section id="TbxBasic">
+   <title>tbx-basic</title>
+   <p>The <uicontrol>tbx-basic</uicontrol> transformation type transforms your terminology to a
+    single TBX-Basic file. A TBX-Min file is a bilingual XML-based file for exchanging terminology
+    with your language service provider.</p>
+   <p><b>Parameters</b></p>
+   <p>none</p>
+   <p><b>Usage</b></p>
+   <p><userinput>dita -i terminology.ditamap -f tbx-basic -o tbx-basic</userinput></p>
+  </section>
+  <section id="TbxMin">
+   <title>tbx-min</title>
+   <p>The <uicontrol>tbx-min</uicontrol> transformation type transforms your terminology to a single
+    TBX-Min file. A TBX-Min file is a bilingual XML-based file for exchanging terminology with your
+    language service provider.</p>
+   <p><b>Parameters</b></p>
+   <ul>
+    <li><parmname>args.source.language</parmname>: The source language of your terminology</li>
+    <li><parmname>args.target.language</parmname>: The target language of your terminology</li>
+   </ul>
+   <p><b>Usage</b></p>
+   <p><userinput>dita -i terminology.ditamap -f tbx-min -Dargs.source.language="en"
+     -Dargs.target.language="de" -o tbx-min</userinput></p>
+  </section>
+  <section id="termbrowser">
+   <title>Termbrowser</title>
+   <p><b>org.doctales.terminology</b> includes XSLT templates, JavaScript libraries and CSS for
+    rendering a termbrowser. You need the plugin <b>com.oxygenxml.webhelp</b> with a CLI license for
+    publishing a termbrowser from CLI or you need to call the transformation scenario directly from
+    &lt;oXygen/> XML.</p>
+   <p><b>Parameters</b></p>
+   <ul>
+    <li><parmname>args.hdf</parmname>: Path to the <filepath>~/org.doctales.terminology/hdf/hdf.xml</filepath> file</li>
+   </ul>
+   <p><b>Usage</b></p>
+   <p><userinput>dita -i terminology.ditamap -f webhelp -Dargs.hdf=../hdf/hdf.xml</userinput></p>
+  </section>
+ </conbody>
+</concept>

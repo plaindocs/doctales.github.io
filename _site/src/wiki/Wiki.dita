@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_c3g_wln_hv">
+ <title>Wiki</title>
+ <shortdesc>The Doctales Wiki is a place to collect DITA knowledge.</shortdesc>
+ <conbody>
+  <p>DITA aims to be the most important information architecture, but the information about DITA is
+   very fragmented. The Doctales Wiki is made to make it easier for newbies for gettings started
+   with DITA but also helps experts to set-up solutions for more complex requirements.</p>
+  <p>
+   <ul id="ul_ycm_zh4_jv">
+    <li>If you are new to DITA, you should have a look at the <xref keyref="GettingStarted">Getting
+      Started</xref> topic.</li>
+    <li>If you already know the DITA basics, you should have a look at the <xref
+      keyref="KnowledgeArticles">Knowledge Articles</xref>.</li>
+   </ul>
+  </p>
+ </conbody>
+</concept>
