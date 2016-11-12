@@ -2,7 +2,7 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
   <title>Doctales</title>
-  <topicref href="wiki/Wiki.dita">
+  <!--<topicref href="wiki/Wiki.dita">
     <topicref href="wiki/GettingStarted.dita" keys="GettingStarted"/>
     <topicref href="wiki/KnowledgeArticles.dita" keys="KnowledgeArticles"/>
   </topicref>
@@ -11,7 +11,7 @@
     <topicref href="plugins/org.doctales.pdf.dita"/>
     <topicref href="plugins/org.doctales.reveal.dita"/>
     <topicref href="plugins/org.doctales.terminology.dita" keys="org.doctales.terminology"/>
-  </topicref>
+  </topicref>-->
   <topicref href="about-us/AboutUs.dita">
     <topicref href="about-us/StefanEike.dita"/>
     <topicref href="about-us/SaschaNothofer.dita"/>
