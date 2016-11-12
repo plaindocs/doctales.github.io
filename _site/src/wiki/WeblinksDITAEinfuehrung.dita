@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:dita-ng:dita:rng:reference.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:dita-ng:dita:rng:reference.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<reference id="reference_rhv_dbq_kr" xml:lang="de-de">
+  <title>Web-Links für die ersten Schritte in der DITA-Welt</title>
+  <shortdesc xml:lang="de_de">Die nachfolgenden Links helfen dabei, ein Grundverständnis für den
+    DITA-Standard aufzubauen und begleiten Autoren bei der Arbeit mit DITA. Letzte Aktualisierung am
+    19. März 2015. DITA Version 1.2, DITA Open Toolkit Version 1.8</shortdesc>
+  <refbody>
+    <section>
+      <title>DITA-Einführung</title>
+      <simpletable id="simpletable_ann_mbq_kr">
+        <sthead>
+          <stentry>Titel</stentry>
+          <stentry>Typ/Beschreibung</stentry>
+          <stentry>Link</stentry>
+          <stentry>Sprache</stentry>
+        </sthead>
+        <strow>
+          <stentry>DITA - Der neue Standard für Technische Dokumentation</stentry>
+          <stentry>Website mit umfangreicher DITA-Einführung</stentry>
+          <stentry><xref id="data2typeDITAPage" href="http://www.data2type.de/xml-xslt-xslfo/dita/" format="html"
+              scope="external"/></stentry>
+          <stentry>DE</stentry>
+        </strow>
+        <strow>
+          <stentry>Introduction to DITA</stentry>
+          <stentry>Video-Einführung in Maps, Topics, Relation-Tables</stentry>
+          <stentry><xref id="DITAIntroVideo" href="https://www.youtube.com/watch?v=3gGRasZ-Z2Y" format="html"
+              scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>Getting Started with Information Architecture</stentry>
+          <stentry>Video-Einführung mit praktischen Beispielen im Oxygen XML-Editor</stentry>
+          <stentry><xref id="GetingStartetVideo" href="https://www.youtube.com/watch?v=Aq6hcXwe02A" format="html"
+              scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>Introduction to the Darwin Information Typing Architecture</stentry>
+          <stentry>Website mit den Grundlagen zum Konzept des DITA-Standards</stentry>
+          <stentry><xref id="IBMDITAIntro" href="http://www.ibm.com/developerworks/library/x-dita1/" format="html"
+              scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+      </simpletable>
+    </section>
+    <section>
+      <title>Foren und Community</title>
+      <simpletable id="simpletable_csd_ndq_kr">
+        <sthead>
+          <stentry>Titel</stentry>
+          <stentry>Typ/Beschreibung</stentry>
+          <stentry>Link</stentry>
+          <stentry>Sprache</stentry>
+        </sthead>
+        <strow>
+          <stentry>XING DITA Gruppe und</stentry>
+          <stentry>Forum</stentry>
+          <stentry><xref id="dita-usersXing"
+              href="https://www.xing.com/communities/groups/darwin-information-typing-architecture-dita-1012092"
+              format="html" scope="external"/></stentry>
+          <stentry>DE</stentry>
+        </strow>
+        <strow>
+          <stentry>Yahoo Mailinglist</stentry>
+          <stentry>Mailinglist</stentry>
+          <stentry><xref id="dita-usersYahoo" href="https://groups.yahoo.com/neo/groups/dita-users/info" format="html"
+              scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>dita.xml.org</stentry>
+          <stentry>Community-Portal betrieben von der Standardisierungsorganisation OASIS</stentry>
+          <stentry><xref id="dita.xml.org" href="http://dita.xml.org/" format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+      </simpletable>
+    </section>
+    <section>
+      <title>Begleitung für die ersten Schritte als DITA-Autor</title>
+      <simpletable id="simpletable_uq2_1fq_kr">
+        <sthead>
+          <stentry>Titel</stentry>
+          <stentry>Typ/Beschreibung</stentry>
+          <stentry>Link</stentry>
+          <stentry>Sprache</stentry>
+        </sthead>
+        <strow>
+          <stentry>DITA Language Reference</stentry>
+          <stentry>Website mit Spezifikation und Struktur-Beschreibung des DITA-Standards in der
+            Version 1.2 von OASIS</stentry>
+          <stentry><xref  id="DITA1.2-spec" href="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"
+              format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>DITA Style Guide - Best Practice for Authors</stentry>
+          <stentry>WebHelp-Website, die die einzelnen DITA-Strukturelemente und Attribute genau
+            beschreibt und praktische Anwendungsempehlungen liefert</stentry>
+          <stentry><xref id="DITAStyleguide"
+              href="http://www.oxygenxml.com/dita/styleguide/webhelp-feedback/index.html#Artefact/Maps/c_copy-to_Attribute.html"
+              format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>FAQ</stentry>
+          <stentry>Häufig gestellte Fragen zum DITA Standard</stentry>
+          <stentry><xref id="FAQ" href="http://www.ibm.com/developerworks/library/x-dita3/" format="html"
+              scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+      </simpletable>
+    </section>
+    <section>
+      <title>DITA Open Toolkit</title>
+      <simpletable id="simpletable_dzq_jhq_kr">
+        <sthead>
+          <stentry>Titel</stentry>
+          <stentry>Typ/Beschreibung</stentry>
+          <stentry>Link</stentry>
+          <stentry>Sprache</stentry>
+        </sthead>
+        <strow>
+          <stentry>Overview of the DITA Open Toolkit </stentry>
+          <stentry>Einführungspräsentation als PDF oder Video von  Kristen James Eberlein</stentry>
+          <stentry><xref id="Eberlein-overview-of-DITA-OT"
+              href="http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/Eberlein-overview-of-DITA-OT.pdf"
+              format="pdf" scope="external"/>
+            <xref id="Overview_of_the_DITA_Open_Toolkit"
+              href="http://www.oxygenxml.com/events/2014/dita-ot_day.html#Overview_of_the_DITA_Open_Toolkit"
+              format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>Looking under the hood of the DITA Open Toolkit</stentry>
+          <stentry>Details zur Funktionsweise des DITA-OT als PDF oder Video von Jarno
+            Elovirta</stentry>
+          <stentry><xref id="DITA-OT-Under-the-Hood"
+              href="http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/DITA-OT-Under-the-Hood.pdf"
+              format="pdf" scope="external"/>
+            <xref
+              id="Looking_under_the_hood_of_the_DITA_Open_Toolkit" href="http://www.oxygenxml.com/events/2014/dita-ot_day.html#Looking_under_the_hood_of_the_DITA_Open_Toolkit"
+              format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>DITA Open Toolkit</stentry>
+          <stentry>Projektwebsite mit Downloads und Dokumentation zur DITA-OT</stentry>
+          <stentry><xref id="dita-ot.org" href="http://www.dita-ot.org/" format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+        <strow>
+          <stentry>PDFs from the DITA Open Toolkit: The Easy and the Not So Easy</stentry>
+          <stentry>Eine Einschätzung zu den einfachen und schwierigeren Möglichkeiten des DITA-OT
+            als PDF oder Video von  Leigh White</stentry>
+          <stentry><xref
+            id="pdfsfromoteasynotsoeasy" href="http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/pdfsfromoteasynotsoeasy.pdf"
+              format="pdf" scope="external"/>
+            <xref id="PDFs_from_the_DITA_Open_Toolkit"
+              href="http://www.oxygenxml.com/events/2014/dita-ot_day.html#PDFs_from_the_DITA_Open_Toolkit"
+              format="html" scope="external"/></stentry>
+          <stentry>EN</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

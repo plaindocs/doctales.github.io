@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_edd_2qt_hv">
+ <title>Stefan Eike</title>
+ <shortdesc>Stefan is the lead developer of the Doctales team. He maintains most of the
+  plugins.</shortdesc>
+ <conbody>
+  <p>
+   <ul id="ul_imh_kqt_hv">
+    <li><xref href="https://de.linkedin.com/in/stefan-eike-a02a9939" format="html" scope="external"
+      >Linkedin</xref></li>
+    <li><xref href="https://www.xing.com/profile/Stefan_Eike" format="html" scope="external"
+      >Xing</xref></li>
+    <li><xref href="http://github.com/xephon2" format="html" scope="external">Github</xref></li>
+    <li><xref href="http://stackoverflow.com/users/3604444/xephon" format="html" scope="external"
+      >Stackoverflow</xref></li>
+   </ul>
+  </p>
+ </conbody>
+</concept>
