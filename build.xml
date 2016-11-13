@@ -22,7 +22,7 @@
   <property name="jekyll.dir" value="."/>
   <property name="jekyll.out.dir" value="out/jekyll"/>
   <property name="jekyll.temp.dir" value="temp/jekyll"/>
-  <property name="dita.dir" value="${user.home}/workspace/DITA/dita-ot-2.3.2"/>
+  <property name="dita.dir" value="${user.home}/workspace/DITA/dita-ot"/>
 
   <target name="all"
           description="Copy the output files to Jekyll.">
