@@ -8,7 +8,7 @@
       <title>DITA Specification</title>
       <ul>
         <li><xref
-            href="http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/dita-v1.3-os-part3-all-inclusive.html"
+            href="https://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/dita-v1.3-os-part3-all-inclusive.html"
             format="html" scope="external">Darwin Information Typing Architecture (DITA) Version 1.3
             Part 3: All-Inclusive Edition</xref> - The most important information resource is the
           DITA specification itself. It contains the technical reference and many useful
@@ -19,12 +19,12 @@
       <title>Getting Started Articles</title>
       <ul>
         <li>
-          <p><xref href="http://dita.xml.org/book/dita-wiki-knowledgebase" format="html"
+          <p><xref href="https://dita.xml.org/book/dita-wiki-knowledgebase" format="html"
               scope="external">dita.xml.org - DITA Wiki Knowledgebase</xref> - Official DITA
             information collection maintained by the OASIS.</p>
         </li>
         <li>
-          <p><ph id="learningdita"><xref href="http://www.learningdita.com/" format="html" scope="external">learningDITA</xref> - LearningDITA.com provides e-learning for individuals who want to explore DITA, the Darwin Information Typing Architecture.</ph></p>
+          <p><ph id="learningdita"><xref href="https://www.learningdita.com/" format="html" scope="external">learningDITA</xref> - LearningDITA.com provides e-learning for individuals who want to explore DITA, the Darwin Information Typing Architecture.</ph></p>
         </li>
       </ul>
     </section>
@@ -36,19 +36,19 @@
         <li><xref
             href="https://www.xing.com/communities/groups/darwin-information-typing-architecture-dita-ba2f-1012092"
             format="html" scope="external">DITA Group (Xing)</xref> - DITA community on Xing.</li>
-        <li><xref href="http://www.dita4publishers.org/" format="html" scope="external">DITA For
+        <li><xref href="https://www.dita4publishers.org/" format="html" scope="external">DITA For
             Publishers</xref> - The general goal of the DITA for Publishers project is to make
           creating and using DITA-based solutions for Publishing-specific business challenges as
           quick and easy as possible by providing a solid base from which you can start
           immediately.</li>
-        <li><xref href="http://www.dita-community.org/" format="html" scope="external"
+        <li><xref href="https://www.dita-community.org/" format="html" scope="external"
             >DITA-Community</xref> - The DITA-Community is a place for DITA-OT plugins and sample
           files.</li>
-        <li><xref href="http://ditanauts.org/" format="html" scope="external">DITANAUTS</xref> - The
+        <li><xref href="https://ditanauts.org/" format="html" scope="external">DITANAUTS</xref> - The
           goal of the DITANAUTS project is to provide relevant, actionable information that helps
           others with the implementation of DITA.</li>
         <li>
-          <p><xref href="http://ditachicks.com/" format="html" scope="external">DITAChicks</xref> -
+          <p><xref href="https://ditachicks.com/" format="html" scope="external">DITAChicks</xref> -
             DITAChicks is a blog of Karen Lowe and Lu Hall covering various DITA related topics.</p>
         </li>
         <li><xref href="https://www.oxygenxml.com/forum/forum20.html" format="html" scope="external"
@@ -59,19 +59,19 @@
     <section>
       <title>Blogs</title>
       <ul>
-        <li><xref href="http://think-dita.com/" format="html" scope="external">Think DITA</xref> -
+        <li><xref href="https://think-dita.com/" format="html" scope="external">Think DITA</xref> -
           Blog of Magda Caloian about DITA and information architecture</li>
-        <li><xref href="http://www.scriptorium.com/blog/" format="html" scope="external"
+        <li><xref href="https://www.scriptorium.com/blog/" format="html" scope="external"
             >Scriptorium</xref> - Blog of the publishing and content strategy consulting company
           Scriptorium.</li>
-        <li><xref href="http://drmacros-xml-rants.blogspot.de/" format="html" scope="external">Dr.
+        <li><xref href="https://drmacros-xml-rants.blogspot.de/" format="html" scope="external">Dr.
             Macro's XML Rants</xref> - DITA blog written by Eliot Kimber</li>
-        <li><xref href="http://idratherbewriting.com/" format="html" scope="external">I'd Rather Be
+        <li><xref href="https://idratherbewriting.com/" format="html" scope="external">I'd Rather Be
             Writing</xref> - Information architecture and API documentation blog written by Tom
           Johnson.</li>
-        <li><xref href="http://blog.oxygenxml.com/" format="html" scope="external">oXygen XML
+        <li><xref href="https://blog.oxygenxml.com/" format="html" scope="external">oXygen XML
             Blog</xref> - Official blog of the oXygen XML editor.</li>
-        <li><xref href="http://www.ditalog.com/blog/linking-dependency-tree" format="html" scope="external">Ditalog</xref> - DITA blog written by Andreas Petersell.</li>
+        <li><xref href="https://www.ditalog.com/blog/linking-dependency-tree" format="html" scope="external">Ditalog</xref> - DITA blog written by Andreas Petersell.</li>
       </ul>
     </section>
     <section>
@@ -81,7 +81,7 @@
             href="https://www.oasis-open.org/committees/download.php/56339/Release_Management_WP.pdf"
             format="pdf" scope="external">DITA 1.3 Feature Article:About the DITA 1.3 release
             management domain</xref></li>
-        <li><xref href="http://www.ditatranslation.com/articles/ditaxliff.html" format="html"
+        <li><xref href="https://www.ditatranslation.com/articles/ditaxliff.html" format="html"
             scope="external">DITA 1.2 Feature Article: Using XLIFF to Translate DITA
           Projects</xref></li>
       </ul>
@@ -91,7 +91,7 @@
       <ul>
         <li><xref href="https://www.youtube.com/channel/UCtCxC8CmavB_DQAq1pOy7rQ" format="html"
             scope="external">oxygenxml</xref> - Official Youtube-Channel of the famous <xref
-            href="http://oxygenxml.com/" format="html" scope="external">oXygen XML</xref> Editor.
+            href="https://oxygenxml.com/" format="html" scope="external">oXygen XML</xref> Editor.
           This channel mainly contains video manuals and recordings of presentations.</li>
       </ul>
     </section>
@@ -102,7 +102,7 @@
             href="https://read.amazon.com/kp/embed?asin=B00C7CC4HG&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_W-W7wb16PG4EG"
             format="html" scope="external">DITA for Practitioners Volume 1: Architecture and
             Technology (Eliot Kimber)</xref> - The most famous DITA book about the DITA basics.</li>
-        <li><xref href="http://www.amazon.com/dp/0982811810/ref=cm_sw_su_dp" format="html"
+        <li><xref href="https://www.amazon.com/dp/0982811810/ref=cm_sw_su_dp" format="html"
             scope="external">The Dita Style Guide: Best Practices for Authors (Tony Self)</xref> -
           Contains best practices and real world DITA examples and comprehensive, practical
           explanations of DITA elements and attributes.</li>

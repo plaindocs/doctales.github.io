@@ -4,7 +4,7 @@
  <title>org.doctales.reveal</title>
  <shortdesc>The plugin <uicontrol>org.doctales.reveal</uicontrol> publishes DITA content to a <xref
    href="https://github.com/hakimel/reveal.js" format="html" scope="external">reveal.js</xref> based
-  presentation. You can see an example here: <xref href="http://lab.hakim.se/reveal-js/#/"
+  presentation. You can see an example here: <xref href="https://lab.hakim.se/reveal-js/#/"
    format="html" scope="external">lab.hakim.se/reveal-js</xref>.</shortdesc>
  <conbody>
   <section>
@@ -22,7 +22,7 @@
    <p><codeblock><coderef href="samples/org.doctales.reveal/reveal.slide.normal.dita"/></codeblock></p>
    <p>Now create your second slide. This time we want to create a slide containing two nested (vertical) slides. Each nested slide is represented by a nested <xmlelement>topic</xmlelement>.</p>
    <p><codeblock><coderef href="samples/org.doctales.reveal/reveal.slide.nested.dita"/></codeblock></p>
-    <p>That's all the magic. You can use all DITA elements as usual. If an element is not correctly rendered, please create an issue on <xref href="http://github.com/doctales/org.doctales.reveal" format="html" scope="external">github.com/doctales/org.doctales.reveal</xref>.</p> 
+    <p>That's all the magic. You can use all DITA elements as usual. If an element is not correctly rendered, please create an issue on <xref href="https://github.com/doctales/org.doctales.reveal" format="html" scope="external">github.com/doctales/org.doctales.reveal</xref>.</p> 
   </section>
   <section>
     <title>Parameters</title>

@@ -7,7 +7,7 @@
     Abhängigkeiten zueinander haben. Auf diese Weise lassen sich komplexe wiederkehrende Abläufe
     festlegen, die einfach ausgeführt werden können.</shortdesc>
   <conbody>
-    <p>Ant-Skripte sind XML-Dateien. Üblicherweise lautet der Dateiname eines Ant-Skriptes <!--<filepath>build.xml</filepath>,--> das muss aber nicht so sein.<xref href="http://www.google.de" format="html" scope="external">gooole</xref></p>
+    <p>Ant-Skripte sind XML-Dateien. Üblicherweise lautet der Dateiname eines Ant-Skriptes <!--<filepath>build.xml</filepath>,--> das muss aber nicht so sein.<xref href="https://www.google.de" format="html" scope="external">gooole</xref></p>
     <p><xref keyref="AntSkriptStarten" class="- topic/xref "/></p>
     <codeblock xml:lang="" outputclass="language-xml" class="+ topic/pre pr-d/codeblock ">&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;project name="my-project" basedir=".">

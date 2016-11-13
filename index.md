@@ -23,6 +23,6 @@ image:
   </div>
 </nav>-->
 <main class="col-md-9">
-  <img src="images/doctales-logo.svg" style="width:100%;"/>
+  <img src="{{ site.url }}/images/doctales-logo.svg" style="width:100%;"/>
   <p>The page has been moved to <a href="https://doctales.atlassian.net/wiki">doctales.atlassian.net</a>.</p>
 </main>
