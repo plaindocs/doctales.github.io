@@ -1,0 +1,46 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Installation</h1>
+        
+  
+  <div class="body taskbody"><p class="shortdesc">This chapter explains how to install the plugin <strong class="ph b">org.doctales.terminology</strong> to the
+    DITA-OT and how to integrate its framework into &lt;oXygen/&gt;.</p>
+        
+    <div class="section prereq p" id="install__prereq_f3z_tz2_sx">
+      <p class="p">Make sure you have installed:</p>
+        
+      <ul class="ul" id="install__ul_oyj_5z2_sx">
+        <li class="li">DITA-OT 2.3 or higher</li>
+        
+        <li class="li">&lt;oXygen/&gt; 18 or higher</li>
+        
+      </ul>
+        
+    </div>
+        
+    <ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">In the DITA-OT directory call:</span>
+        <div class="itemgroup info">
+          <kbd class="ph userinput">./bin/dita -install
+            https://github.com/doctales/org.doctales.terminology/archive/master.zip</kbd>
+        </div>
+        <div class="itemgroup stepresult">The plugin is installed into your DITA-OT.</div>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">To integrate the &lt;oXygen/&gt; XML framework, open <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Preferences</span></span> in &lt;oXygen/&gt;.</span>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">Go to <span class="ph menucascade"><span class="ph uicontrol">Document Type Association</span> &gt; <span class="ph uicontrol">Locations</span></span>.</span>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">Add the directory of the plugin as an additional framework directory, e.g:</span>
+        <div class="itemgroup info"><span class="ph uicontrol">~/DITA-OT/plugins/org.doctales.terminology</span><div class="note note"><span class="notetitle">Note:</span> You can find
+            detailed instructions for installation and usage in the <a class="xref" href="https://github.com/doctales/org.doctales.terminology" target="_blank">README.md</a>.</div>
+        </div>
+      </li>
+        </ol>
+        
+  </div>
+        
+</topicContainer>

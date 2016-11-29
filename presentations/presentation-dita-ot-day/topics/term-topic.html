@@ -1,0 +1,139 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">New <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> Topic</h1>
+        
+  <div class="body">
+    <ul class="ul" id="term-topic__ul_dcj_nws_gx">
+      <li class="li">New <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> DITA topic type, similar to
+          <code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> topic.</li>
+        
+      <li class="li">A term is the central unit of information.</li>
+        
+      <li class="li">The new topic type opens the flexibility to change the behavior of &lt;oXygen/&gt; to better
+        support terminology management.</li>
+        
+    </ul>
+        
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2"><code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> Topic</h2>
+        
+    <div class="body">
+      <p class="p">Built for glossaries, not for terminology databases.</p>
+        
+      <ul class="ul" id="topic_khb_sws_gx__ul_epn_nqt_gx">
+        <li class="li">Not meant to be multilingual.</li>
+        
+        <li class="li">No elements for terminology metadata.</li>
+        
+        <li class="li">Attribute standards are missing, e.g. <code class="keyword markupname xmlelement">&lt;glossStatus&gt;</code>
+          <code class="keyword markupname xmlatt">@value</code> has no values defined</li>
+        
+      </ul>
+        
+      <div class="section" id="topic_khb_sws_gx__section_qww_jwn_jx">
+        
+        <pre><code class="hljs xml">&lt;glossentry id="usbfd"&gt;
+  &lt;glossterm&gt;USB flash drive&lt;/glossterm&gt;
+  &lt;glossdef&gt;A small portable drive.&lt;/glossdef&gt;
+  &lt;glossBody&gt;
+    &lt;glossPartOfSpeech value="noun"/&gt;
+    &lt;glossUsage&gt;
+      Do not provide in upper case (as in "USB Flash Drive") 
+      because that suggests a trademark.
+    &lt;/glossUsage&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAcronym&gt;UFD&lt;/glossAcronym&gt;
+      &lt;glossUsage&gt;Explain the acronym on first occurrence.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt id="memoryStick"&gt;
+      &lt;glossSynonym&gt;memory stick&lt;/glossSynonym&gt;
+      &lt;glossUsage&gt;This is a colloquial term.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;stick&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This is too colloquial.&lt;/glossUsage&gt;
+      &lt;glossAlternateFor href="#usbfd/memoryStick"/&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;flash&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This short form is ambiguous.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+  &lt;/glossBody&gt;
+&lt;/glossentry&gt;</code></pre>
+      </div>
+        
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3"><code class="keyword markupname xmlelement">&lt;termentry&gt;</code> Topic</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_acn_yws_gx__ul_tch_krt_gx">
+        <li class="li">Multiple languages in one topic</li>
+        
+        <li class="li">Compatible to DITA-OT processing.</li>
+        
+        <li class="li">Total control of element names and structures</li>
+        
+        <li class="li">Easier to create XSL transformations, Schematron Termchecker and Termbrowser and
+            <strong class="ph b">&lt;oXygen/&gt; XML</strong> author frameworks that do not interfere with the standard DITA
+          frameworks</li>
+        
+        <li class="li">Strict element and attribute structures simplify UX focussed development</li>
+        
+        <li class="li">Content can still be shared between a <code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> based glossary
+          (e.g. for the end user) and the <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> based terminology base,
+          e.g. by <code class="keyword markupname xmlelement">&lt;ph&gt;</code> (e.g. for internal terms)</li>
+        
+      </ul>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd"&gt;
+&lt;termentry id="truck"&gt;
+  &lt;title&gt;Truck&lt;/title&gt;
+  &lt;definition&gt;
+    &lt;definitionText&gt;A truck is a motor vehicle designed to transport cargo.&lt;/definitionText&gt;
+    &lt;definitionSource&gt;
+      &lt;sourceReference href="https://en.wikipedia.org/wiki/Truck" 
+        format="html" scope="external"&gt;
+        Wikipedia
+      &lt;/sourceReference&gt;
+    &lt;/definitionSource&gt;
+  &lt;/definition&gt;
+  &lt;termBody&gt;
+    &lt;agreedWith&gt;
+      &lt;termCommitteeMember&gt;Heinrich Müller&lt;/termCommitteeMember&gt;
+      &lt;termCommitteeMember&gt;Günther Schmidt&lt;/termCommitteeMember&gt;
+    &lt;/agreedWith&gt;
+    &lt;fullForm language="de-DE" usage="preferred"&gt;
+      &lt;termVariant&gt;Lastkraftwagen&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;acronym language="de-DE" usage="preferred"&gt;
+      &lt;termVariant&gt;LKW&lt;/termVariant&gt;
+    &lt;/acronym&gt;
+    &lt;fullForm language="en-US" usage="preferred"&gt;
+      &lt;termVariant&gt;truck&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;fullForm language="en-GB" usage="preferred"&gt;
+      &lt;termVariant&gt;lorry&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;fullForm language="en-GB" usage="notRecommended"&gt;
+      &lt;termVariant&gt;truck&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+  &lt;/termBody&gt;
+  &lt;relations&gt;
+    &lt;relatedTerms&gt;
+      &lt;relatedTerm keyref="car"/&gt;
+    &lt;/relatedTerms&gt;
+  &lt;/relations&gt;
+&lt;/termentry&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>

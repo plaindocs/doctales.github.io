@@ -1,0 +1,616 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <meta name="copyright" content="(C) Copyright 2016"></meta>
+        <meta name="DC.rights.owner" content="(C) Copyright 2016"></meta>
+        <meta name="DC.Type" content="topic"></meta>
+        <meta name="DC.Title" content="Terminology Management with DITA"></meta>
+        <meta name="DC.Format" content="XHTML"></meta>
+        <meta name="DC.Identifier" content="topic_alz_yky_dx"></meta>
+        <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
+        <title>Terminology Management with DITA</title>
+        <meta name="apple-mobile-web-app-capable" content="yes"></meta><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"></meta><link rel="stylesheet" href="css/reveal.css"></link><link rel="stylesheet" href="css/theme/doctales.css" id="theme"></link><link href="lib/css/zenburn.css" rel="stylesheet"></link><script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script></head>
+        <body><div class="reveal"><div class="slides">
+        <section>
+  <h1 class="title topictitle1" id="ariaid-title1">Terminology Management with DITA</h1>
+        
+  <div class="body">
+    <p class="p">DITA-OT-Day 2016 - Stefan Eike</p>
+        
+    
+    
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_alz_yky_dx__table_rcq_11s_gx" class="table" frame="void" border="1" rules="all"><colgroup><col style="width:50%"></col><col style="width:50%"></col></colgroup><tbody class="tbody">
+          <tr class="row">
+            <td class="entry cell-norowborder" style="vertical-align:top;"><img class="image" src="media/dakosy-logo.svg"></img></td>
+        
+            <td class="entry nocellnorowborder" style="vertical-align:top;"><img class="image" src="media/doctales-logo.svg"></img></td>
+        
+          </tr>
+        
+        </tbody>
+        </table>
+        </div>
+        
+  </div>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title2">Who am I?</h1>
+        
+  <div class="body">
+    <div class="p">
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" width="100%" frame="void" border="0" rules="none"><colgroup><col style="width:33%"></col><col style="width:67%"></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;"><br></br><img class="image" src="media/ich.png"></img><br></br></td>
+        
+              <td class="entry nocellnorowborder" style="vertical-align:top;">
+                <div class="div">
+                  <p class="p"><strong class="ph b">Stefan Eike</strong></p>
+        
+                </div>
+                <div class="div">
+                  <p class="p"><strong class="ph b">Work</strong></p>
+        
+                  <ul class="ul">
+                    <li class="li">Technical Writer and Information Architect <a class="xref" href="http://www.dakosy.de" target="_blank"><img class="image inline" src="media/icon-dakosy.svg"></img></a></li>
+        
+                    <li class="li">Open Source DITA Developer <a class="xref" href="http://doctales.github.io" target="_blank"><img class="image inline" src="media/icon-doctales.svg"></img></a></li>
+        
+                  </ul>
+        
+                </div>
+                <div class="div">
+                  <p class="p"><strong class="ph b">Education</strong></p>
+        
+                  <ul class="ul">
+                    <li class="li">Technischer Redakteur B.A. (Technical Writer) <a class="xref" href="http://technische-redaktion-hannover.de/" target="_blank"><img class="image inline" src="media/icon-hs-hannover.svg"></img></a></li>
+        
+                    <li class="li">Medieninformatiker M.Sc. (Media Informatics) <a class="xref" href="http://www.oncampus.de/master-medieninformatik.html" target="_blank"><img class="image inline" src="media/icon-oncampus.svg"></img></a> <strong class="ph b">coming soon</strong></li>
+        
+                  </ul>
+        
+                </div>
+                <div class="div">
+                  <p class="p">
+                    <a class="xref" href="mailto:stefan.eike@mailbox.org" target="_blank"><img class="image inline" src="media/icon-mail.svg"></img></a>
+                    <a class="xref" href="https://de.linkedin.com/in/stefan-eike-a02a9939" target="_blank"><img class="image inline" src="media/icon-linkedin.svg"></img></a>
+                    <a class="xref" href="https://www.xing.com/profile/Stefan_Eike" target="_blank"><img class="image inline" src="media/icon-xing.svg"></img></a>
+                    <a class="xref" href="http://github.com/xephon2" target="_blank"><img class="image inline" src="media/icon-github.svg"></img></a>
+                    <a class="xref" href="https://twitter.com/stefaneike" target="_blank"><img class="image inline" src="media/icon-twitter.svg"></img></a>
+                    <a class="xref" href="https://keybase.io/stefaneike" target="_blank"><img class="image inline" src="media/icon-keybase.svg"></img></a>
+                  </p>
+        
+                </div>
+              </td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </div>
+        
+</section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title3"></h1>
+        
+  <div class="body">
+    <img class="image" src="media/doctales-logo.svg"></img>
+  </div>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title4">Open Source DITA Team</h2>
+        
+    <div class="body">
+      <ul class="ul">
+        <li class="li">We develop open source solutions for DITA teams.</li>
+        
+        <li class="li">Code hosted on <img class="image inline" src="media/icon-github.svg"></img>
+          <a class="xref" href="http://github.com/doctales/" target="_blank">github.com/doctales</a></li>
+        
+        <li class="li">Plugins: <ul class="ul">
+            <li class="li"><a class="xref" href="http://github.com/doctales/org.doctales.terminology" target="_blank">org.doctales.terminology</a> -
+              DITA-OT plugin for terminology management</li>
+        
+            <li class="li"><a class="xref" href="http://github.com/doctales/org.doctales.reveal" target="_blank">org.doctales.reveal</a> - DITA-OT plugin for generating <a class="xref" href="https://github.com/hakimel/reveal.js" target="_blank">reveal.js</a> based web presentations from DITA files</li>
+        
+            <li class="li"><a class="xref" href="http://github.com/doctales/org.doctales.javaProperties2Dita" target="_blank">org.doctales.javaProperties2Dita</a> - DITA-OT plugin for converting Java
+              property files to DITA</li>
+        
+          </ul>
+        
+        </li>
+        
+      </ul>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title5">How to Contribute?</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_fcf_gbj_kx__ul_or3_hbj_kx">
+        <li class="li">Join us: Code, test, write, translate and design.</li>
+        
+        <li class="li">Share ideas and create visions.</li>
+        
+        <li class="li">Give feedback and write bug reports.</li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section>
+  <h1 class="title topictitle1" id="ariaid-title6">Semiotic Triangle</h1>
+        
+  
+  <div class="body">
+    
+    
+    <section class="fig fignone">
+      <br></br><img class="image" src="media/semiotic-triangle.svg" alt="Figure of the Semiotic Triangle"></img><br></br>
+    </section>
+        
+  </div>
+        
+</section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title7">Terminology</h1>
+        
+  <div class="body">
+    
+    
+  </div>
+        
+  
+  
+  
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title8">Why Terminology?</h2>
+        
+    <div class="body">
+      
+      <ul class="ul">
+        <li class="li">Enhance the <strong class="ph b">understandability</strong> of your documents by avoiding synonyms.</li>
+        
+        <li class="li">Speak with one voice, a harmonized terminology increases the <strong class="ph b">quality</strong> of your
+          text.</li>
+        
+        <li class="li"><strong class="ph b">Lower your translation costs</strong>. Harmonized (multilingual) terms lead to more
+          matches in your Translation Memory System (TMS).</li>
+        
+        <li class="li">Prevent internal <strong class="ph b">communication conflicts</strong> in your own team and with others.</li>
+        
+        <li class="li">Explain to <strong class="ph b">translators</strong> the meaning of your product subject/vocabulary.</li>
+        
+      </ul>
+        
+      <p class="p">More languages <strong class="ph b">+</strong> more synonyms <strong class="ph b">=</strong> More words to handle</p>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title9">Where should terminology be applied?</h2>
+        
+    <div class="body">
+      <p class="p">Wherever there is text, there should be terminology</p>
+        
+      <ul class="ul">
+        <li class="li">Software</li>
+        
+        <li class="li">Marketing material</li>
+        
+        <li class="li">Technical documentation</li>
+        
+        <li class="li">Web Sites</li>
+        
+        <li class="li">Catalogues</li>
+        
+        <li class="li">Brochures</li>
+        
+        <li class="li">Internal documents</li>
+        
+        <li class="li">Presentations</li>
+        
+        <li class="li">and so forth</li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title10">org.doctales.terminology</h1>
+        
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title11">What's that?</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_crf_wtg_jx__ul_svd_ztg_jx">
+        <li class="li">Plugin for the DITA-OT</li>
+        
+        <li class="li">New DITA topic type for terms</li>
+        
+        <li class="li">New DITA map type for terminology maps</li>
+        
+        <li class="li">&lt;oXygen/&gt; XML framework for authoring</li>
+        
+        <li class="li">Transformation scenarios<ul class="ul" id="topic_crf_wtg_jx__ul_tzj_25g_jx">
+            <li class="li">Termchecker for DITA</li>
+        
+            <li class="li">Termchecker for XLIFF</li>
+        
+            <li class="li">TBX-Basic</li>
+        
+            <li class="li">TBX-Min</li>
+        
+            <li class="li">Termbrowser (based on &lt;oXygen/&gt; webhelp)</li>
+        
+            <li class="li">Termbrowser Responsive (based on &lt;oXygen/&gt; webhelp)</li>
+        
+          </ul>
+        </li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title12">New <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> Topic</h1>
+        
+  <div class="body">
+    <ul class="ul" id="term-topic__ul_dcj_nws_gx">
+      <li class="li">New <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> DITA topic type, similar to
+          <code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> topic.</li>
+        
+      <li class="li">A term is the central unit of information.</li>
+        
+      <li class="li">The new topic type opens the flexibility to change the behavior of &lt;oXygen/&gt; to better
+        support terminology management.</li>
+        
+    </ul>
+        
+  </div>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title13"><code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> Topic</h2>
+        
+    <div class="body">
+      <p class="p">Built for glossaries, not for terminology databases.</p>
+        
+      <ul class="ul" id="topic_khb_sws_gx__ul_epn_nqt_gx">
+        <li class="li">Not meant to be multilingual.</li>
+        
+        <li class="li">No elements for terminology metadata.</li>
+        
+        <li class="li">Attribute standards are missing, e.g. <code class="keyword markupname xmlelement">&lt;glossStatus&gt;</code>
+          <code class="keyword markupname xmlatt">@value</code> has no values defined</li>
+        
+      </ul>
+        
+      <div class="section" id="topic_khb_sws_gx__section_qww_jwn_jx">
+        
+        <pre><code class="hljs xml">&lt;glossentry id="usbfd"&gt;
+  &lt;glossterm&gt;USB flash drive&lt;/glossterm&gt;
+  &lt;glossdef&gt;A small portable drive.&lt;/glossdef&gt;
+  &lt;glossBody&gt;
+    &lt;glossPartOfSpeech value="noun"/&gt;
+    &lt;glossUsage&gt;
+      Do not provide in upper case (as in "USB Flash Drive") 
+      because that suggests a trademark.
+    &lt;/glossUsage&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAcronym&gt;UFD&lt;/glossAcronym&gt;
+      &lt;glossUsage&gt;Explain the acronym on first occurrence.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt id="memoryStick"&gt;
+      &lt;glossSynonym&gt;memory stick&lt;/glossSynonym&gt;
+      &lt;glossUsage&gt;This is a colloquial term.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;stick&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This is too colloquial.&lt;/glossUsage&gt;
+      &lt;glossAlternateFor href="#usbfd/memoryStick"/&gt;
+    &lt;/glossAlt&gt;
+    &lt;glossAlt&gt;
+      &lt;glossAbbreviation&gt;flash&lt;/glossAbbreviation&gt;
+      &lt;glossStatus value="prohibited"/&gt;
+      &lt;glossUsage&gt;This short form is ambiguous.&lt;/glossUsage&gt;
+    &lt;/glossAlt&gt;
+  &lt;/glossBody&gt;
+&lt;/glossentry&gt;</code></pre>
+      </div>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title14"><code class="keyword markupname xmlelement">&lt;termentry&gt;</code> Topic</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_acn_yws_gx__ul_tch_krt_gx">
+        <li class="li">Multiple languages in one topic</li>
+        
+        <li class="li">Compatible to DITA-OT processing.</li>
+        
+        <li class="li">Total control of element names and structures</li>
+        
+        <li class="li">Easier to create XSL transformations, Schematron Termchecker and Termbrowser and
+            <strong class="ph b">&lt;oXygen/&gt; XML</strong> author frameworks that do not interfere with the standard DITA
+          frameworks</li>
+        
+        <li class="li">Strict element and attribute structures simplify UX focussed development</li>
+        
+        <li class="li">Content can still be shared between a <code class="keyword markupname xmlelement">&lt;glossentry&gt;</code> based glossary
+          (e.g. for the end user) and the <code class="keyword markupname xmlelement">&lt;termentry&gt;</code> based terminology base,
+          e.g. by <code class="keyword markupname xmlelement">&lt;ph&gt;</code> (e.g. for internal terms)</li>
+        
+      </ul>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd"&gt;
+&lt;termentry id="truck"&gt;
+  &lt;title&gt;Truck&lt;/title&gt;
+  &lt;definition&gt;
+    &lt;definitionText&gt;A truck is a motor vehicle designed to transport cargo.&lt;/definitionText&gt;
+    &lt;definitionSource&gt;
+      &lt;sourceReference href="https://en.wikipedia.org/wiki/Truck" 
+        format="html" scope="external"&gt;
+        Wikipedia
+      &lt;/sourceReference&gt;
+    &lt;/definitionSource&gt;
+  &lt;/definition&gt;
+  &lt;termBody&gt;
+    &lt;agreedWith&gt;
+      &lt;termCommitteeMember&gt;Heinrich Müller&lt;/termCommitteeMember&gt;
+      &lt;termCommitteeMember&gt;Günther Schmidt&lt;/termCommitteeMember&gt;
+    &lt;/agreedWith&gt;
+    &lt;fullForm language="de-DE" usage="preferred"&gt;
+      &lt;termVariant&gt;Lastkraftwagen&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;acronym language="de-DE" usage="preferred"&gt;
+      &lt;termVariant&gt;LKW&lt;/termVariant&gt;
+    &lt;/acronym&gt;
+    &lt;fullForm language="en-US" usage="preferred"&gt;
+      &lt;termVariant&gt;truck&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;fullForm language="en-GB" usage="preferred"&gt;
+      &lt;termVariant&gt;lorry&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+    &lt;fullForm language="en-GB" usage="notRecommended"&gt;
+      &lt;termVariant&gt;truck&lt;/termVariant&gt;
+    &lt;/fullForm&gt;
+  &lt;/termBody&gt;
+  &lt;relations&gt;
+    &lt;relatedTerms&gt;
+      &lt;relatedTerm keyref="car"/&gt;
+    &lt;/relatedTerms&gt;
+  &lt;/relations&gt;
+&lt;/termentry&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title15">&lt;oXygen/&gt; Author Framework</h1>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title16">Why a framework?</h2>
+        
+    <div class="body">
+      <ul class="ul">
+        <li class="li">Tagless XML editing: Technical Writers (mostly) prefer WYSIWYG-like editing and don't
+          want to see XML tags.</li>
+        
+        <li class="li">UX-focussed</li>
+        
+        <li class="li">Fun</li>
+        
+      </ul>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title17">Screenshot</h2>
+        
+    <div class="body">
+      
+      <img class="image" src="media/oxygen-author_1.png"></img>
+      
+      <img class="image" src="media/oxygen-author_2.png"></img>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title18">Termchecker</h1>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title19">Schematron based</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_ak1_bfh_jx__ul_ypl_kfh_jx">
+        <li class="li">Creates Schematron Quick Fixes. </li>
+        
+        <li class="li"><strong class="ph b">Prerequisite</strong>: <code class="keyword markupname xmlatt">@xml:lang</code> of DITA Topic must match
+            <code class="keyword markupname xmlatt">@language</code> of <code class="keyword markupname xmlelement">&lt;termNotation&gt;</code>.</li>
+        
+      </ul>
+        
+      <pre><code class="hljs xml">&lt;sch:pattern id="truck-d35e134"&gt;
+  &lt;sch:rule context="text()"&gt;
+    &lt;sch:report test="contains(/*/@xml:lang, 'en-GB') and contains(., 'truck')"
+                role="warning"
+                sqf:fix="sqfGroupTruckd35e134"&gt;The term 'truck' is not allowed.&lt;/sch:report&gt;
+    &lt;sqf:group id="sqfGroupTruckd35e134"&gt;
+      &lt;sqf:fix id="termTruckd35e1284"&gt;
+        &lt;sqf:description&gt;
+          &lt;sqf:title&gt;Replace with an allowed term: 'lorry'&lt;/sqf:title&gt;
+          &lt;sqf:p&gt;A truck is a motor vehicle designed to transport cargo.&lt;/sqf:p&gt;
+        &lt;/sqf:description&gt;
+        &lt;sqf:stringReplace regex="truck"&gt;lorry&lt;/sqf:stringReplace&gt;
+      &lt;/sqf:fix&gt;
+    &lt;/sqf:group&gt;
+  &lt;/sch:rule&gt;
+&lt;/sch:pattern&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title20">Termchecker Screencast</h2>
+        
+    <div class="body"><img class="image" src="media/term-replace.gif"></img></div>
+        
+  </section></section><section>
+  <h1 class="title topictitle1" id="ariaid-title21">Demo</h1>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title22">Installation</h1>
+        
+  
+  <div class="body taskbody"><p class="shortdesc">This chapter explains how to install the plugin <strong class="ph b">org.doctales.terminology</strong> to the
+    DITA-OT and how to integrate its framework into &lt;oXygen/&gt;.</p>
+        
+    <div class="section prereq p" id="install__prereq_f3z_tz2_sx">
+      <p class="p">Make sure you have installed:</p>
+        
+      <ul class="ul" id="install__ul_oyj_5z2_sx">
+        <li class="li">DITA-OT 2.3 or higher</li>
+        
+        <li class="li">&lt;oXygen/&gt; 18 or higher</li>
+        
+      </ul>
+        
+    </div>
+        
+    <ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">In the DITA-OT directory call:</span>
+        <div class="itemgroup info">
+          <kbd class="ph userinput">./bin/dita -install
+            https://github.com/doctales/org.doctales.terminology/archive/master.zip</kbd>
+        </div>
+        <div class="itemgroup stepresult">The plugin is installed into your DITA-OT.</div>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">To integrate the &lt;oXygen/&gt; XML framework, open <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Preferences</span></span> in &lt;oXygen/&gt;.</span>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">Go to <span class="ph menucascade"><span class="ph uicontrol">Document Type Association</span> &gt; <span class="ph uicontrol">Locations</span></span>.</span>
+      </li>
+        <li class="li step stepexpand">
+        <span class="ph cmd">Add the directory of the plugin as an additional framework directory, e.g:</span>
+        <div class="itemgroup info"><span class="ph uicontrol">~/DITA-OT/plugins/org.doctales.terminology</span><div class="note note"><span class="notetitle">Note:</span> You can find
+            detailed instructions for installation and usage in the <a class="xref" href="https://github.com/doctales/org.doctales.terminology" target="_blank">README.md</a>.</div>
+        </div>
+      </li>
+        </ol>
+        
+  </div>
+        
+</section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title23">Goals for the future</h1>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title24">Visualization of semantic net</h2>
+        
+    <div class="body">
+      <img class="image" id="topic_wvh_zdy_rx__image_mp4_c2y_rx" src="media/SemanticNet.jpg"></img>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title25">Any ideas?</h2>
+        
+  </section></section><section>
+  <h1 class="title topictitle1" id="ariaid-title26">Contact</h1>
+        
+  <div class="body">
+    <ul class="ul" id="unbenannt2__ul_n3m_h2y_rx">
+      <li class="li">If you have questions, want to contribute, need help, commercial support or training:
+        Write an e-mail to <a class="xref" href="mailto:stefan.eike@mailbox.org" target="_blank">stefan.eike@mailbox.org</a></li>
+        
+      <li class="li">Discuss something at <a class="xref" href="https://doctales.atlassian.net/wiki/display/TERM/questions/all" target="_blank">doctales.atlassian.net/wiki/display/TERM/questions</a></li>
+        
+      <li class="li">Report bugs and feature requests at <a class="xref" href="https://github.com/doctales/org.doctales.terminology" target="_blank">github.com/doctales/org.doctales.terminology</a></li>
+        
+    </ul>
+        
+  </div>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title27">Thank you</h1>
+        
+</section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
+        <script src="js/reveal.js" type="text/javascript"></script>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+                
+                Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    slideNumber: false,
+                    history: true,
+                    keyboard: true,
+                    overview: true,
+                    center: true,
+                    touch: true,
+                    loop: false,
+                    rtl: false,
+                    fragments: true,
+                    embedded: false,
+                    autoSlide: 0,
+                    autoSlideStoppable: true,
+                    mouseWheel: false,
+                    hideAddressBar: true,
+                    previewLinks: false,
+                    transition: 'default',
+                    transitionSpeed: 'default',
+                    backgroundTransition: 'default',
+                    viewDistance: 3,
+                    // parallaxBackgroundImage: '',
+                    // parallaxBackgroundSize: '',
+                    // parallaxBackgroundHorizontal: null,
+                    // parallaxBackgroundVertical: null,
+                    width: 960,
+                    height: 700,
+                    margin: 0.1,
+                    minScale: 0.2,
+                    maxScale: 1.5,
+                    
+                    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                    
+                    // Optional libraries used to extend on reveal.js
+                    dependencies: [
+                        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    ]
+                });
+                
+                Reveal.addEventListener( 'slidechanged', function( event ) {
+                zoomSection();
+                } );
+                
+                $( document ).ready(function() {
+                });
+            </script></body></html>

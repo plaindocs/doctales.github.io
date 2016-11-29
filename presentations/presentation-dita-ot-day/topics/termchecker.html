@@ -1,0 +1,43 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Termchecker</h1>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">Schematron based</h2>
+        
+    <div class="body">
+      <ul class="ul" id="topic_ak1_bfh_jx__ul_ypl_kfh_jx">
+        <li class="li">Creates Schematron Quick Fixes. </li>
+        
+        <li class="li"><strong class="ph b">Prerequisite</strong>: <code class="keyword markupname xmlatt">@xml:lang</code> of DITA Topic must match
+            <code class="keyword markupname xmlatt">@language</code> of <code class="keyword markupname xmlelement">&lt;termNotation&gt;</code>.</li>
+        
+      </ul>
+        
+      <pre><code class="hljs xml">&lt;sch:pattern id="truck-d35e134"&gt;
+  &lt;sch:rule context="text()"&gt;
+    &lt;sch:report test="contains(/*/@xml:lang, 'en-GB') and contains(., 'truck')"
+                role="warning"
+                sqf:fix="sqfGroupTruckd35e134"&gt;The term 'truck' is not allowed.&lt;/sch:report&gt;
+    &lt;sqf:group id="sqfGroupTruckd35e134"&gt;
+      &lt;sqf:fix id="termTruckd35e1284"&gt;
+        &lt;sqf:description&gt;
+          &lt;sqf:title&gt;Replace with an allowed term: 'lorry'&lt;/sqf:title&gt;
+          &lt;sqf:p&gt;A truck is a motor vehicle designed to transport cargo.&lt;/sqf:p&gt;
+        &lt;/sqf:description&gt;
+        &lt;sqf:stringReplace regex="truck"&gt;lorry&lt;/sqf:stringReplace&gt;
+      &lt;/sqf:fix&gt;
+    &lt;/sqf:group&gt;
+  &lt;/sch:rule&gt;
+&lt;/sch:pattern&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">Termchecker Screencast</h2>
+        
+    <div class="body"><img class="image" src="../media/term-replace.gif"></img></div>
+        
+  </topicContainer>
+</topicContainer>
