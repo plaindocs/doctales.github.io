@@ -1,0 +1,34 @@
+<termstats>
+   <termconflicts>
+      <termconflict>
+         <termnotation>car</termnotation>
+         <preferredTermFile>car.dita</preferredTermFile>
+         <notRecommendedTermFile>vehicle.dita</notRecommendedTermFile>
+      </termconflict>
+      <termconflict>
+         <termnotation>Fahrgestell</termnotation>
+         <preferredTermFile>chassis.dita</preferredTermFile>
+         <notRecommendedTermFile>unitizedBody.dita</notRecommendedTermFile>
+      </termconflict>
+      <termconflict>
+         <termnotation>Motor</termnotation>
+         <preferredTermFile>engine.dita</preferredTermFile>
+         <notRecommendedTermFile>internalCombustionEngine.dita</notRecommendedTermFile>
+      </termconflict>
+      <termconflict>
+         <termnotation>Motor</termnotation>
+         <preferredTermFile>petrolEngine.dita</preferredTermFile>
+         <notRecommendedTermFile>internalCombustionEngine.dita</notRecommendedTermFile>
+      </termconflict>
+   </termconflicts>
+   <reports>
+      <report date="2017-03-24">
+         <numberOfTermTopics>36</numberOfTermTopics>
+         <numberOfLanguages>5</numberOfLanguages>
+         <numberOfPreferredTermNotations>83</numberOfPreferredTermNotations>
+         <numberOfAdmittedTermNotations>7</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>29</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>0</numberOfObsoleteTermNotations>
+      </report>
+   </reports>
+</termstats>
