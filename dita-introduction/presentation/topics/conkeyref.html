@@ -1,0 +1,85 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Content Key Reference (conkeyref)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content key reference mechanism combines the content reference mechanism with the
+    key reference mechanism.</p>
+        
+    
+    <img class="image" src="media/conkeyref.svg"></img>
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">conkeyref.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">On the <span class="ph filepath">conkeyref.ditamap</span> the <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
+      element defines the key <code class="ph codeph">source</code> for the <span class="ph filepath">source.dita</span> topic
+      using the <code class="keyword markupname xmlatt">@keys</code> attribute. The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is a
+      specialization of the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element and implicitely sets the
+        <code class="keyword markupname xmlatt">@processing-role</code> attribute to <code class="ph codeph">resource-only</code>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;conkeyref&lt;/title&gt;
+    &lt;!--
+        Instead of using a &lt;topicref&gt;, we can use a &lt;keydef&gt; element,
+        which is a "short form" of the following &lt;topicref&gt;:
+        
+        &lt;topicref href="source.dita" keys="source" processing-role="resource-only" toc="no"/&gt;
+    --&gt;
+    &lt;keydef keys="source" href="source.dita"/&gt;
+    &lt;topicref href="target.dita"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">source.dita</span> file contains a <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element, that has an <code class="keyword markupname xmlatt">@id</code> attribute and therefore can be pulled using a content
+      reference or content key reference.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conkeyref-source"&gt;
+    &lt;title&gt;source&lt;/title&gt;
+    &lt;body&gt;
+        &lt;note id="charge-before-use"&gt;Use the included USB cable to charge your speaker and make sure
+            it is fully charged before first use.&lt;/note&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> file pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element by content reference. The pattern of the <code class="keyword markupname xmlatt">@conkeyref</code> attribute
+      is:</p>
+        
+      <pre class="pre codeblock"><code>KEY OF THE TOPIC + "/" + ID OF THE ELEMENT</code></pre>
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conkeyref-target"&gt;
+    &lt;title&gt;target&lt;/title&gt;
+    &lt;body&gt;
+        &lt;!--
+            Instead of using a @conref, we're using a @conkeyref
+            
+            &lt;note conref="source.dita#conref-source/charge-before-use"/&gt;
+        --&gt;
+        &lt;note conkeyref="source/charge-before-use"/&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>

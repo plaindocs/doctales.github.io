@@ -1,0 +1,402 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Key Scopes</h1>
+        
+  
+  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can, for
+    example, be used to use <em class="ph i">template</em> topics multiple times in the same project and fill them
+    with different data.</p>
+        
+    
+    <br></br><img class="image" id="key-scopes__image_ndd_3r3_tz" src="media/key-scope.svg"></img><br></br>
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the same
+        <span class="ph filepath">technical-data.dita</span> topic twice. The <code class="keyword markupname xmlatt">@keyscope</code>
+      attributes on the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for
+      the <em class="ph i">Galaxy S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;keyscopes&lt;/title&gt;
+
+  &lt;!-- The same technical data topic is used --&gt;
+  &lt;topicref href="technical-data.dita" keyscope="galaxys7"&gt;
+    &lt;mapref href="database-galaxys7.ditamap"/&gt;
+  &lt;/topicref&gt;
+
+  &lt;topicref href="technical-data.dita" keyscope="iphone7"&gt;
+    &lt;mapref href="database-iphone7.ditamap"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">technical-data.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> topic is a template topic, that is
+      filled with the data from the <span class="ph filepath">database-galaxys7.ditamap</span> map and from the
+        <span class="ph filepath">database-iphone7.ditamap</span> map.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="technical-data"&gt;
+  &lt;title&gt;technical data&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;Technical Data of &lt;keyword keyref="product"/&gt;&lt;/p&gt;
+    &lt;table frame="none" rowsep="0" colsep="0"&gt;
+      &lt;tgroup cols="2"&gt;
+        &lt;colspec colname="c1" colnum="1" colwidth="25*"/&gt;
+        &lt;colspec colname="c2" colnum="2" colwidth="75*"/&gt;
+        &lt;tbody&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Device Type&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="device-type"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;OS&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="os"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Dimensions&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="dimensions"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Weight&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="weight"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Display&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="display"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Resolution&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="resolution"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Pixel Density&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="pixel-density"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Processor&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="processor"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/tbody&gt;
+      &lt;/tgroup&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">database-galaxys7.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> map defines multiple keys, that
+      contain technical data specific for the <em class="ph i">Galaxy S7</em>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;Galaxy S7&lt;/title&gt;
+  &lt;keydef keys="product"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Galaxy S7&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="device-type"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Smartphone&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="os"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Android&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="dimensions"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;150.9 x 72.6 x 7.7 mm&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="weight"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;157 g&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="display"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;5.5 inches&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="resolution"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;1440 x 2560 pixels&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="pixel-density"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;534 ppi&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="processor"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Qualcomm Snapdragon 820 MSM8996, Quad-core, 2200 MHz&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title5">database-iphone7.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> map defines multiple keys, that
+      contain technical data specific for the <em class="ph i">iPhone 7</em>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;iPhone 7&lt;/title&gt;
+  &lt;keydef keys="product"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;iPhone 7&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="device-type"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Smartphone&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="os"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;iOS&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="dimensions"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;158.2 x 77.9 x 7.3 mm&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="weight"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;188 g&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="display"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;5.5 inches&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="resolution"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;1080 x 1920 pixels&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="pixel-density"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;401 ppi&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="processor"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Apple A10 Fusion, Quad-core, 2340 MHz&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title6">Galaxy S7 Result</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following table is rendered for the <em class="ph i">Galaxy S7</em>.</p>
+        
+      <p class="p">Technical Data of Galaxy S7</p>
+        
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_ppn_rs3_tz__table_gnl_ss3_tz" class="table" frame="border" border="1" rules="all"><colgroup><col></col><col></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Device Type</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Smartphone</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">OS</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Android</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Dimensions</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">150.9 x 72.6 x 7.7 mm</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Weight</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">157 g</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Display</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">5.5 inches</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Resolution</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">1440 x 2560 pixels</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Pixel Density</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">534 ppi</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry row-nocellborder" style="vertical-align:top;">Processor</td>
+        
+              <td class="entry cellrowborder" style="vertical-align:top;">Qualcomm Snapdragon 820 MSM8996, Quad-core, 2200 MHz</td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title7">iPhone 7 Result</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following table is rendered for the <em class="ph i">iPhone 7</em>.</p>
+        
+      <p class="p">Technical Data of iPhone 7</p>
+        
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dfh_ts3_tz__table_bjf_5s3_tz" class="table" frame="border" border="1" rules="all"><colgroup><col></col><col></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Device Type</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Smartphone</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">OS</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">iOS</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Dimensions</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">158.2 x 77.9 x 7.3 mm</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Weight</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">188 g</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Display</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">5.5 inches</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Resolution</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">1080 x 1920 pixels</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Pixel Density</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">401 ppi</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry row-nocellborder" style="vertical-align:top;">Processor</td>
+        
+              <td class="entry cellrowborder" style="vertical-align:top;">Apple A10 Fusion, Quad-core, 2340 MHz</td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </topicContainer>
+</topicContainer>

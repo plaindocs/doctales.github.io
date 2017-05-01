@@ -1,0 +1,106 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Content Reference End (conrefend)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content reference end mechansim is used together with a content reference or
+    content key reference and identifies an element, that is the last element of a content reference
+    range.</p>
+        
+    
+    <img class="image" src="media/conrefend.svg"></img>
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">conrefend.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element in the
+        <span class="ph filepath">conrefend.ditamap</span> defines the key <code class="ph codeph">source</code> using the
+        <code class="keyword markupname xmlatt">@keys</code> attribute for the <span class="ph filepath">source.dita</span> topic. The
+        <span class="ph filepath">source.dita</span> topic is a database topic and not rendered in the output.
+      Further on, it references the <span class="ph filepath">target.dita</span> topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;conrefend&lt;/title&gt;
+    &lt;!--
+        The source.dita file is not rendered in the output,
+        because the &lt;keydef&gt; element implicitly sets processing-role="resource-only"
+    --&gt;
+    &lt;keydef keys="source" href="source.dita"/&gt;
+    &lt;topicref href="target.dita"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">source.dita</span> topic contains an unordered list
+        (<code class="keyword markupname xmlelement">&lt;ul&gt;</code>) with 10 list items (<code class="keyword markupname xmlelement">&lt;li&gt;</code>).</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="source"&gt;
+  &lt;title&gt;source&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li id="li01"&gt;list item 01&lt;/li&gt;
+      &lt;li id="li02"&gt;list item 02&lt;/li&gt;
+      &lt;li id="li03"&gt;list item 03&lt;/li&gt;
+      &lt;li id="li04"&gt;list item 04&lt;/li&gt;
+      &lt;li id="li05"&gt;list item 05&lt;/li&gt;
+      &lt;li id="li06"&gt;list item 06&lt;/li&gt;
+      &lt;li id="li07"&gt;list item 07&lt;/li&gt;
+      &lt;li id="li08"&gt;list item 08&lt;/li&gt;
+      &lt;li id="li09"&gt;list item 09&lt;/li&gt;
+      &lt;li id="li10"&gt;list item 10&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> topic pulls a range of
+        <code class="keyword markupname xmlelement">&lt;li&gt;</code> elements. The range starts with the <code class="keyword markupname xmlelement">&lt;li&gt;</code>
+      element <code class="ph codeph">li03</code> and ends with the <code class="keyword markupname xmlelement">&lt;li&gt;</code> element
+        <code class="ph codeph">li07</code>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="target"&gt;
+    &lt;title&gt;target&lt;/title&gt;
+    &lt;body&gt;
+        &lt;ul&gt;
+            &lt;!-- All &lt;li&gt; elements from li03 to li07 are pulled into the &lt;ul&gt; --&gt;
+            &lt;li conkeyref="source/li03" conrefend=".#/li07"/&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+      <p class="p">The rendered output is:</p>
+        
+      <ul class="ul" id="conrefend-target__ul_lmp_w23_tz">
+        <li class="li">list item 03</li>
+        
+        <li class="li">list item 04</li>
+        
+        <li class="li">list item 05</li>
+        
+        <li class="li">list item 06</li>
+        
+        <li class="li">list item 07</li>
+        
+      </ul>
+        
+    </div>
+        
+  </topicContainer>
+</topicContainer>

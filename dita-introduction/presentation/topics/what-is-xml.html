@@ -1,0 +1,91 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">What is XML?</h1>
+        
+  <p class="shortdesc">DITA is based on the Extensible Markup Language (XML). XML is a meta-language for
+    creating new languages. To understand what DITA is, it is important to understand what XML is
+    and how it works.</p>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">Elements</h2>
+        
+    <div class="body">
+      <p class="p">XML is a markup language. This means that text or other content is marked up with elements,
+        called <em class="ph i">tags</em>. XML documents are both human-readable and machine-readable.</p>
+        
+      <p class="p">An XML document always has a tree structure, meaning it has a single root element. An
+        element consists of an opening tag of a closing tag. A tag has a name, that is wrapped in a
+        lower than char (<code class="ph codeph">&lt;</code>) and a greater than char (<code class="ph codeph">&gt;</code>).</p>
+        
+      <pre><code class="hljs xml">&lt;!-- An opening tag --&gt;
+&lt;recipe&gt;
+
+&lt;!-- A closing tag (indicated by the "/" char) --&gt;
+&lt;/recipe&gt;
+
+&lt;!-- The short form, a combination of opening and closing tag. The "/" is placed after the name --&gt;
+&lt;recipe/&gt;</code></pre>
+      <p class="p">An XML document may contain comments that are not processed by an XML processor. A comments
+        starts with <code class="ph codeph">&lt;!--</code> and ends with <code class="ph codeph">--&gt;</code>.</p>
+        
+      <pre class="pre codeblock"><code>&lt;!-- A comment --&gt;</code></pre>
+      <p class="p">An element may have attributes which add additional information to the element. Attributes
+        are included in the opening tag.</p>
+        
+      <pre><code class="hljs xml">&lt;element attribute="value"/&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">Schemas</h2>
+        
+    <div class="body">
+      <p class="p">The structure of an XML file can be specified using a schema. There are 3 common schema
+        languages, that are can be used to specify an XML structure.</p>
+        
+      <ul class="ul" id="topic_kkf_lcj_tz__ul_hwy_ncj_tz">
+        <li class="li">Document Type Definition (DTD)</li>
+        
+        <li class="li">XML Schema (XSD)</li>
+        
+        <li class="li">Relax NG (RNG/RNC)</li>
+        
+      </ul>
+        
+      <p class="p">The DITA XML structure is defined in all 3 languages. An information architect can choose,
+        which schema language he wants for validating the DITA files.</p>
+        
+      <div class="note note"><span class="notetitle">Note:</span> Working with grammars is a complex task, that is not going to be explained here.</div>
+        
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">A Simple XML document</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following sample file shows a basic XML file representing a recipe to cook sunny
+      side-up eggs.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;recipe&gt;
+  &lt;title&gt;Sunny side-up egg&lt;/title&gt;
+  &lt;ingredients&gt;
+    &lt;ingredient&gt;1 egg&lt;/ingredient&gt;
+    &lt;ingredient&gt;olive oil&lt;/ingredient&gt;
+    &lt;ingredient&gt;salt&lt;/ingredient&gt;
+  &lt;/ingredients&gt;
+  &lt;steps&gt;
+    &lt;step&gt;Get frying pan on a medium head.&lt;/step&gt;
+    &lt;step&gt;Add olive oil.&lt;/step&gt;
+    &lt;step&gt;Crack the egg into the pan.&lt;/step&gt;
+    &lt;step&gt;Cook the egg until the tops of the whites are set but the yolk of the egg is still runny.&lt;/step&gt;
+    &lt;step&gt;Remove the pan from the head and take the egg using a spatula.&lt;/step&gt;
+    &lt;step&gt;Serve the egg with a sprinkling of the salt.&lt;/step&gt;
+  &lt;/steps&gt;
+&lt;/recipe&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>

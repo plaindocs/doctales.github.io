@@ -1,0 +1,2060 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <meta name="copyright" content="(C) Copyright 2017"></meta>
+        <meta name="DC.rights.owner" content="(C) Copyright 2017"></meta>
+        <meta name="DC.Type" content="topic"></meta>
+        <meta name="DC.Title" content="Introduction to DITA"></meta>
+        <meta name="DC.Format" content="XHTML"></meta>
+        <meta name="DC.Identifier" content="topic_byt_xfj_mz"></meta>
+        <link rel="stylesheet" type="text/css" href="commonltr.css"></link>
+        <title>Introduction to DITA</title>
+        <meta name="apple-mobile-web-app-capable" content="yes"></meta><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"></meta><link rel="stylesheet" href="css/reveal.css"></link><link rel="stylesheet" href="css/theme/doctales.css" id="theme"></link><link href="lib/css/zenburn.css" rel="stylesheet"></link><script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script></head>
+        <body><div class="reveal"><div class="slides">
+        <section>
+  <h1 class="title topictitle1" id="ariaid-title1">Introduction to DITA</h1>
+        
+  <div class="body">
+    <img class="image" src="topics/media/logo-dita.svg"></img>
+  </div>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title2">Who am I?</h1>
+        
+  <div class="body">
+    <div class="p">
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" width="100%" frame="void" border="0" rules="none"><colgroup><col style="width:33%"></col><col style="width:67%"></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;"><br></br><img class="image" src="media/ich.png"></img><br></br></td>
+        
+              <td class="entry nocellnorowborder" style="vertical-align:top;">
+                <div class="div">
+                  <p class="p"><strong class="ph b">Stefan Eike</strong></p>
+        
+                </div>
+                <div class="div">
+                  <p class="p"><strong class="ph b">Work</strong></p>
+        
+                  <ul class="ul">
+                    <li class="li">Technical Writer and Information Architect <a class="xref" href="http://www.dakosy.de" target="_blank"><img class="image inline" src="media/icon-dakosy.svg"></img></a></li>
+        
+                    <li class="li">Open Source DITA Developer <a class="xref" href="http://doctales.github.io" target="_blank"><img class="image inline" src="media/icon-doctales.svg"></img></a></li>
+        
+                  </ul>
+        
+                </div>
+                <div class="div">
+                  <p class="p"><strong class="ph b">Education</strong></p>
+        
+                  <ul class="ul">
+                    <li class="li">Technischer Redakteur B.A. (Technical Writer) <a class="xref" href="http://technische-redaktion-hannover.de/" target="_blank"><img class="image inline" src="media/icon-hs-hannover.svg"></img></a></li>
+        
+                    <li class="li">Medieninformatiker M.Sc. (Media Informatics) <a class="xref" href="http://www.oncampus.de/master-medieninformatik.html" target="_blank"><img class="image inline" src="media/icon-oncampus.svg"></img></a> <strong class="ph b">coming soon</strong></li>
+        
+                  </ul>
+        
+                </div>
+                <div class="div">
+                  <p class="p">
+                    <span class="xref"><img class="image"></img></span>
+                    <span class="xref"><img class="image"></img></span>
+                    <span class="xref"><img class="image"></img></span>
+                    <span class="xref"><img class="image"></img></span>
+                    <span class="xref"><img class="image"></img></span>
+                    <span class="xref"><img class="image"></img></span>
+                  </p>
+        
+                </div>
+              </td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </div>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title3">Objectives</h1>
+        
+  <div class="body">
+    <ul class="ul">
+      <li class="li">Understand XML and DITA</li>
+        
+      <li class="li">Brief history of DITA</li>
+        
+      <li class="li">Essential features of DITA</li>
+        
+      <li class="li">Pros and cons</li>
+        
+    </ul>
+        
+  </div>
+        
+</section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title4">What is XML?</h1>
+        
+  <p class="shortdesc">DITA is based on the Extensible Markup Language (XML). XML is a meta-language for
+    creating new languages. To understand what DITA is, it is important to understand what XML is
+    and how it works.</p>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title5">Elements</h2>
+        
+    <div class="body">
+      <p class="p">XML is a markup language. This means that text or other content is marked up with elements,
+        called <em class="ph i">tags</em>. XML documents are both human-readable and machine-readable.</p>
+        
+      <p class="p">An XML document always has a tree structure, meaning it has a single root element. An
+        element consists of an opening tag of a closing tag. A tag has a name, that is wrapped in a
+        lower than char (<code class="ph codeph">&lt;</code>) and a greater than char (<code class="ph codeph">&gt;</code>).</p>
+        
+      <pre><code class="hljs xml">&lt;!-- An opening tag --&gt;
+&lt;recipe&gt;
+
+&lt;!-- A closing tag (indicated by the "/" char) --&gt;
+&lt;/recipe&gt;
+
+&lt;!-- The short form, a combination of opening and closing tag. The "/" is placed after the name --&gt;
+&lt;recipe/&gt;</code></pre>
+      <p class="p">An XML document may contain comments that are not processed by an XML processor. A comments
+        starts with <code class="ph codeph">&lt;!--</code> and ends with <code class="ph codeph">--&gt;</code>.</p>
+        
+      <pre class="pre codeblock"><code>&lt;!-- A comment --&gt;</code></pre>
+      <p class="p">An element may have attributes which add additional information to the element. Attributes
+        are included in the opening tag.</p>
+        
+      <pre><code class="hljs xml">&lt;element attribute="value"/&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title6">Schemas</h2>
+        
+    <div class="body">
+      <p class="p">The structure of an XML file can be specified using a schema. There are 3 common schema
+        languages, that are can be used to specify an XML structure.</p>
+        
+      <ul class="ul" id="topic_kkf_lcj_tz__ul_hwy_ncj_tz">
+        <li class="li">Document Type Definition (DTD)</li>
+        
+        <li class="li">XML Schema (XSD)</li>
+        
+        <li class="li">Relax NG (RNG/RNC)</li>
+        
+      </ul>
+        
+      <p class="p">The DITA XML structure is defined in all 3 languages. An information architect can choose,
+        which schema language he wants for validating the DITA files.</p>
+        
+      <div class="note note"><span class="notetitle">Note:</span> Working with grammars is a complex task, that is not going to be explained here.</div>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title7">A Simple XML document</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following sample file shows a basic XML file representing a recipe to cook sunny
+      side-up eggs.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;recipe&gt;
+  &lt;title&gt;Sunny side-up egg&lt;/title&gt;
+  &lt;ingredients&gt;
+    &lt;ingredient&gt;1 egg&lt;/ingredient&gt;
+    &lt;ingredient&gt;olive oil&lt;/ingredient&gt;
+    &lt;ingredient&gt;salt&lt;/ingredient&gt;
+  &lt;/ingredients&gt;
+  &lt;steps&gt;
+    &lt;step&gt;Get frying pan on a medium head.&lt;/step&gt;
+    &lt;step&gt;Add olive oil.&lt;/step&gt;
+    &lt;step&gt;Crack the egg into the pan.&lt;/step&gt;
+    &lt;step&gt;Cook the egg until the tops of the whites are set but the yolk of the egg is still runny.&lt;/step&gt;
+    &lt;step&gt;Remove the pan from the head and take the egg using a spatula.&lt;/step&gt;
+    &lt;step&gt;Serve the egg with a sprinkling of the salt.&lt;/step&gt;
+  &lt;/steps&gt;
+&lt;/recipe&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+    <h1 class="title topictitle1" id="ariaid-title8">What is DITA?</h1>
+        
+    <div class="body">
+        <ul class="ul" id="topic_wvy_24y_sz__ul_rry_f4y_sz">
+            <li class="li">
+                <p class="p">DITA is an XML architecture and writing methodology, originally developed for
+                    creating software documentation.</p>
+        
+            </li>
+        
+            <li class="li">
+                <p class="p">DITA stands for the Darwin Information Typing Architecture.</p>
+        
+            </li>
+        
+            <li class="li">
+                <p class="p">The "Darwin" is in homage to Charles Darwin, who has developed the theory of
+                    evolution. DITA incorporates evolutionary principles (specialisation, adaption
+                    and inheritance).</p>
+        
+            </li>
+        
+        </ul>
+        
+    </div>
+        
+    
+    
+    
+    
+    
+    
+</section><section>
+        <h2 class="title topictitle2" id="ariaid-title9">Definition</h2>
+        
+        <div class="body">
+            <p class="p"><span class="q">"DITA defines an XML architecture for designing, writing, managing, and publishing
+                    many kinds of information in print and on the Web."</span></p>
+        
+            <p class="p">Source: <a class="xref" href="https://www.oxygenxml.com/dita/styleguide/webhelp-feedback/index.html#Artefact/Authoring_Concepts/c_Introduction_to_DITA.html" target="_blank">The DITA Style Guide Best Practices for Authors -
+                    Introduction to DITA</a></p>
+        
+        </div>
+        
+    </section><section>
+        <h2 class="title topictitle2" id="ariaid-title10">Maps and topics</h2>
+        
+        
+        <div class="body"><p class="shortdesc">DITA contains multiple map and topic types. All of them are designed to serve a
+            specific purpose.</p>
+        
+            
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="maps-and-topics__map-types" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:25%"></col><col style="width:75%"></col></colgroup><thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e347">Map</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e350">Description</th>
+        
+                        </tr>
+        
+                    </thead>
+        <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e347 "><code class="keyword markupname xmlelement">&lt;map&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e350 ">Describes the relationships among a set of resources, such as
+                                DITA topics</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e347 "><code class="keyword markupname xmlelement">&lt;bookmap&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e350 ">Special map type with elements needed to specify information
+                                needed to publish documentation as books</td>
+        
+                        </tr>
+        
+                    </tbody>
+        </table>
+        </div>
+        
+            
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="maps-and-topics__topic-types" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:25%"></col><col style="width:75%"></col></colgroup><thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e392">Topic</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e395">Description</th>
+        
+                        </tr>
+        
+                    </thead>
+        <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e392 "><code class="keyword markupname xmlelement">&lt;topic&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e395 ">Generic topic type</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e392 "><code class="keyword markupname xmlelement">&lt;concept&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e395 ">Contains background information that helps readers understand
+                                essential information about a product, a task, a process, or any
+                                other conceptual or descriptive information</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e392 "><code class="keyword markupname xmlelement">&lt;task&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e395 ">Contains instructions for the completion of a procedure</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e392 "><code class="keyword markupname xmlelement">&lt;reference&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e395 ">Provides lists and tables that include product specifications,
+                                parts lists, and other data that is often "looked up" rather than
+                                memorized</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e392 "><code class="keyword markupname xmlelement">&lt;glossentry&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e395 ">Represents a glossary entry</td>
+        
+                        </tr>
+        
+                    </tbody>
+        </table>
+        </div>
+        
+        </div>
+        
+    </section><section>
+        <h2 class="title topictitle2" id="ariaid-title11">Elements, Domains and Specializations</h2>
+        
+        
+        <div class="body"><p class="shortdesc">DITA has hundreds of pre-defined elements that are bundled in <strong class="ph b">domains</strong>.
+            Domains can be stripped out or added, if necessary.</p>
+        
+            <ul class="ul" id="topic_w4b_xjj_tz__ul_d5b_jkj_tz">
+                <li class="li">Specialized maps, topics and elements always base on specific base
+                    elements.</li>
+        
+                <li class="li">New maps, topics and elements must be as restrictive or more restrictive than
+                    the base information type.</li>
+        
+                <li class="li">Specializations are created be writing new schemas (Relax NG, XML Schema or
+                    DTD).</li>
+        
+            </ul>
+        
+        </div>
+        
+    </section><section>
+        <h2 class="title topictitle2" id="ariaid-title12">Why specialization?</h2>
+        
+        <div class="body">
+            <div class="p">
+                <ul class="ul" id="topic_ckm_t1z_sz__ul_dgd_bbz_sz">
+                    <li class="li">Because specialized maps, topic and elements are based on a base vocabulary,
+                        these specialized elements <em class="ph i">can</em> use the same processing as the base
+                        elements or can be processed different.</li>
+        
+                    <li class="li">Specialized structures can be used to create more specific search,
+                        validation, filtering and re-use.</li>
+        
+                    <li class="li">Special product architectural requirements can be mapped on new
+                        structures.</li>
+        
+                    <li class="li">Specializations can be easily shared with other teams or business
+                        partners.</li>
+        
+                </ul>
+        
+            </div>
+        
+        </div>
+        
+    </section><section>
+        <h2 class="title topictitle2" id="ariaid-title13">Highlighting Domain</h2>
+        
+        
+        <div class="body"><p class="shortdesc">The <strong class="ph b">highlighting</strong> domain contains elements, that can be used to emphasize
+            information.</p>
+        
+            <p class="p">The table shows the elements of the <strong class="ph b">highlighting</strong> domain and their base
+                elements.</p>
+        
+            
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:25%"></col><col style="width:25%"></col><col style="width:50%"></col></colgroup><thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e548">Element Name</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e551">Based On</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e554">Decription</th>
+        
+                        </tr>
+        
+                    </thead>
+        <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;b&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">To apply bold highlighting to the content of the element</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;i&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">To apply italic highlighting to the content of the
+                                element</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;line-through&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">Indicates text that is rendered with a line struck through the
+                                content</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;overline&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">Indicates content that is rendered with a line above it</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;sub&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">Indicates that text should appear with subscript
+                                highlighting</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;sup&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">Indicates that text should appear with superscript
+                                highlighting</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;tt&gt;</code> (teletype)</td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">To apply monospaced highlighting to the content of the
+                                element</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e548 "><code class="keyword markupname xmlelement">&lt;u&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e551 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e554 ">To apply underline highlighting to the content of the
+                                element</td>
+        
+                        </tr>
+        
+                    </tbody>
+        </table>
+        </div>
+        
+        </div>
+        
+    </section><section>
+        <h2 class="title topictitle2" id="ariaid-title14">Software Domain</h2>
+        
+        
+        <div class="body"><p class="shortdesc">The <strong class="ph b">software</strong> domain contains elements, that can be used to explain
+            software.</p>
+        
+            <p class="p">The table shows the elements of the <strong class="ph b">software</strong> domain and their base
+                elements.</p>
+        
+            
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:25%"></col><col style="width:25%"></col><col style="width:50%"></col></colgroup><thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e713">Element Name</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e716">Based On</th>
+        
+                            <th class="entry cellrowborder" style="text-align:left;vertical-align:top;" id="d647e719">Decription</th>
+        
+                        </tr>
+        
+                    </thead>
+        <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;cmdname&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;keyword&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Name of a command</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;filepath&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Name of a referenced file, system path, or both</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;msgblock&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;pre&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Multi-line message or set of messages</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;msgnum&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;keyword&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Number of a message produced by an application or program</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;msgph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Message phrase that contains the text content of a message
+                                produced by an application or program</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;systemoutput&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Computer output or responses to a command or situation</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;userinput&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;ph&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Text a user should input in response to a program or system
+                                prompt</td>
+        
+                        </tr>
+        
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e713 "><code class="keyword markupname xmlelement">&lt;varname&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e716 "><code class="keyword markupname xmlelement">&lt;keyword&gt;</code></td>
+        
+                            <td class="entry cellrowborder" style="text-align:left;vertical-align:top;" headers="d647e719 ">Variable that must be supplied to a software application.</td>
+        
+                        </tr>
+        
+                    </tbody>
+        </table>
+        </div>
+        
+        </div>
+        
+    </section></section><section>
+    <h1 class="title topictitle1" id="ariaid-title15">Why using DITA?</h1>
+        
+    <div class="body">
+        <ul class="ul" id="topic_ehm_1py_sz__ul_xly_1py_sz">
+            <li class="li">DITA enforces <strong class="ph b">structured authoring</strong>, which results in a good document
+                structure.</li>
+        
+            <li class="li">DITA facilitates <strong class="ph b">content re-use</strong>, which leads to less duplicated content.</li>
+        
+            <li class="li">DITA supports <strong class="ph b">single sourcing</strong>, which speeds up making changes in multiple
+                outputs.</li>
+        
+            <li class="li">DITA <strong class="ph b">reduces translation costs</strong>, because less content has to be
+                translated.</li>
+        
+            <li class="li">DITA is <strong class="ph b">extendable</strong> due to specializations and therefore can easily be adapted
+                to customer needs.</li>
+        
+            <li class="li">DITA is <strong class="ph b">scalable</strong> and can be used by a single author on a single machine or by
+                hundreds of authors in a complex authoring environment with multiple publishing
+                servers.</li>
+        
+            <li class="li">DITA is effective for <strong class="ph b">collaboration</strong>, because DITA files can be shared in
+                version control systems like Git or in a CMS.</li>
+        
+            <li class="li">DITA enables <strong class="ph b">conditional processing</strong>, e.g. based on target audience or product
+                features.</li>
+        
+            <li class="li">DITA can be <strong class="ph b">converted</strong> in all major output formats, e.g. HTML5 or PDF</li>
+        
+            <li class="li">DITA <strong class="ph b">seperates content from presentation</strong> and therefore can easily converted
+                to new output formats like, for example, responsive HTML5.</li>
+        
+            <li class="li">DITA ensures <strong class="ph b">structural integrity</strong>, because it is based on XML which can be
+                validated.</li>
+        
+            <li class="li">DITA <strong class="ph b">separetes content</strong> (topics) <strong class="ph b">from context</strong> (maps).</li>
+        
+            <li class="li">DITA is an <strong class="ph b">open standard</strong> (not proprietary) and is not relying on specific
+                tools.</li>
+        
+        </ul>
+        
+    </div>
+        
+</section><section>
+    <h1 class="title topictitle1" id="ariaid-title16">Who is using DITA</h1>
+        
+    
+    <div class="body"><p class="shortdesc">The list of the <a class="xref" href="https://www.oasis-open.org/committees/ballot.php?id=2892" target="_blank">companies</a> who <em class="ph i">voted</em> for the DITA 1.3
+        specification is public.</p>
+        
+        <ul class="ul" id="topic_xwx_gqz_sz__ul_p2d_dtz_sz">
+            <li class="li">AT&amp;T</li>
+        
+            <li class="li">Adobe</li>
+        
+            <li class="li">Alcatel-Lucent</li>
+        
+            <li class="li">Cisco Systems</li>
+        
+            <li class="li">Deutsche Boerse AG</li>
+        
+            <li class="li">Deutsche Telekom AG</li>
+        
+            <li class="li">EMC</li>
+        
+            <li class="li">Ericsson</li>
+        
+            <li class="li">Fujitsu Limited</li>
+        
+            <li class="li">Hewlett Packard Enterprise (HPE)</li>
+        
+            <li class="li">Huawei Technologies Co., Ltd.</li>
+        
+            <li class="li">IBM</li>
+        
+            <li class="li">M.I.T.</li>
+        
+            <li class="li">Microsoft</li>
+        
+            <li class="li">Nokia Solutions and Networks</li>
+        
+            <li class="li">Oracle</li>
+        
+            <li class="li">PTC</li>
+        
+            <li class="li">Red Hat</li>
+        
+            <li class="li">SAP SE</li>
+        
+            <li class="li">SDL</li>
+        
+            <li class="li">Siemens AG</li>
+        
+            <li class="li">TYPO3 Association</li>
+        
+            <li class="li">The Boeing Company</li>
+        
+            <li class="li">US Department of Defense (DoD)</li>
+        
+            <li class="li">VMware, Inc.</li>
+        
+        </ul>
+        
+    </div>
+        
+</section><section>
+    <h1 class="title topictitle1" id="ariaid-title17">DITA at SAP</h1>
+        
+    
+    <div class="body"><p class="shortdesc">SAP presented their worldwide DITA environment at the <em class="ph i">DITA Europe 2017</em> in
+        Munich/Germany.</p>
+        
+        <div class="div"><object width="560" height="315" data="https://www.youtube.com/embed/rBPK93UdrwQ"></object></div>
+        <p class="p"><strong class="ph b">Impressive Numbers</strong></p>
+        
+        <ul class="ul" id="topic_tbk_jqz_sz__ul_brr_hrz_sz">
+            <li class="li">3.000.000+ DITA Topics</li>
+        
+            <li class="li">Daily builds and on-demand builds</li>
+        
+            <li class="li">1.000+ registered authors</li>
+        
+            <li class="li">60.000+ outputs daily</li>
+        
+            <li class="li">300+ products</li>
+        
+            <li class="li">47 languages</li>
+        
+        </ul>
+        
+    </div>
+        
+</section><section>
+  <h1 class="title topictitle1" id="ariaid-title18">The History of DTA</h1>
+        
+  
+  <div class="body"><p class="shortdesc">This is a short summary of the DITA history. The detailed history can be looked up at
+      <a class="xref" href="http://dita.xml.org/book/history-of-dita" target="_blank">http://dita.xml.org/book/history-of-dita</a>.</p>
+        
+    <ul class="ul">
+      <li class="li">In <strong class="ph b">April 2004</strong>, the Organization for the Advancement of Structured Information
+        Standards (OASIS), formed a Technical Committee to explore a DITA Standard. The TC included
+        XML tools vendors, consultants on Information Architecture and Content Management Systems
+        (CMS), and end users of the DITA Document Type Definitions (DTD) and Schemas needed for the
+        new DITA Standard.</li>
+        
+      <li class="li">In <strong class="ph b">February 2005</strong>, IBM donated the Open Toolkit, a limited version of their internal
+        Information Developers Workbench, to SourceForge. IBM continues to develop the OT, which is
+        not a part of the OASIS DITA Standard efforts.</li>
+        
+      <li class="li"><strong class="ph b">DITA 1.0</strong> was approved as an OASIS Standard in <strong class="ph b">June 2005</strong></li>
+        
+      <li class="li"><strong class="ph b">DITA 1.1</strong> was approved in <strong class="ph b">August 2007</strong>, adding a new Bookmap
+          specialization.</li>
+        
+      <li class="li"><strong class="ph b">DITA 1.2</strong> was released in <strong class="ph b">2010</strong>. It added structured learning, creation of
+        Learning Objects with DITA, which will be compatible with eLearning standards such as
+        SCORM.</li>
+        
+      <li class="li"><strong class="ph b">DITA 1.3</strong> was released in <strong class="ph b">2015</strong>. It added the new troubleshooting topic,
+        release management, scoped keys.</li>
+        
+      <li class="li"><strong class="ph b">Lightweight DITA</strong> containing a very basic set of DITA elements and <strong class="ph b">DITA 2.0</strong>
+        will be released soon making it easier for people to start with DITA.</li>
+        
+    </ul>
+        
+  </div>
+        
+</section><section><section>
+    <h1 class="title topictitle1" id="ariaid-title19">Simple project hierarchy</h1>
+        
+    
+    <div class="body"><p class="shortdesc">A DITA project usually contains a DITA Map with multiple
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that reference DITA Topics.</p>
+        
+        <br></br><img class="image" src="topics/media/simple-project-hierarchy.svg"></img><br></br>
+        
+    </div>
+        
+    
+</section><section>
+        <h2 class="title topictitle2" id="ariaid-title20">DITA Map with some topic references</h2>
+        
+        
+        <div class="body"><p class="shortdesc">The following DITA Map example shows a very simple map structure with a few
+            topics.</p>
+        
+            <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;Map&lt;/title&gt;
+    &lt;topicref href="topics/topic-01.dita"/&gt;
+    &lt;topicref href="topics/topic-02.dita"&gt;
+        &lt;topicref href="topics/topic-02-01.dita"/&gt;
+    &lt;/topicref&gt;
+    &lt;topicref href="topics/topic-03.dita"/&gt;
+&lt;/map&gt;</code></pre>
+            <div class="note note"><span class="notetitle">Note:</span> It is possible to nest DITA Maps in DITA Maps using the
+                    <code class="keyword markupname xmlelement">&lt;mapref&gt;</code> element.</div>
+        
+        </div>
+        
+    </section></section><section><section>
+    <h1 class="title topictitle1" id="ariaid-title21">DITA-OT</h1>
+        
+    <p class="shortdesc">The <strong class="ph b">DITA-OT</strong> is the unofficial reference implementation of the DITA standard.
+        It is a set of tools and technologies to process DITA maps and topics and to create output
+        formats like <strong class="ph b">PDF</strong> or <strong class="ph b">HTML5</strong>.</p>
+        
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title22">DITA-OT Technologies</h2>
+        
+    <div class="body">
+        <ul class="ul">
+            <li class="li"><strong class="ph b">Apache Ant</strong> - As a build management tool for the orchestration of Java and
+                XSLT processing</li>
+        
+            <li class="li"><strong class="ph b">XSLT</strong> - For the XML transformation</li>
+        
+            <li class="li"><strong class="ph b">Java</strong> - For complex calculations</li>
+        
+        </ul>
+        
+    </div>
+        
+    
+</section><section>
+        <h3 class="title topictitle3" id="ariaid-title23">Processing Flow</h3>
+        
+        <div class="body">
+            <img class="image" src="topics/media/processing-flow.png"></img>
+            <p class="p"><strong class="ph b">Source</strong>: <a class="xref" href="http://www.dita-ot.org/2.4/dev_ref/processing-structure.html" target="_blank">DITA-OT Documentation - Processing
+                    Structure</a></p>
+        
+        </div>
+        
+    </section></section><section>
+    <h1 class="title topictitle1" id="ariaid-title24">Key Features</h1>
+        
+</section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title25">Content Reference (conref)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">A content reference (<code class="keyword markupname xmlatt">@conref</code>) pulls a content block to another
+    topic.</p>
+        
+    
+    <img class="image" src="topics/media/conref.svg"></img>
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title26">conref.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conref.ditamap</span> map references two topics. The
+        <span class="ph filepath">source.dita</span> topic is only used as a database topic. It is not rendered
+      in the output, because the <code class="keyword markupname xmlatt">@processing-role</code> attribute has the value
+        <code class="ph codeph">resource-only</code> and it does not appear in the TOC, because the
+        <code class="keyword markupname xmlatt">@toc</code> attribute has the value <code class="ph codeph">no</code>. The
+        <span class="ph filepath">source.dita</span> topic contains a <code class="keyword markupname xmlelement">&lt;note&gt;</code> element,
+      that is pulled into the topic <span class="ph filepath">target.dita</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;conref&lt;/title&gt;
+    &lt;!--
+        The first topic is only used as a database topic,
+        it is not rendered in the output and does not appear in the TOC
+    --&gt;
+    &lt;topicref href="source.dita" processing-role="resource-only" toc="no"/&gt;
+    &lt;topicref href="target.dita"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title27">source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">source.dita</span> topic is not designed to be published. It only
+      works as a content container for re-usable elements. It has a <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element with an <code class="keyword markupname xmlatt">@id</code> attribute. All elements with an <code class="keyword markupname xmlatt">@id</code>
+      attribute can be pulled to other topics.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conref-source"&gt;
+    &lt;title&gt;source&lt;/title&gt;
+    &lt;body&gt;
+        &lt;!-- The following &lt;note&gt; element has an ID and therefore can be pulled into another topic. --&gt;
+        &lt;note id="charge-before-use"&gt;Use the included USB cable to charge your speaker and make sure
+            it is fully charged before first use.&lt;/note&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title28">target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> file pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element from the <span class="ph filepath">source.dita</span> topic using the <code class="keyword markupname xmlatt">@conref</code>
+      attribute. The attribute contains a path to the element. The <code class="keyword markupname xmlatt">@conref</code> attribute
+      in this example has the following pattern:</p>
+        
+      <pre class="pre codeblock"><code>PATH TO DITA FILE + "#" + ID OF ROOT ELEMENT + "/" + ID OF RE-USED ELEMENT</code></pre>
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conref-target"&gt;
+    &lt;title&gt;target&lt;/title&gt;
+    &lt;body&gt;
+        &lt;!-- The content of the &lt;note&gt; element is pulled from the source.dita file. --&gt;
+        &lt;note conref="source.dita#conref-source/charge-before-use"/&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title29">Key Reference (keyref)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The key reference mechanism has been developed to decouple information.</p>
+        
+    
+    <div class="p">Consider that the only linking mechanism in a DITA environment would be relative
+      links:<pre><code class="hljs xml">&lt;!-- Move a directory level up (../) and go to the topic.dita file --&gt; 
+&lt;topicref href="../topic.dita"/&gt;
+
+&lt;!-- Step into the "subdir" directory and go to the topic.dita file --&gt;
+&lt;topicref href="subdir/topic.dita"/&gt;</code></pre></div>
+        
+    <p class="p">If topics would link heavily among each other, renaming or moving files or directories would
+      cause a lot of trouble.</p>
+        
+    <img class="image" src="topics/media/keyref.svg"></img>
+    <p class="p">As a solution, keys can be added to topics and elements on DITA Maps. Afterwards these topics
+      and elements can be fetched by their keys. The file paths are fetched from the DITA Map. </p>
+        
+  </div>
+        
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title30">keyref.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">keyref.ditamap</span> contains a <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
+      element that has a <code class="keyword markupname xmlatt">@keys</code> attribute with the value <code class="ph codeph">product</code>.
+      The wrapped <code class="keyword markupname xmlelement">&lt;keyword&gt;</code>  element can then be pulled into the topics with
+      a key reference (<code class="keyword markupname xmlatt">@keyref</code>). The map also references the topic
+        <span class="ph filepath">keyref.dita</span> and assigns the key <code class="ph codeph">keyref</code> to
+      it.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;keyref&lt;/title&gt;
+    
+    &lt;!-- The &lt;keydef&gt; element defines the key "product" for a &lt;keyword&gt; element. --&gt;
+    &lt;keydef keys="product"&gt;
+        &lt;topicmeta&gt;
+            &lt;keywords&gt;
+                &lt;keyword&gt;My Product&lt;/keyword&gt;
+            &lt;/keywords&gt;
+        &lt;/topicmeta&gt;
+    &lt;/keydef&gt;
+    
+    &lt;!-- A topic is referenced and the key "keyref" is assigned to it. --&gt;
+    &lt;topicref href="keyref.dita" keys="keyref"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title31">keyref.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element is replaced with the
+        <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element from the
+      <span class="ph filepath">keyref.ditamap</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="keyref"&gt;
+    &lt;title&gt;keyref&lt;/title&gt;
+    &lt;body&gt;
+        &lt;p&gt;Thank you for buying &lt;keyword keyref="product"/&gt;.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+      <p class="p">The rendered output is:</p>
+        
+      <pre class="pre codeblock"><code>Thank you for buying My Product.</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title32">Content Key Reference (conkeyref)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content key reference mechanism combines the content reference mechanism with the
+    key reference mechanism.</p>
+        
+    
+    <img class="image" src="topics/media/conkeyref.svg"></img>
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title33">conkeyref.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">On the <span class="ph filepath">conkeyref.ditamap</span> the <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
+      element defines the key <code class="ph codeph">source</code> for the <span class="ph filepath">source.dita</span> topic
+      using the <code class="keyword markupname xmlatt">@keys</code> attribute. The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element is a
+      specialization of the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element and implicitely sets the
+        <code class="keyword markupname xmlatt">@processing-role</code> attribute to <code class="ph codeph">resource-only</code>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;conkeyref&lt;/title&gt;
+    &lt;!--
+        Instead of using a &lt;topicref&gt;, we can use a &lt;keydef&gt; element,
+        which is a "short form" of the following &lt;topicref&gt;:
+        
+        &lt;topicref href="source.dita" keys="source" processing-role="resource-only" toc="no"/&gt;
+    --&gt;
+    &lt;keydef keys="source" href="source.dita"/&gt;
+    &lt;topicref href="target.dita"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title34">source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">source.dita</span> file contains a <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element, that has an <code class="keyword markupname xmlatt">@id</code> attribute and therefore can be pulled using a content
+      reference or content key reference.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conkeyref-source"&gt;
+    &lt;title&gt;source&lt;/title&gt;
+    &lt;body&gt;
+        &lt;note id="charge-before-use"&gt;Use the included USB cable to charge your speaker and make sure
+            it is fully charged before first use.&lt;/note&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title35">target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> file pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+      element by content reference. The pattern of the <code class="keyword markupname xmlatt">@conkeyref</code> attribute
+      is:</p>
+        
+      <pre class="pre codeblock"><code>KEY OF THE TOPIC + "/" + ID OF THE ELEMENT</code></pre>
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conkeyref-target"&gt;
+    &lt;title&gt;target&lt;/title&gt;
+    &lt;body&gt;
+        &lt;!--
+            Instead of using a @conref, we're using a @conkeyref
+            
+            &lt;note conref="source.dita#conref-source/charge-before-use"/&gt;
+        --&gt;
+        &lt;note conkeyref="source/charge-before-use"/&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title36">Content Reference End (conrefend)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content reference end mechansim is used together with a content reference or
+    content key reference and identifies an element, that is the last element of a content reference
+    range.</p>
+        
+    
+    <img class="image" src="topics/media/conrefend.svg"></img>
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title37">conrefend.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;keydef&gt;</code> element in the
+        <span class="ph filepath">conrefend.ditamap</span> defines the key <code class="ph codeph">source</code> using the
+        <code class="keyword markupname xmlatt">@keys</code> attribute for the <span class="ph filepath">source.dita</span> topic. The
+        <span class="ph filepath">source.dita</span> topic is a database topic and not rendered in the output.
+      Further on, it references the <span class="ph filepath">target.dita</span> topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;conrefend&lt;/title&gt;
+    &lt;!--
+        The source.dita file is not rendered in the output,
+        because the &lt;keydef&gt; element implicitly sets processing-role="resource-only"
+    --&gt;
+    &lt;keydef keys="source" href="source.dita"/&gt;
+    &lt;topicref href="target.dita"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title38">source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">source.dita</span> topic contains an unordered list
+        (<code class="keyword markupname xmlelement">&lt;ul&gt;</code>) with 10 list items (<code class="keyword markupname xmlelement">&lt;li&gt;</code>).</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="source"&gt;
+  &lt;title&gt;source&lt;/title&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li id="li01"&gt;list item 01&lt;/li&gt;
+      &lt;li id="li02"&gt;list item 02&lt;/li&gt;
+      &lt;li id="li03"&gt;list item 03&lt;/li&gt;
+      &lt;li id="li04"&gt;list item 04&lt;/li&gt;
+      &lt;li id="li05"&gt;list item 05&lt;/li&gt;
+      &lt;li id="li06"&gt;list item 06&lt;/li&gt;
+      &lt;li id="li07"&gt;list item 07&lt;/li&gt;
+      &lt;li id="li08"&gt;list item 08&lt;/li&gt;
+      &lt;li id="li09"&gt;list item 09&lt;/li&gt;
+      &lt;li id="li10"&gt;list item 10&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title39">target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> topic pulls a range of
+        <code class="keyword markupname xmlelement">&lt;li&gt;</code> elements. The range starts with the <code class="keyword markupname xmlelement">&lt;li&gt;</code>
+      element <code class="ph codeph">li03</code> and ends with the <code class="keyword markupname xmlelement">&lt;li&gt;</code> element
+        <code class="ph codeph">li07</code>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="target"&gt;
+    &lt;title&gt;target&lt;/title&gt;
+    &lt;body&gt;
+        &lt;ul&gt;
+            &lt;!-- All &lt;li&gt; elements from li03 to li07 are pulled into the &lt;ul&gt; --&gt;
+            &lt;li conkeyref="source/li03" conrefend=".#/li07"/&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+      <p class="p">The rendered output is:</p>
+        
+      <ul class="ul" id="conrefend-target__ul_lmp_w23_tz">
+        <li class="li">list item 03</li>
+        
+        <li class="li">list item 04</li>
+        
+        <li class="li">list item 05</li>
+        
+        <li class="li">list item 06</li>
+        
+        <li class="li">list item 07</li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title40">Relationship Table (reltable)</h1>
+        
+  
+  <div class="body"><p class="shortdesc"><a class="xref" href="https://www.oxygenxml.com/dita/1.3/specs/langRef/base/reltable.html?hl=relationship%2Ctable" target="_blank">Relationship Tables</a> externalize links and therefore
+    decouple topics from each other, because the topics themselves do not contain links to other
+    topics, that could break, if the link target is missing.</p>
+        
+    
+    <img class="image" src="topics/media/reltable.svg"></img>
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title41">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the
+        <span class="ph filepath">reltable.ditamap</span>, that contains the relationship table. Relationship
+      tables can only be defined in maps, not in topics.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;Relationship Table Example&lt;/title&gt;
+  &lt;topicref href="batsonar.dita" keys="batsonar"/&gt;
+  &lt;topicref href="batcaring.dita" keys="batcaring"/&gt;
+  &lt;topicref href="batfeeding.dita" keys="batfeeding"/&gt;
+  &lt;topicref href="batguano.dita" keys="batguano"/&gt;
+  &lt;topicref href="bathistory.dita" keys="bathistory"/&gt;
+  &lt;!-- The reltable.ditamap only contains a relationship table --&gt;
+  &lt;mapref href="reltable.ditamap"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title42">reltable.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">reltable.ditamap</span> contains the relationship table. The keys
+      are propagated from the <span class="ph filepath">map.ditamap</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;Relationship Table&lt;/title&gt;
+    &lt;reltable&gt;
+        &lt;relheader&gt;
+            &lt;relcolspec type="concept"/&gt;
+            &lt;relcolspec type="task"/&gt;
+            &lt;relcolspec type="reference"/&gt;
+        &lt;/relheader&gt;
+        &lt;relrow&gt;
+            &lt;relcell&gt;
+                &lt;topicref keyref="batsonar"/&gt;
+            &lt;/relcell&gt;
+            &lt;relcell&gt;
+                &lt;topicref keyref="batcaring"/&gt;
+                &lt;topicref keyref="batfeeding"/&gt;
+            &lt;/relcell&gt;
+            &lt;relcell&gt;
+                &lt;topicref keyref="batguano"/&gt;
+                &lt;topicref keyref="bathistory"/&gt;
+            &lt;/relcell&gt;
+        &lt;/relrow&gt;
+    &lt;/reltable&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title43">Result</h2>
+        
+    
+    <div class="body"><p class="shortdesc">In the output, the following links are rendered.</p>
+        
+      <ul class="ul">
+        <li class="li"><strong class="ph b"><span class="ph filepath">batsonar</span></strong> links to <code class="ph codeph">batcaring</code>,
+          <code class="ph codeph">batfeeding</code>, <code class="ph codeph">batguano</code>,
+          <code class="ph codeph">bathistory</code></li>
+        
+        <li class="li"><strong class="ph b"><span class="ph filepath">batcaring</span></strong> links to <code class="ph codeph">batsonar</code>,
+          <code class="ph codeph">batguano</code>, <code class="ph codeph">bathistory</code></li>
+        
+        <li class="li"><strong class="ph b"><span class="ph filepath">batfeeding</span></strong> links to <code class="ph codeph">batsonar</code>,
+          <code class="ph codeph">batguano</code>, <code class="ph codeph">bathistory</code></li>
+        
+        <li class="li"><strong class="ph b"><span class="ph filepath">batguano</span></strong> links to <code class="ph codeph">batsonar</code>,
+          <code class="ph codeph">batcaring</code>, <code class="ph codeph">batfeeding</code></li>
+        
+        <li class="li"><strong class="ph b"><span class="ph filepath">bathistory</span></strong> links to <code class="ph codeph">batsonar</code>,
+          <code class="ph codeph">batcaring</code>, <code class="ph codeph">batfeeding</code></li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title44">Content Reference Push (conref push)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content reference push mechanism is the opposite of a content
+    reference.</p>
+        
+    
+    <br></br><img class="image" id="conrefpush__image_fgj_rk3_tz" src="topics/media/conref-push.svg"></img><br></br>
+    <div class="note note"><span class="notetitle">Note:</span> The content reference push can, for example, be helpful, if a <em class="ph i">technical data</em> topic
+      is referenced multiple times in a map and then filled with technical data of different
+      products.</div>
+        
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title45">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> reference the
+        <span class="ph filepath">conrefpush-source.dita</span> topic that itself pushes content into the
+        <span class="ph filepath">conrefpush-target.dita</span> topic. The
+        <span class="ph filepath">conrefpush-source.dita</span> topic is not rendered int the
+      output.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;conrefpush&lt;/title&gt;
+  &lt;topicref href="conrefpush-source.dita" processing-role="resource-only" toc="no"/&gt;
+  &lt;topicref href="conrefpush-target.dita" keys="conrefpush-target"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title46">conrefpush-source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conrefpush-source.dita</span> topic contains a
+        <code class="keyword markupname xmlelement">&lt;p&gt;</code> element, that replaces the <code class="keyword markupname xmlelement">&lt;p&gt;</code> element
+      with the <code class="keyword markupname xmlatt">@id</code>
+      <code class="ph codeph">replace-me</code> in the <span class="ph filepath">conrefpush-target.dita</span>
+      topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conrefpush-source"&gt;
+  &lt;title&gt;source&lt;/title&gt;
+  &lt;body&gt;
+    &lt;!--
+      The following &lt;p&gt; element replaces the &lt;p&gt; element
+      with the @id="replace-me" in the conrefpush-target.dita topic.
+    --&gt;
+    &lt;p conaction="pushreplace" conkeyref="conrefpush-target/replace-me"&gt;
+      NEW CONTENT :)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title47">conrefpush-target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conrefpush-target.dita</span> file contains a
+        <code class="keyword markupname xmlelement">&lt;p&gt;</code> element with the <code class="keyword markupname xmlatt">@id</code>
+      <code class="ph codeph">replace-me</code>, that is replaced with the pushed <code class="keyword markupname xmlelement">&lt;p&gt;</code>
+      element of the <span class="ph filepath">conrefpush-source.dita</span> topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conrefpush-target"&gt;
+  &lt;title&gt;target&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;The following paragraph should be replaced&lt;/p&gt;
+    &lt;p id="replace-me"&gt;REPLACE ME&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title48">Filtering (DITAVAL)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">A DITAVAL file <em class="ph i">includes</em>, <em class="ph i">excludes</em>, <em class="ph i">flags</em> elements with filter
+    attributes. DITAVAL files can be passed into the build process by the
+      <code class="ph codeph">dita.input.valfile</code> property or by <a class="xref" href="https://www.oxygenxml.com/dita/1.3/specs/langRef/base/ditavalref.html" target="_blank"><code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code></a>.</p>
+        
+    
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title49">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> map references the
+        <span class="ph filepath">topic.dita</span> topic. The <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element
+      includes a <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element that references the DITAVAL file
+      containing the filter rules. The filters are applied in the scope of its parent element, in
+      this case the <span class="ph filepath">topic.dita</span> topic and its children. This mechansim is called
+        <em class="ph i">branch filtering</em>.</p>
+        
+      <div class="note note"><span class="notetitle">Note:</span> If the same filter rules should be applied to the whole project, it is recommended to
+        pass the DITAVAL file by defining the <code class="ph codeph">dita.input.valfile</code> property.</div>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;map&lt;/title&gt;
+  &lt;topicref href="topic.dita"&gt;
+    &lt;ditavalref href="android.ditaval"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title50">topic.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">topic.dita</span> file contains two <code class="keyword markupname xmlelement">&lt;p&gt;</code>
+      elements, both with the filter attribute <code class="keyword markupname xmlatt">@platform</code>, but with different values.
+      In this example, the element with the attribute value <code class="ph codeph">ios</code> should be filtered
+      out.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="topic"&gt;
+  &lt;title&gt;topic&lt;/title&gt;
+  &lt;body&gt;
+    &lt;!-- Will NOT be filtered out --&gt;  
+    &lt;p platform="android"&gt;android&lt;/p&gt;
+    &lt;!-- Will be filtered out --&gt;
+    &lt;p platform="ios"&gt;ios&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title51">android.ditaval</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">android.ditaval</span> file contains the filter rules. The
+        <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements represent the filter rules. The <code class="keyword markupname xmlatt">@att</code>
+      attribute contains the name of the filter attribute and the <code class="keyword markupname xmlatt">@val</code> attribute the
+      value of the filter attribute. The <code class="keyword markupname xmlatt">@action</code> attribute specifies what should
+      happen to the element (<code class="ph codeph">include</code>, <code class="ph codeph">exclude</code>,
+        <code class="ph codeph">flag</code>).</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;val&gt;
+  &lt;prop action="include" att="platform" val="android"/&gt;
+  &lt;prop action="exclude" att="platform" val="ios"/&gt;  
+&lt;/val&gt;</code></pre>
+      <p class="p">This DITAVAL file</p>
+        
+      <ul class="ul" id="ditaval-ditaval__ul_rx3_xm3_tz">
+        <li class="li"><strong class="ph b">excludes</strong> all elements with <code class="ph codeph">platform="ios"</code>,
+          e.g.<pre><code class="hljs xml">&lt;p platform="ios"&gt;ios&lt;/p&gt;</code></pre>
+        </li>
+        
+        <li class="li"><strong class="ph b">includes</strong> all elements with <code class="ph codeph">platform="android"</code>,
+          e.g.<pre><code class="hljs xml">&lt;p platform="android"&gt;android&lt;/p&gt;</code></pre>
+        </li>
+        
+      </ul>
+        
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title52">Subject Scheme</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The Subject Scheme Map is a specialized DITA Map that defines allowed attribute
+    values.</p>
+        
+    
+    <img class="image" src="topics/media/subjectscheme.svg"></img>
+  </div>
+        
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title53">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the Subject Scheme Map
+        <span class="ph filepath">subjectScheme.ditamap</span>. The attributes values are mapped with keys and
+      are therefore available in all topics of the <span class="ph filepath">map.ditamap</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;Subject Scheme Map Example&lt;/title&gt;
+  &lt;topicref href="topic.dita"/&gt;
+  &lt;mapref href="subjectScheme.ditamap"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title54">subjectScheme.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">subjectScheme.ditamap</span> defines the attribute values. An
+      attribute value is specified using the <code class="keyword markupname xmlatt">@keys</code> attribute of a
+        <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code> element. The key is then used to pull and map its
+      children to an attribute. In this case, in the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code>
+      element, the attribute values of the <code class="ph codeph">os</code> key are binded to the attribute
+        <code class="keyword markupname xmlatt">@platform</code></p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"&gt; 
+&lt;subjectScheme&gt;
+  &lt;!-- The key "os" is the top level attribute value --&gt;
+  &lt;subjectdef keys="os" navtitle="Operating system"&gt;
+    &lt;subjectdef keys="android" navtitle="Android"&gt;
+      &lt;subjectdef keys="android5" navtitle="Android 5 Lollipop"/&gt;
+      &lt;subjectdef keys="android6" navtitle="Android 6 Marshmallow"/&gt;
+      &lt;subjectdef keys="android7" navtitle="Android 7 Nougat"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="ios" navtitle="iOS"&gt;
+      &lt;subjectdef keys="ios8" navtitle="iOS 8 Donner"/&gt;
+      &lt;subjectdef keys="ios9" navtitle="iOS 9 Eagle"/&gt;
+      &lt;subjectdef keys="ios10" navtitle="iOS 10 Whitetail"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="windows" navtitle="Windows"&gt;
+      &lt;subjectdef keys="windows7" navtitle="Windows 7"/&gt;
+      &lt;subjectdef keys="windows8" navtitle="Windows 8"/&gt;
+      &lt;subjectdef keys="windows10" navtitle="Windows 10"/&gt;
+    &lt;/subjectdef&gt;  
+  &lt;/subjectdef&gt;
+  &lt;!-- The &lt;enumerationdef&gt; element binds the values of the "os" key to the attribute "platform" --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title55">topic.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">If the <span class="ph filepath">topic.dita</span> is opened in the scope of the
+        <span class="ph filepath">map.ditamap</span> map, the values for the <code class="keyword markupname xmlatt">@platform</code> attribute
+      are pulled from the Subject Scheme Map.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="topic"&gt;
+    &lt;title&gt;topic&lt;/title&gt;
+    &lt;body&gt;
+        &lt;p platform="android7"/&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section></section><section><section>
+  <h1 class="title topictitle1" id="ariaid-title56">Key Scopes</h1>
+        
+  
+  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can, for
+    example, be used to use <em class="ph i">template</em> topics multiple times in the same project and fill them
+    with different data.</p>
+        
+    
+    <br></br><img class="image" id="key-scopes__image_ndd_3r3_tz" src="topics/media/key-scope.svg"></img><br></br>
+  </div>
+        
+  
+  
+  
+  
+  
+  
+</section><section>
+    <h2 class="title topictitle2" id="ariaid-title57">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the same
+        <span class="ph filepath">technical-data.dita</span> topic twice. The <code class="keyword markupname xmlatt">@keyscope</code>
+      attributes on the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for
+      the <em class="ph i">Galaxy S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;keyscopes&lt;/title&gt;
+
+  &lt;!-- The same technical data topic is used --&gt;
+  &lt;topicref href="technical-data.dita" keyscope="galaxys7"&gt;
+    &lt;mapref href="database-galaxys7.ditamap"/&gt;
+  &lt;/topicref&gt;
+
+  &lt;topicref href="technical-data.dita" keyscope="iphone7"&gt;
+    &lt;mapref href="database-iphone7.ditamap"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title58">technical-data.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> topic is a template topic, that is
+      filled with the data from the <span class="ph filepath">database-galaxys7.ditamap</span> map and from the
+        <span class="ph filepath">database-iphone7.ditamap</span> map.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="technical-data"&gt;
+  &lt;title&gt;technical data&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;Technical Data of &lt;keyword keyref="product"/&gt;&lt;/p&gt;
+    &lt;table frame="none" rowsep="0" colsep="0"&gt;
+      &lt;tgroup cols="2"&gt;
+        &lt;colspec colname="c1" colnum="1" colwidth="25*"/&gt;
+        &lt;colspec colname="c2" colnum="2" colwidth="75*"/&gt;
+        &lt;tbody&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Device Type&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="device-type"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;OS&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="os"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Dimensions&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="dimensions"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Weight&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="weight"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Display&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="display"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Resolution&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="resolution"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Pixel Density&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="pixel-density"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;entry&gt;Processor&lt;/entry&gt;
+            &lt;entry&gt;&lt;keyword keyref="processor"/&gt;&lt;/entry&gt;
+          &lt;/row&gt;
+        &lt;/tbody&gt;
+      &lt;/tgroup&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title59">database-galaxys7.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> map defines multiple keys, that
+      contain technical data specific for the <em class="ph i">Galaxy S7</em>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;Galaxy S7&lt;/title&gt;
+  &lt;keydef keys="product"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Galaxy S7&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="device-type"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Smartphone&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="os"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Android&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="dimensions"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;150.9 x 72.6 x 7.7 mm&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="weight"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;157 g&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="display"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;5.5 inches&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="resolution"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;1440 x 2560 pixels&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="pixel-density"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;534 ppi&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="processor"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Qualcomm Snapdragon 820 MSM8996, Quad-core, 2200 MHz&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title60">database-iphone7.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> map defines multiple keys, that
+      contain technical data specific for the <em class="ph i">iPhone 7</em>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;iPhone 7&lt;/title&gt;
+  &lt;keydef keys="product"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;iPhone 7&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="device-type"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Smartphone&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="os"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;iOS&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="dimensions"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;158.2 x 77.9 x 7.3 mm&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="weight"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;188 g&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="display"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;5.5 inches&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="resolution"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;1080 x 1920 pixels&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="pixel-density"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;401 ppi&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+  &lt;keydef keys="processor"&gt;
+    &lt;topicmeta&gt;
+      &lt;keywords&gt;
+        &lt;keyword&gt;Apple A10 Fusion, Quad-core, 2340 MHz&lt;/keyword&gt;
+      &lt;/keywords&gt;
+    &lt;/topicmeta&gt;
+  &lt;/keydef&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title61">Galaxy S7 Result</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following table is rendered for the <em class="ph i">Galaxy S7</em>.</p>
+        
+      <p class="p">Technical Data of Galaxy S7</p>
+        
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_ppn_rs3_tz__table_gnl_ss3_tz" class="table" frame="border" border="1" rules="all"><colgroup><col></col><col></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Device Type</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Smartphone</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">OS</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Android</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Dimensions</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">150.9 x 72.6 x 7.7 mm</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Weight</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">157 g</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Display</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">5.5 inches</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Resolution</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">1440 x 2560 pixels</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Pixel Density</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">534 ppi</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry row-nocellborder" style="vertical-align:top;">Processor</td>
+        
+              <td class="entry cellrowborder" style="vertical-align:top;">Qualcomm Snapdragon 820 MSM8996, Quad-core, 2200 MHz</td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </section><section>
+    <h2 class="title topictitle2" id="ariaid-title62">iPhone 7 Result</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The following table is rendered for the <em class="ph i">iPhone 7</em>.</p>
+        
+      <p class="p">Technical Data of iPhone 7</p>
+        
+      
+        <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dfh_ts3_tz__table_bjf_5s3_tz" class="table" frame="border" border="1" rules="all"><colgroup><col></col><col></col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Device Type</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">Smartphone</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">OS</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">iOS</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Dimensions</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">158.2 x 77.9 x 7.3 mm</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Weight</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">188 g</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Display</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">5.5 inches</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Resolution</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">1080 x 1920 pixels</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry nocellnorowborder" style="vertical-align:top;">Pixel Density</td>
+        
+              <td class="entry cell-norowborder" style="vertical-align:top;">401 ppi</td>
+        
+            </tr>
+        
+            <tr class="row">
+              <td class="entry row-nocellborder" style="vertical-align:top;">Processor</td>
+        
+              <td class="entry cellrowborder" style="vertical-align:top;">Apple A10 Fusion, Quad-core, 2340 MHz</td>
+        
+            </tr>
+        
+          </tbody>
+        </table>
+        </div>
+        
+    </div>
+        
+  </section></section><section>
+    <h1 class="title topictitle1" id="ariaid-title63">Pros and Cons</h1>
+        
+    <div class="body">
+        <table cellpadding="4" cellspacing="0" summary="" id="topic_plq_gnk_pz__simpletable_xrh_3nk_pz" border="1" class="simpletable"><col style="width:50%"></col><col style="width:50%"></col><thead><tr class="sthead">
+                <th style="vertical-align:bottom;text-align:left;" id="d647e2640" class="stentry">Pros</th>
+        
+                <th style="vertical-align:bottom;text-align:left;" id="d647e2643" class="stentry">Cons</th>
+        
+            </tr>
+        </thead><tbody><tr class="strow">
+                <td style="vertical-align:top;" headers="d647e2640" class="stentry">
+                    <ul class="ul" id="topic_plq_gnk_pz__ul_zp2_jnk_pz">
+                        <li class="li">Open Standard</li>
+        
+                        <li class="li">Adopted by the big players</li>
+        
+                        <li class="li">Can be used with version control systems, like Git</li>
+        
+                        <li class="li">Scalability, start on file system and move to enterprise CMS later</li>
+        
+                        <li class="li">DITA-OT is open source</li>
+        
+                        <li class="li">Cool features (conref, keys, relationship tables, key scopes,
+                            filters)</li>
+        
+                        <li class="li">Batch processing with Apache Ant</li>
+        
+                        <li class="li">Can be integrated in continuous integration/delivery systems like Jenkins
+                            or Travis</li>
+        
+                        <li class="li">User Groups on Google/Yahoo/LinkedIn/XING</li>
+        
+                    </ul>
+        
+                </td>
+        
+                <td style="vertical-align:top;" headers="d647e2643" class="stentry">
+                    <ul class="ul" id="topic_plq_gnk_pz__ul_ywm_jnk_pz">
+                        <li class="li">Hard to learn</li>
+        
+                        <li class="li">Verbose XML</li>
+        
+                        <li class="li">Cannot (really) be used without buying an enterprise editor like
+                            &lt;oXygen/&gt; XML</li>
+        
+                        <li class="li">Hard to customize (specializations)</li>
+        
+                        <li class="li">Default output is ugly</li>
+        
+                        <li class="li">Customizing the output is hard</li>
+        
+                        <li class="li">No useful open source solution for creating webhelps</li>
+        
+                        <li class="li">Only a few open source tools</li>
+        
+                        <li class="li">Enterprise solutions are very expensive</li>
+        
+                        <li class="li">Most important information platform is a <a class="xref" href="https://groups.yahoo.com/group/dita-users/" target="_blank">Yahoo! Group</a></li>
+        
+                    </ul>
+        
+                </td>
+        
+            </tr>
+        </tbody></table>
+        
+    </div>
+        
+</section></div></div><script src="lib/js/head.min.js" type="text/javascript"></script>
+        <script src="js/reveal.js" type="text/javascript"></script>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+                
+                Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    slideNumber: false,
+                    history: true,
+                    keyboard: true,
+                    overview: true,
+                    center: true,
+                    touch: true,
+                    loop: false,
+                    rtl: false,
+                    fragments: true,
+                    embedded: false,
+                    autoSlide: 0,
+                    autoSlideStoppable: true,
+                    mouseWheel: false,
+                    hideAddressBar: true,
+                    previewLinks: false,
+                    transition: 'default',
+                    transitionSpeed: 'default',
+                    backgroundTransition: 'default',
+                    viewDistance: 3,
+                    // parallaxBackgroundImage: '',
+                    // parallaxBackgroundSize: '',
+                    // parallaxBackgroundHorizontal: null,
+                    // parallaxBackgroundVertical: null,
+                    width: 960,
+                    height: 700,
+                    margin: 0.1,
+                    minScale: 0.2,
+                    maxScale: 1.5,
+                    
+                    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                    
+                    // Optional libraries used to extend on reveal.js
+                    dependencies: [
+                        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    ]
+                });
+                
+                Reveal.addEventListener( 'slidechanged', function( event ) {
+                zoomSection();
+                } );
+                
+                $( document ).ready(function() {
+                });
+            </script></body></html>

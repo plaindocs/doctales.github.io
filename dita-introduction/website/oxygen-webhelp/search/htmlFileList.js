@@ -1,0 +1,24 @@
+//List of files which are indexed.
+fl = new Array();
+fl["0"]= "topics/conkeyref.html";
+fl["1"]= "topics/conref.html";
+fl["2"]= "topics/conrefend.html";
+fl["3"]= "topics/conrefpush.html";
+fl["4"]= "topics/dita-history.html";
+fl["5"]= "topics/dita-introduction.html";
+fl["6"]= "topics/dita-ot-technologies.html";
+fl["7"]= "topics/dita-ot.html";
+fl["8"]= "topics/ditaval.html";
+fl["9"]= "topics/key-features.html";
+fl["10"]= "topics/key-scopes.html";
+fl["11"]= "topics/keyref.html";
+fl["12"]= "topics/pros-and-cons.html";
+fl["13"]= "topics/reltable.html";
+fl["14"]= "topics/sap-dita-figures.html";
+fl["15"]= "topics/simple-project-hierarchy.html";
+fl["16"]= "topics/subjectScheme.html";
+fl["17"]= "topics/what-is-dita.html";
+fl["18"]= "topics/what-is-xml.html";
+fl["19"]= "topics/who-is-using-dita.html";
+fl["20"]= "topics/why-dita.html";
+var doStem = false;searchLoaded = true;

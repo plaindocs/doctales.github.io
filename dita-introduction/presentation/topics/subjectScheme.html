@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Subject Scheme</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The Subject Scheme Map is a specialized DITA Map that defines allowed attribute
+    values.</p>
+        
+    
+    <img class="image" src="media/subjectscheme.svg"></img>
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the Subject Scheme Map
+        <span class="ph filepath">subjectScheme.ditamap</span>. The attributes values are mapped with keys and
+      are therefore available in all topics of the <span class="ph filepath">map.ditamap</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;Subject Scheme Map Example&lt;/title&gt;
+  &lt;topicref href="topic.dita"/&gt;
+  &lt;mapref href="subjectScheme.ditamap"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">subjectScheme.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">subjectScheme.ditamap</span> defines the attribute values. An
+      attribute value is specified using the <code class="keyword markupname xmlatt">@keys</code> attribute of a
+        <code class="keyword markupname xmlelement">&lt;subjectdef&gt;</code> element. The key is then used to pull and map its
+      children to an attribute. In this case, in the <code class="keyword markupname xmlelement">&lt;enumerationdef&gt;</code>
+      element, the attribute values of the <code class="ph codeph">os</code> key are binded to the attribute
+        <code class="keyword markupname xmlatt">@platform</code></p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"&gt; 
+&lt;subjectScheme&gt;
+  &lt;!-- The key "os" is the top level attribute value --&gt;
+  &lt;subjectdef keys="os" navtitle="Operating system"&gt;
+    &lt;subjectdef keys="android" navtitle="Android"&gt;
+      &lt;subjectdef keys="android5" navtitle="Android 5 Lollipop"/&gt;
+      &lt;subjectdef keys="android6" navtitle="Android 6 Marshmallow"/&gt;
+      &lt;subjectdef keys="android7" navtitle="Android 7 Nougat"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="ios" navtitle="iOS"&gt;
+      &lt;subjectdef keys="ios8" navtitle="iOS 8 Donner"/&gt;
+      &lt;subjectdef keys="ios9" navtitle="iOS 9 Eagle"/&gt;
+      &lt;subjectdef keys="ios10" navtitle="iOS 10 Whitetail"/&gt;
+    &lt;/subjectdef&gt;
+    &lt;subjectdef keys="windows" navtitle="Windows"&gt;
+      &lt;subjectdef keys="windows7" navtitle="Windows 7"/&gt;
+      &lt;subjectdef keys="windows8" navtitle="Windows 8"/&gt;
+      &lt;subjectdef keys="windows10" navtitle="Windows 10"/&gt;
+    &lt;/subjectdef&gt;  
+  &lt;/subjectdef&gt;
+  &lt;!-- The &lt;enumerationdef&gt; element binds the values of the "os" key to the attribute "platform" --&gt;
+  &lt;enumerationdef&gt;
+    &lt;attributedef name="platform"/&gt;
+    &lt;subjectdef keyref="os"/&gt;
+  &lt;/enumerationdef&gt;
+&lt;/subjectScheme&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">topic.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">If the <span class="ph filepath">topic.dita</span> is opened in the scope of the
+        <span class="ph filepath">map.ditamap</span> map, the values for the <code class="keyword markupname xmlatt">@platform</code> attribute
+      are pulled from the Subject Scheme Map.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="topic"&gt;
+    &lt;title&gt;topic&lt;/title&gt;
+    &lt;body&gt;
+        &lt;p platform="android7"/&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>

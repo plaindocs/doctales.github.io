@@ -1,0 +1,79 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Key Reference (keyref)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The key reference mechanism has been developed to decouple information.</p>
+        
+    
+    <div class="p">Consider that the only linking mechanism in a DITA environment would be relative
+      links:<pre><code class="hljs xml">&lt;!-- Move a directory level up (../) and go to the topic.dita file --&gt; 
+&lt;topicref href="../topic.dita"/&gt;
+
+&lt;!-- Step into the "subdir" directory and go to the topic.dita file --&gt;
+&lt;topicref href="subdir/topic.dita"/&gt;</code></pre></div>
+        
+    <p class="p">If topics would link heavily among each other, renaming or moving files or directories would
+      cause a lot of trouble.</p>
+        
+    <img class="image" src="media/keyref.svg"></img>
+    <p class="p">As a solution, keys can be added to topics and elements on DITA Maps. Afterwards these topics
+      and elements can be fetched by their keys. The file paths are fetched from the DITA Map. </p>
+        
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">keyref.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">keyref.ditamap</span> contains a <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
+      element that has a <code class="keyword markupname xmlatt">@keys</code> attribute with the value <code class="ph codeph">product</code>.
+      The wrapped <code class="keyword markupname xmlelement">&lt;keyword&gt;</code>  element can then be pulled into the topics with
+      a key reference (<code class="keyword markupname xmlatt">@keyref</code>). The map also references the topic
+        <span class="ph filepath">keyref.dita</span> and assigns the key <code class="ph codeph">keyref</code> to
+      it.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;keyref&lt;/title&gt;
+    
+    &lt;!-- The &lt;keydef&gt; element defines the key "product" for a &lt;keyword&gt; element. --&gt;
+    &lt;keydef keys="product"&gt;
+        &lt;topicmeta&gt;
+            &lt;keywords&gt;
+                &lt;keyword&gt;My Product&lt;/keyword&gt;
+            &lt;/keywords&gt;
+        &lt;/topicmeta&gt;
+    &lt;/keydef&gt;
+    
+    &lt;!-- A topic is referenced and the key "keyref" is assigned to it. --&gt;
+    &lt;topicref href="keyref.dita" keys="keyref"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">keyref.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element is replaced with the
+        <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element from the
+      <span class="ph filepath">keyref.ditamap</span>.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="keyref"&gt;
+    &lt;title&gt;keyref&lt;/title&gt;
+    &lt;body&gt;
+        &lt;p&gt;Thank you for buying &lt;keyword keyref="product"/&gt;.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+      <p class="p">The rendered output is:</p>
+        
+      <pre class="pre codeblock"><code>Thank you for buying My Product.</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>

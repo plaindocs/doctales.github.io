@@ -1,0 +1,37 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+    <h1 class="title topictitle1" id="ariaid-title1">Simple project hierarchy</h1>
+        
+    
+    <div class="body"><p class="shortdesc">A DITA project usually contains a DITA Map with multiple
+            <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements that reference DITA Topics.</p>
+        
+        <br></br><img class="image" src="media/simple-project-hierarchy.svg"></img><br></br>
+        
+    </div>
+        
+    <topicContainer>
+        <h2 class="title topictitle2" id="ariaid-title2">DITA Map with some topic references</h2>
+        
+        
+        <div class="body"><p class="shortdesc">The following DITA Map example shows a very simple map structure with a few
+            topics.</p>
+        
+            <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+    &lt;title&gt;Map&lt;/title&gt;
+    &lt;topicref href="topics/topic-01.dita"/&gt;
+    &lt;topicref href="topics/topic-02.dita"&gt;
+        &lt;topicref href="topics/topic-02-01.dita"/&gt;
+    &lt;/topicref&gt;
+    &lt;topicref href="topics/topic-03.dita"/&gt;
+&lt;/map&gt;</code></pre>
+            <div class="note note"><span class="notetitle">Note:</span> It is possible to nest DITA Maps in DITA Maps using the
+                    <code class="keyword markupname xmlelement">&lt;mapref&gt;</code> element.</div>
+        
+        </div>
+        
+    </topicContainer>
+</topicContainer>

@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "about:legacy-compat">
+<topicContainer xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title topictitle1" id="ariaid-title1">Content Reference Push (conref push)</h1>
+        
+  
+  <div class="body"><p class="shortdesc">The content reference push mechanism is the opposite of a content
+    reference.</p>
+        
+    
+    <br></br><img class="image" id="conrefpush__image_fgj_rk3_tz" src="media/conref-push.svg"></img><br></br>
+    <div class="note note"><span class="notetitle">Note:</span> The content reference push can, for example, be helpful, if a <em class="ph i">technical data</em> topic
+      is referenced multiple times in a map and then filled with technical data of different
+      products.</div>
+        
+  </div>
+        
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> reference the
+        <span class="ph filepath">conrefpush-source.dita</span> topic that itself pushes content into the
+        <span class="ph filepath">conrefpush-target.dita</span> topic. The
+        <span class="ph filepath">conrefpush-source.dita</span> topic is not rendered int the
+      output.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map&gt;
+  &lt;title&gt;conrefpush&lt;/title&gt;
+  &lt;topicref href="conrefpush-source.dita" processing-role="resource-only" toc="no"/&gt;
+  &lt;topicref href="conrefpush-target.dita" keys="conrefpush-target"/&gt;
+&lt;/map&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title3">conrefpush-source.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conrefpush-source.dita</span> topic contains a
+        <code class="keyword markupname xmlelement">&lt;p&gt;</code> element, that replaces the <code class="keyword markupname xmlelement">&lt;p&gt;</code> element
+      with the <code class="keyword markupname xmlatt">@id</code>
+      <code class="ph codeph">replace-me</code> in the <span class="ph filepath">conrefpush-target.dita</span>
+      topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conrefpush-source"&gt;
+  &lt;title&gt;source&lt;/title&gt;
+  &lt;body&gt;
+    &lt;!--
+      The following &lt;p&gt; element replaces the &lt;p&gt; element
+      with the @id="replace-me" in the conrefpush-target.dita topic.
+    --&gt;
+    &lt;p conaction="pushreplace" conkeyref="conrefpush-target/replace-me"&gt;
+      NEW CONTENT :)
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+  <topicContainer>
+    <h2 class="title topictitle2" id="ariaid-title4">conrefpush-target.dita</h2>
+        
+    
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conrefpush-target.dita</span> file contains a
+        <code class="keyword markupname xmlelement">&lt;p&gt;</code> element with the <code class="keyword markupname xmlatt">@id</code>
+      <code class="ph codeph">replace-me</code>, that is replaced with the pushed <code class="keyword markupname xmlelement">&lt;p&gt;</code>
+      element of the <span class="ph filepath">conrefpush-source.dita</span> topic.</p>
+        
+      <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
+&lt;topic id="conrefpush-target"&gt;
+  &lt;title&gt;target&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;The following paragraph should be replaced&lt;/p&gt;
+    &lt;p id="replace-me"&gt;REPLACE ME&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</code></pre>
+    </div>
+        
+  </topicContainer>
+</topicContainer>
