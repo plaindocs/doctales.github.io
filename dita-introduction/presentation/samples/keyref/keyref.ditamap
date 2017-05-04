@@ -12,6 +12,5 @@
         </topicmeta>
     </keydef>
     
-    <!-- A topic is referenced and the key "keyref" is assigned to it. -->
-    <topicref href="keyref.dita" keys="keyref"/>
+    <topicref href="keyref.dita"/>
 </map>

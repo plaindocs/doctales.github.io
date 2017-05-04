@@ -3,7 +3,7 @@
   PUBLIC "" "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
-      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Key Scopes" /><meta name="abstract" content="Keys can be limited to a specific scope by defining key scopes. This mechanism can, for example, be used to use template topics multiple times in the same project and fill them with different data." /><meta name="description" content="Keys can be limited to a specific scope by defining key scopes. This mechanism can, for example, be used to use template topics multiple times in the same project and fill them with different data." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="key-scopes" /><title>Key Scopes</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Key Scopes" /><meta name="abstract" content="Keys can be limited to a specific scope by defining key scopes. This mechanism can be used to fill template topics, that are referenced multiple times, with different data." /><meta name="description" content="Keys can be limited to a specific scope by defining key scopes. This mechanism can be used to fill template topics, that are referenced multiple times, with different data." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="key-scopes" /><title>Key Scopes</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script>
           function debug(msg, object){
@@ -118,9 +118,9 @@
   <h1 class="title topictitle1" id="ariaid-title1">Key Scopes</h1>
 
   
-  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can, for
-    example, be used to use <em class="ph i">template</em> topics multiple times in the same project and fill them
-    with different data.</p>
+  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can be
+    used to fill <em class="ph i">template</em> topics, that are referenced multiple times, with different
+    data.</p>
 
     <p class="p">Sample project: <a class="xref" href="../resources/projects/key-scopes.zip">key-scopes.zip</a></p>
 
@@ -131,10 +131,10 @@
     <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the same
-        <span class="ph filepath">technical-data.dita</span> topic twice. The <code class="keyword markupname xmlatt">@keyscope</code>
-      attributes on the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for
-      the <em class="ph i">Galaxy S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the
+        <span class="ph filepath">technical-data.dita</span> twice. The <code class="keyword markupname xmlatt">@keyscope</code> attributes on
+      the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for the <em class="ph i">Galaxy
+        S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
@@ -158,9 +158,9 @@
     <h2 class="title topictitle2" id="ariaid-title3">technical-data.dita</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> topic is a template topic, that is
-      filled with the data from the <span class="ph filepath">database-galaxys7.ditamap</span> map and from the
-        <span class="ph filepath">database-iphone7.ditamap</span> map.</p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> is a template topic, that is filled with
+      the data from the <span class="ph filepath">database-galaxys7.ditamap</span> and from the
+        <span class="ph filepath">database-iphone7.ditamap</span>.</p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
@@ -218,7 +218,7 @@
     <h2 class="title topictitle2" id="ariaid-title4">database-galaxys7.ditamap</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> map defines multiple keys, that
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> defines multiple keys, that
       contain technical data specific for the <em class="ph i">Galaxy S7</em>.</p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -297,8 +297,8 @@
     <h2 class="title topictitle2" id="ariaid-title5">database-iphone7.ditamap</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> map defines multiple keys, that
-      contain technical data specific for the <em class="ph i">iPhone 7</em>.</p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> defines multiple keys, that contain
+      technical data specific for the <em class="ph i">iPhone 7</em>.</p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;

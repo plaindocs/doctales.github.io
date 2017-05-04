@@ -3,7 +3,7 @@
   PUBLIC "" "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
-      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Filtering (DITAVAL)" /><meta name="abstract" content="A DITAVAL file includes, excludes, flags elements with filter attributes. DITAVAL files can be passed into the build process by the dita.input.valfile property or by ditavalref." /><meta name="description" content="A DITAVAL file includes, excludes, flags elements with filter attributes. DITAVAL files can be passed into the build process by the dita.input.valfile property or by ditavalref." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="ditaval" /><title>Filtering (DITAVAL)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Filtering (DITAVAL)" /><meta name="abstract" content="A DITAVAL file includes, excludes or flags elements with filter attributes. DITAVAL files can be passed into the build process by the dita.input.valfile property or by ditavalref." /><meta name="description" content="A DITAVAL file includes, excludes or flags elements with filter attributes. DITAVAL files can be passed into the build process by the dita.input.valfile property or by ditavalref." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="ditaval" /><title>Filtering (DITAVAL)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script>
           function debug(msg, object){
@@ -118,7 +118,7 @@
   <h1 class="title topictitle1" id="ariaid-title1">Filtering (DITAVAL)</h1>
 
   
-  <div class="body"><p class="shortdesc">A DITAVAL file <em class="ph i">includes</em>, <em class="ph i">excludes</em>, <em class="ph i">flags</em> elements with filter
+  <div class="body"><p class="shortdesc">A DITAVAL file <em class="ph i">includes</em>, <em class="ph i">excludes</em> or <em class="ph i">flags</em> elements with filter
     attributes. DITAVAL files can be passed into the build process by the
       <code class="ph codeph">dita.input.valfile</code> property or by <a class="xref" href="https://www.oxygenxml.com/dita/1.3/specs/langRef/base/ditavalref.html" target="_blank"><code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code></a>.</p>
 
@@ -130,12 +130,11 @@
     <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> map references the
-        <span class="ph filepath">topic.dita</span> topic. The <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element
-      includes a <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code> element that references the DITAVAL file
-      containing the filter rules. The filters are applied in the scope of its parent element, in
-      this case the <span class="ph filepath">topic.dita</span> topic and its children. This mechansim is called
-        <em class="ph i">branch filtering</em>.</p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the <span class="ph filepath">topic.dita</span>.
+      The <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> element includes a <code class="keyword markupname xmlelement">&lt;ditavalref&gt;</code>
+      element that references the DITAVAL file containing the filter rules. The filters are applied
+      in the scope of their parent element, in this case <span class="ph filepath">topic.dita</span>, and its
+      children. This mechansim is called <em class="ph i">branch filtering</em>.</p>
 
       <div class="note note"><span class="notetitle">Note:</span> If the same filter rules should be applied to the whole project, it is recommended to
         pass the DITAVAL file by defining the <code class="ph codeph">dita.input.valfile</code> property.</div>
@@ -156,7 +155,7 @@
     <h2 class="title topictitle2" id="ariaid-title3">topic.dita</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">topic.dita</span> file contains two <code class="keyword markupname xmlelement">&lt;p&gt;</code>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">topic.dita</span> topic contains two <code class="keyword markupname xmlelement">&lt;p&gt;</code>
       elements, both with the filter attribute <code class="keyword markupname xmlatt">@platform</code>, but with different values.
       In this example, the element with the attribute value <code class="ph codeph">ios</code> should be filtered
       out.</p>
@@ -182,9 +181,9 @@
     
     <div class="body"><p class="shortdesc">The <span class="ph filepath">android.ditaval</span> file contains the filter rules. The
         <code class="keyword markupname xmlelement">&lt;prop&gt;</code> elements represent the filter rules. The <code class="keyword markupname xmlatt">@att</code>
-      attribute contains the name of the filter attribute and the <code class="keyword markupname xmlatt">@val</code> attribute the
-      value of the filter attribute. The <code class="keyword markupname xmlatt">@action</code> attribute specifies what should
-      happen to the element (<code class="ph codeph">include</code>, <code class="ph codeph">exclude</code>,
+      attribute contains the name of the filter attribute and the <code class="keyword markupname xmlatt">@val</code> attribute
+      contains the value of the filter attribute. The <code class="keyword markupname xmlatt">@action</code> attribute specifies
+      what should happen to the element (<code class="ph codeph">include</code>, <code class="ph codeph">exclude</code>,
         <code class="ph codeph">flag</code>).</p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;

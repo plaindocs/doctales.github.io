@@ -4,8 +4,7 @@
   <h1 class="title topictitle1" id="ariaid-title1">Content Reference (conref)</h1>
         
   
-  <div class="body"><p class="shortdesc">A content reference (<code class="keyword markupname xmlatt">@conref</code>) pulls a content block to another
-    topic.</p>
+  <div class="body"><p class="shortdesc">The content reference mechanism pulls a content block to another topic.</p>
         
     
     <img class="image" src="media/conref.svg"></img>
@@ -15,7 +14,7 @@
     <h2 class="title topictitle2" id="ariaid-title2">conref.ditamap</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">conref.ditamap</span> map references two topics. The
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conref.ditamap</span> references two topics. The
         <span class="ph filepath">source.dita</span> topic is only used as a database topic. It is not rendered
       in the output, because the <code class="keyword markupname xmlatt">@processing-role</code> attribute has the value
         <code class="ph codeph">resource-only</code> and it does not appear in the TOC, because the
@@ -63,7 +62,7 @@
     <h2 class="title topictitle2" id="ariaid-title4">target.dita</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> file pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> topic pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
       element from the <span class="ph filepath">source.dita</span> topic using the <code class="keyword markupname xmlatt">@conref</code>
       attribute. The attribute contains a path to the element. The <code class="keyword markupname xmlatt">@conref</code> attribute
       in this example has the following pattern:</p>

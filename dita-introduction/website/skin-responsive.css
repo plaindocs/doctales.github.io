@@ -18,6 +18,9 @@ html * {
   margin: 50px;
 }
 @media screen and (min-width: 1076px) {
+  .wh_welcome:not(:empty) {
+    width: 1170px !important;
+  }
   .welcome-fragment-div1 {
     float: left;
     width: 60%;
@@ -33,6 +36,16 @@ html * {
   .welcome-fragment-image {
     width: 75%;
     float: right;
+  }
+}
+
+/*********************************************
+ * SEARCH
+ *********************************************/
+@media screen and (min-width: 1076px) {
+  .wh_search_textfield,
+  .wh_search_button {
+      margin-top: 50px;
   }
 }
 
@@ -495,6 +508,9 @@ a:hover, a:focus {
 /*********************************************
  * CHILD LINKS
  *********************************************/
+.ullinks > .ulchildlink {
+  margin-bottom: 25px !important;
+}
 .ullinks > .ulchildlink > strong {
   font-weight: bold;
 }

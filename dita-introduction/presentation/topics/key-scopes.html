@@ -4,9 +4,9 @@
   <h1 class="title topictitle1" id="ariaid-title1">Key Scopes</h1>
         
   
-  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can, for
-    example, be used to use <em class="ph i">template</em> topics multiple times in the same project and fill them
-    with different data.</p>
+  <div class="body"><p class="shortdesc">Keys can be limited to a specific scope by defining key scopes. This mechanism can be
+    used to fill <em class="ph i">template</em> topics, that are referenced multiple times, with different
+    data.</p>
         
     
     <br></br><img class="image" id="key-scopes__image_ndd_3r3_tz" src="media/key-scope.svg"></img><br></br>
@@ -16,10 +16,10 @@
     <h2 class="title topictitle2" id="ariaid-title2">map.ditamap</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the same
-        <span class="ph filepath">technical-data.dita</span> topic twice. The <code class="keyword markupname xmlatt">@keyscope</code>
-      attributes on the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for
-      the <em class="ph i">Galaxy S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">map.ditamap</span> references the
+        <span class="ph filepath">technical-data.dita</span> twice. The <code class="keyword markupname xmlatt">@keyscope</code> attributes on
+      the <code class="keyword markupname xmlelement">&lt;topicref&gt;</code> elements define two key scopes, one for the <em class="ph i">Galaxy
+        S7</em> and one for the <em class="ph i">iPhone 7</em>. </p>
         
       <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
@@ -42,9 +42,9 @@
     <h2 class="title topictitle2" id="ariaid-title3">technical-data.dita</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> topic is a template topic, that is
-      filled with the data from the <span class="ph filepath">database-galaxys7.ditamap</span> map and from the
-        <span class="ph filepath">database-iphone7.ditamap</span> map.</p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">technical-data.dita</span> is a template topic, that is filled with
+      the data from the <span class="ph filepath">database-galaxys7.ditamap</span> and from the
+        <span class="ph filepath">database-iphone7.ditamap</span>.</p>
         
       <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;
@@ -101,7 +101,7 @@
     <h2 class="title topictitle2" id="ariaid-title4">database-galaxys7.ditamap</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> map defines multiple keys, that
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-galaxys7.ditamap</span> defines multiple keys, that
       contain technical data specific for the <em class="ph i">Galaxy S7</em>.</p>
         
       <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -179,8 +179,8 @@
     <h2 class="title topictitle2" id="ariaid-title5">database-iphone7.ditamap</h2>
         
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> map defines multiple keys, that
-      contain technical data specific for the <em class="ph i">iPhone 7</em>.</p>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">database-iphone7.ditamap</span> defines multiple keys, that contain
+      technical data specific for the <em class="ph i">iPhone 7</em>.</p>
         
       <pre><code class="hljs xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;

@@ -3,7 +3,7 @@
   PUBLIC "" "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
-      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Content Reference (conref)" /><meta name="abstract" content="A content reference (conref) pulls a content block to another topic." /><meta name="description" content="A content reference (conref) pulls a content block to another topic." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Relation" scheme="URI" content="../topics/keyref.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conkeyref.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conrefend.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conrefpush.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="conref" /><title>Content Reference (conref)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="copyright" content="(C) Copyright 2017" /><meta name="DC.rights.owner" content="(C) Copyright 2017" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Content Reference (conref)" /><meta name="abstract" content="The content reference mechanism pulls a content block to another topic." /><meta name="description" content="The content reference mechanism pulls a content block to another topic." /><meta name="DC.Relation" scheme="URI" content="../topics/key-features.html" /><meta name="DC.Relation" scheme="URI" content="../topics/keyref.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conkeyref.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conrefend.html" /><meta name="DC.Relation" scheme="URI" content="../topics/conrefpush.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="conref" /><title>Content Reference (conref)</title><!--  Generated with Oxygen version 18.1, build number 2016102619.  --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script>
           function debug(msg, object){
@@ -118,8 +118,7 @@
   <h1 class="title topictitle1" id="ariaid-title1">Content Reference (conref)</h1>
 
   
-  <div class="body"><p class="shortdesc">A content reference (<code class="keyword markupname xmlatt">@conref</code>) pulls a content block to another
-    topic.</p>
+  <div class="body"><p class="shortdesc">The content reference mechanism pulls a content block to another topic.</p>
 
     <p class="p">Sample project: <a class="xref" href="../resources/projects/conref.zip">conref.zip</a></p>
 
@@ -130,7 +129,7 @@
     <h2 class="title topictitle2" id="ariaid-title2">conref.ditamap</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">conref.ditamap</span> map references two topics. The
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">conref.ditamap</span> references two topics. The
         <span class="ph filepath">source.dita</span> topic is only used as a database topic. It is not rendered
       in the output, because the <code class="keyword markupname xmlatt">@processing-role</code> attribute has the value
         <code class="ph codeph">resource-only</code> and it does not appear in the TOC, because the
@@ -180,7 +179,7 @@
     <h2 class="title topictitle2" id="ariaid-title4">target.dita</h2>
 
     
-    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> file pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
+    <div class="body"><p class="shortdesc">The <span class="ph filepath">target.dita</span> topic pulls the <code class="keyword markupname xmlelement">&lt;note&gt;</code>
       element from the <span class="ph filepath">source.dita</span> topic using the <code class="keyword markupname xmlatt">@conref</code>
       attribute. The attribute contains a path to the element. The <code class="keyword markupname xmlatt">@conref</code> attribute
       in this example has the following pattern:</p>
@@ -201,7 +200,7 @@
 
 </article></main></div>
                         
-                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../topics/keyref.html" title="The key reference mechanism has been developed to decouple information.">Key Reference (keyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conkeyref.html" title="The content key reference mechanism combines the content reference mechanism with the key reference mechanism.">Content Key Reference (conkeyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefend.html" title="The content reference end mechansim is used together with a content reference or content key reference and identifies an element, that is the last element of a content reference range.">Content Reference End (conrefend)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefpush.html" title="The content reference push mechanism is the opposite of a content reference.">Content Reference Push (conref push)</a></div></div></nav></div>
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../topics/keyref.html" title="The key reference mechanism has been developed to decouple information.">Key Reference (keyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conkeyref.html" title="The content key reference mechanism combines the content reference mechanism with the key reference mechanism.">Content Key Reference (conkeyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefend.html" title="The content reference end mechansim specifies an element, that is the last element of a content reference range. It is used together with a content reference or content key reference, that specifies the first element.">Content Reference End (conrefend)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefpush.html" title="The content reference push mechanism is the opposite of a content reference.">Content Reference Push (conref push)</a></div></div></nav></div>
                         
                         
                     </div>

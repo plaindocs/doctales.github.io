@@ -2,4 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="batsonar">
   <title>batsonar</title>
+  <conbody/>
+  <related-links>
+    <link href="bathistory.dita#bathistory"/>
+  </related-links>
 </concept>

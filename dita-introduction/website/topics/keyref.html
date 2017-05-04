@@ -122,11 +122,11 @@
 
     <p class="p">Sample project: <a class="xref" href="../resources/projects/keyref.zip">keyref.zip</a></p>
 
-    <div class="p">Consider that the only linking mechanism in a DITA environment would be relative
-      links:<pre class="pre codeblock language-xml"><code>&lt;!-- Move a directory level up (../) and go to the topic.dita file --&gt; 
+    <div class="p">Consider that the only linking mechanism in a DITA environment would be a relative
+      link:<pre class="pre codeblock language-xml"><code>&lt;!-- Move a directory level up (../) and go to topic.dita --&gt; 
 &lt;topicref href="../topic.dita"/&gt;
 
-&lt;!-- Step into the "subdir" directory and go to the topic.dita file --&gt;
+&lt;!-- Step into the "subdir" directory and go to topic.dita --&gt;
 &lt;topicref href="subdir/topic.dita"/&gt;</code></pre></div>
 
     <p class="p">If topics would link heavily among each other, renaming or moving files or directories would
@@ -134,7 +134,7 @@
 
     <img class="image" src="media/keyref.svg" />
     <p class="p">As a solution, keys can be added to topics and elements on DITA Maps. Afterwards these topics
-      and elements can be fetched by their keys. The file paths are fetched from the DITA Map. </p>
+      and elements can be pulled by their keys. The file paths are fetched from the DITA Map. </p>
 
   </div>
 
@@ -144,10 +144,8 @@
     
     <div class="body"><p class="shortdesc">The <span class="ph filepath">keyref.ditamap</span> contains a <code class="keyword markupname xmlelement">&lt;keydef&gt;</code>
       element that has a <code class="keyword markupname xmlatt">@keys</code> attribute with the value <code class="ph codeph">product</code>.
-      The wrapped <code class="keyword markupname xmlelement">&lt;keyword&gt;</code>  element can then be pulled into the topics with
-      a key reference (<code class="keyword markupname xmlatt">@keyref</code>). The map also references the topic
-        <span class="ph filepath">keyref.dita</span> and assigns the key <code class="ph codeph">keyref</code> to
-      it.</p>
+      The wrapped <code class="keyword markupname xmlelement">&lt;keyword&gt;</code> element can then be pulled into the topics with a
+      key reference (<code class="keyword markupname xmlatt">@keyref</code>).</p>
 
       <pre class="pre codeblock language-xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
@@ -163,8 +161,7 @@
         &lt;/topicmeta&gt;
     &lt;/keydef&gt;
     
-    &lt;!-- A topic is referenced and the key "keyref" is assigned to it. --&gt;
-    &lt;topicref href="keyref.dita" keys="keyref"/&gt;
+    &lt;topicref href="keyref.dita"/&gt;
 &lt;/map&gt;</code></pre>
     </div>
 
@@ -195,7 +192,7 @@
 
 </article></main></div>
                         
-                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../topics/conref.html" title="A content reference (conref) pulls a content block to another topic.">Content Reference (conref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conkeyref.html" title="The content key reference mechanism combines the content reference mechanism with the key reference mechanism.">Content Key Reference (conkeyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefend.html" title="The content reference end mechansim is used together with a content reference or content key reference and identifies an element, that is the last element of a content reference range.">Content Reference End (conrefend)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefpush.html" title="The content reference push mechanism is the opposite of a content reference.">Content Reference Push (conref push)</a></div></div></nav></div>
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../topics/conref.html" title="The content reference mechanism pulls a content block to another topic.">Content Reference (conref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conkeyref.html" title="The content key reference mechanism combines the content reference mechanism with the key reference mechanism.">Content Key Reference (conkeyref)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefend.html" title="The content reference end mechansim specifies an element, that is the last element of a content reference range. It is used together with a content reference or content key reference, that specifies the first element.">Content Reference End (conrefend)</a></div><div class="related_link"><a class="navheader_parent_path" href="../topics/conrefpush.html" title="The content reference push mechanism is the opposite of a content reference.">Content Reference Push (conref push)</a></div></div></nav></div>
                         
                         
                     </div>
